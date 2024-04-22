@@ -1,54 +1,48 @@
 'use client'
 import Link from "next/link"
 import { HoverEffect } from "./ui/card-hover-effect";
+import { Button } from "./ui/moving-border";
 
 function UpcomingWebinars() {
 
   const featuredWebinars = [
     {
-      title: 'Understanding Music Theory',
+      title: 'QR-password-Manager',
       description:
-        'Dive deep into the fundamentals of music theory and enhance your musical skills.',
-      slug: 'understanding-music-theory',
+        'Manage your passwords securely with QR codes using this password manager application.',
+      slug: 'https://github.com/smartcraze/QR-password-Manager',
       isFeatured: true,
     },
     {
-      title: 'The Art of Songwriting',
+      title: 'zealify',
       description:
-        'Learn the craft of songwriting from experienced musicians and songwriters.',
-      slug: 'the-art-of-songwriting',
+        'Discover and share your passion for music with like-minded individuals on this platform.',
+      slug: 'https://github.com/smartcraze/zealify',
       isFeatured: true,
     },
     {
-      title: 'Mastering Your Instrument',
+      title: 'E-learning-platform ',
       description:
-        'Advanced techniques to master your musical instrument of choice.',
-      slug: 'mastering-your-instrument',
+        'Create and access educational content easily with this E-learning platform.',
+      slug: 'https://github.com/smartcraze/E-learning-platform',
       isFeatured: true,
     },
     {
-      title: 'Music Production Essentials',
+      title: 'E-commerce-WebRT',
       description:
-        'Get started with music production with this comprehensive overview.',
-      slug: 'music-production-essentials',
-      isFeatured: true,
-    },
-    // Added two more webinars
-    {
-      title: 'Live Performance Techniques',
-      description:
-        'Enhance your live performance skills with expert tips and strategies.',
-      slug: 'live-performance-techniques',
+        'Build a robust e-commerce website with real-time features using WebRTC technology.',
+      slug: 'https://github.com/smartcraze/E-commerce-WebRT',
       isFeatured: true,
     },
     {
-      title: 'Digital Music Marketing',
+      title: 'Ai-Techhub',
       description:
-        'Learn how to promote your music effectively in the digital age.',
-      slug: 'digital-music-marketing',
+        'Explore the latest advancements in artificial intelligence and technology on this platform.',
+      slug: 'https://github.com/smartcraze/Ai-Techhub',
       isFeatured: true,
     },
   ];
+  
 
   return (
     <div className="p-12 bg-gray-900">
@@ -59,24 +53,20 @@ function UpcomingWebinars() {
         </div>
 
         <div className="mt-10">
+          
           <HoverEffect
           items={featuredWebinars.map(webinar => (
             {
               title: webinar.title,
               description: webinar.description,
-              link: '/'
+              link: webinar.slug
             }
           ))}
+          
           />
         </div>
 
-        <div className="mt-10 text-center">
-          <Link href={"/"}
-          className="px-4 py-2 rounded border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 transition duration-200"
-          >
-            View All webinars
-          </Link>
-        </div>
+        
       </div>
     </div>
   )

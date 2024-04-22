@@ -42,7 +42,7 @@ function Navbar({ className }: { className?: string }) {
           ></MenuItem>
         </Link>
           
-        <Link href={"/social"} className=" relative group/btn" >
+        <Link href={"/Social"} className=" relative group/btn" >
         <BottomGradient />
           <MenuItem
             setActive={setActive}

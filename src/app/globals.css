@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+/* In your global CSS file or styles */
+html {
+  scroll-behavior: smooth;
+}
