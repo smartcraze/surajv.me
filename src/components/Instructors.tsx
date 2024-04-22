@@ -2,34 +2,39 @@
 import { WavyBackground } from "./ui/wavy-background"
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 
-const instructors = [
+
+const handle = [
     {
       id: 1,
-      name: 'Elena Briggs',
-      designation: 'Vocal Coach',
+      name: 'Instagram',
+      designation: 'Surajv354',
+      link:"https://www.instagram.com/surajv354/",
       image:
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
+        '/insta.avif',
     },
     {
       id: 2,
-      name: 'Marcus Reid',
-      designation: 'Guitar Instructor',
+      name: 'LinkedIN',
+      designation: 'Surajv354',
+      link:"https://www.linkedin.com/in/surajv354/",
       image:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
+        '/linkedin.jpg',
     },
     {
       id: 3,
-      name: 'Julia Zhang',
-      designation: 'Piano Teacher',
+      name: 'x',
+      link:"https://twitter.com/Surajv354",
+      designation: 'Surajv354',
       image:
-        'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
+        '/x.png',
     },
     {
       id: 4,
-      name: 'Andre Gomez',
-      designation: 'Drumming Expert',
+      name: 'github',
+      link:"https://github.com/smartcraze",
+      designation: 'smartcraze',
       image:
-        'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
+        '/github.png',
     },
   ];
 
@@ -37,10 +42,16 @@ function Instructors() {
   return (
     <div className="relative h-[40rem] overflow-hidden flex items-center justify-center">
         <WavyBackground className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full">
-            <h2 className="text-2xl md:text-4xl lg:text-7xl text-white font-bold text-center mb-8">Meet Our Instructors</h2>
-            <p className="text-base md:text-lg text-white text-center mb-4">Discover the talented professionals who will guide your musical journey</p>
+            <h2 className="text-2xl md:text-4xl lg:text-7xl text-white font-bold text-center mb-8">Social Media </h2>
+            <h1 className="mt-5 md:mt-0 text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-violet-600">
+          
+        Discover Me World wide
+        </h1>
+        
             <div className="flex flex-row items-center justify-center mb-10 w-full">
-                <AnimatedTooltip items={instructors} />
+              
+                <AnimatedTooltip items={handle} />
+              
             </div>
         </WavyBackground>
     </div>
