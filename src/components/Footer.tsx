@@ -8,7 +8,7 @@ function Footer() {
         <div>
           <h2 className="text-white text-lg font-semibold mb-4">About Me</h2>
           <p className="mb-4">
-            I'm passionate about coding and creating innovative solutions. My
+            I&apos;m passionate about coding and creating innovative solutions. My
             goal is to continue learning and growing in the field of software
             development.
           </p>
