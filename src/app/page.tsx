@@ -14,8 +14,6 @@ export default function Home() {
       <HeroSection />
       <FeaturedCourses />
       <MeteorsDemo/>
-      
-      
       <Footer />
     </main>
   );
