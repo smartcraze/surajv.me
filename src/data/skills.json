@@ -1,0 +1,74 @@
+{
+  "Skill": [
+    {
+      "id": 1,
+      "title": "Python Programming",
+      "slug": "python-programming",
+      "description": "Master the fundamentals and advanced concepts of Python programming language.",
+      "image": "/SkillImages/python.jpg" 
+    },
+    {
+      "id": 2,
+      "title": "C Programming",
+      "slug": "c-programming",
+      "description": "Learn the basics and advanced concepts of C programming language.",
+      "image": "/SkillImages/c-programming.jpg" 
+    },
+    {
+      "id": 3,
+      "title": "C++ Programming",
+      "slug": "c++-programming",
+      "description": "Master the principles and advanced features of C++ programming language.",
+      "image": "/SkillImages/cpp.jpg" 
+    },
+    {
+      "id": 4,
+      "title": "HTML",
+      "slug": "html",
+      "description": "Learn the basics and advanced techniques of HTML for web development.",
+      "image": "/SkillImages/html.jpg"
+    },
+    {
+      "id": 5,
+      "title": "CSS",
+      "slug": "css",
+      "description": "Master the styling language CSS for designing visually appealing web pages.",
+      "image": "/SkillImages/css.jpg"
+    },
+    {
+      "id": 6,
+      "title": "JavaScript",
+      "slug": "javascript",
+      "description": "Learn the fundamentals and advanced concepts of JavaScript for web development.",
+      "image": "/SkillImages/javascript.jpg"
+    },
+    {
+      "id": 7,
+      "title": "React.js",
+      "slug": "react-js",
+      "description": "Build dynamic and interactive user interfaces with React.js library.",
+      "image": "/SkillImages/react.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Next.js",
+      "slug": "next-js",
+      "description": "Learn server-side rendering and other advanced features with Next.js framework.",
+      "image": "/SkillImages/nextjs.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Node.js",
+      "slug": "node-js",
+      "description": "Build scalable and efficient server-side applications with Node.js runtime environment.",
+      "image": "/SkillImages/nodejs.jpg"
+    },
+    {
+      "id": 10,
+      "title": "MongoDB",
+      "slug": "mongodb",
+      "description": "Master MongoDB, a NoSQL database for building scalable and flexible applications.",
+      "image": "/SkillImages/mongodb.jpg"
+    }
+  ]
+}
