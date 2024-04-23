@@ -31,7 +31,7 @@ export function MeteorsDemo() {
       title: "E-learning-platform ",
       description:
       "Create and access educational content easily with this E-learning platform.",
-      Link:"https://studyspher.vercel.app/",
+      Link:"https://studyspher.vercel.app"
       slug: "https://github.com/smartcraze/E-learning-platform",
       isFeatured: true,
     },

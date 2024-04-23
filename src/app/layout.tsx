@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Smartcraze - Suraj Vishwakarma",
-  description: "Portfolio of Computer Science Engineering by Suraj Vishwakarma",
+  description: "Portfolio of Suraj Vishwakarma Cse",
   keywords: ["portfolio", "computer science", "engineering", "Suraj Vishwakarma"],
   // authors: "Suraj Vishwakarma",
 };
