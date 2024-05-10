@@ -44,6 +44,13 @@ export function MeteorsDemo() {
       isFeatured: true,
     },
     {
+      title: "Bank management system ",
+      description:"build all the functionality such as creating account and transaction related Work using structure in c language",
+        Link:"https://github.com/smartcraze/Bank-management-system",
+      slug: "https://github.com/smartcraze/Bank-management-system",
+      isFeatured: true,
+    },
+    {
       title: "Ai-Techhub",
       description:
         "Explore the latest advancements in artificial intelligence and technology on this platform.",
