@@ -2,7 +2,6 @@
   "name": "smartcraze",
   "version": "0.1.0",
   "private": true,
-
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,11 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tabler/icons-react": "^3.2.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@tabler/icons-react": "^3.7.0",
     "@tsparticles/react": "^3.0.0",
     "axios": "^1.7.2",
-    "clsx": "^2.1.0",
-    "framer-motion": "^11.0.3",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.12",
     "icons-react": "^3.7.1",
     "mini-svg-data-uri": "^1.4.4",
     "next": "^14.2.4",
@@ -23,7 +23,7 @@
     "react-dom": "^18",
     "react-tsparticles": "^2.12.2",
     "simplex-noise": "^4.0.1",
-    "tailwind-merge": "^2.2.1",
+    "tailwind-merge": "^2.3.0",
     "tsparticles": "^3.3.0"
   },
   "devDependencies": {
