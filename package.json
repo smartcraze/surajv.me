@@ -1,7 +1,8 @@
 {
-  "name": "musicnextjs",
+  "name": "smartcraze",
   "version": "0.1.0",
   "private": true,
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,11 +12,13 @@
   "dependencies": {
     "@tabler/icons-react": "^3.2.0",
     "@tsparticles/react": "^3.0.0",
+    "axios": "^1.7.2",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.3",
     "icons-react": "^3.7.1",
     "mini-svg-data-uri": "^1.4.4",
-    "next": "14.1.0",
+    "next": "^14.2.4",
+    "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
     "react-tsparticles": "^2.12.2",
@@ -24,7 +27,9 @@
     "tsparticles": "^3.3.0"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
