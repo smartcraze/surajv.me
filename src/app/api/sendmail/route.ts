@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
     const mailOptions = {
       from: email,
       to: 'garett84@ethereal.email',
-      subject: `${name} from smartcraze mail`,
+      subject: `${name}`,
       text: `Email: ${email}\nMessage: ${message}`,
     };
 
