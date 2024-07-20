@@ -35,3 +35,6 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.glow-effect {
+  box-shadow: 0 33 20px rgba(255, 255, 0, 0.8); }
