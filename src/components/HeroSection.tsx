@@ -31,12 +31,12 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="bg-slate-950 min-h-40  flex flex-col items-center justify-center">
+    <div className="bg-slate-950 min-h-40 flex flex-col items-center justify-center">
       <div className="max-w-4xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col justify-center text-center md:text-left mt-32 md:mt-0">
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              Hey Coders i'm{" "}
+              Hey Coders I&apos;m{" "}
               <span className="text-purple-600"> Suraj Vishwakarma</span>
             </h1>
             <p className="text-lg md:text-xl text-white mb-2">
