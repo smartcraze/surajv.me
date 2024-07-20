@@ -1,9 +1,8 @@
 "use client";
-import Link from "next/link";
 import courseData from "../data/skills.json";
 import { BackgroundGradient } from "./ui/background-gradient";
 import Image from "next/image";
-import { transform } from "next/dist/build/swc";
+
 
 interface skills {
   id: number;
@@ -13,7 +12,7 @@ interface skills {
   image: string;
 }
 
-function FeaturedCourses() {
+function Skill() {
   const featuredCourses = courseData.Skill.filter((skill: skills) => skill);
 
   return (
@@ -34,7 +33,7 @@ function FeaturedCourses() {
             <div   className="hover:transform hover:scale-105 transition-transform duration-300" key={skill.id}>
               <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900 hover:will-change-transform">
                 <Image
-                  // style={{ filter: 'invert(1)' }}
+                  
                   src={skill.image}
                   alt="{skill.slug}"
                   height="100"
@@ -83,4 +82,4 @@ function FeaturedCourses() {
   );
 }
 
-export default FeaturedCourses;
+export default Skill;

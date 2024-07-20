@@ -1,10 +1,10 @@
-import Instructors from '@/components/Instructors'
+import SocialHandle from '@/components/SocialHandle'
 import React from 'react'
 
 function page() {
   return (
     <div>
-<Instructors/>
+      <SocialHandle/>
 
 
     </div>

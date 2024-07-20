@@ -38,7 +38,7 @@ const handle = [
     },
   ];
 
-function Instructors() {
+function SocialHandle() {
   return (
     <div className="relative h-[40rem] overflow-hidden flex items-center justify-center">
         <WavyBackground className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full">
@@ -58,4 +58,4 @@ function Instructors() {
   )
 }
 
-export default Instructors
+export default SocialHandle
