@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link"; // Import Link from Next.js
 import { motion } from "framer-motion";
-import { LinkPreview } from "@/components/ui/link-preview";
+
 function Footer() {
   return (
     <footer className="bg-black text-gray-400 py-12">
@@ -43,45 +43,45 @@ function Footer() {
         <div>
           <h2 className="text-white text-lg font-semibold mb-4">Connect With Me</h2>
           <div className="flex space-x-4">
-            <LinkPreview url="https://www.linkedin.com/in/surajv354/">
+            <Link href="https://www.linkedin.com/in/surajv354/">
               <span className="hover:text-white transition-colors duration-300 cursor-pointer">
                 LinkedIn
               </span>
-            </LinkPreview>
-            <LinkPreview url="https://github.com/smartcraze">
+            </Link>
+            <Link href="https://github.com/smartcraze">
               <span className="hover:text-white transition-colors duration-300 cursor-pointer">
                 GitHub
               </span>
-            </LinkPreview>
-            <LinkPreview url="https://twitter.com/surajv354">
+            </Link>
+            <Link href="https://twitter.com/surajv354">
               <span className="hover:text-white transition-colors duration-300 cursor-pointer">
                 Twitter
               </span>
-            </LinkPreview>
+            </Link>
           </div>
         </div>
         <div>
           <h2 className="text-white text-lg font-semibold mb-4">Contact Me</h2>
           <p>
-            <LinkPreview url="https://www.instagram.com/surajv354">
+            <Link href="https://www.instagram.com/surajv354">
               <span className="hover:text-white transition-colors duration-300 cursor-pointer">
                 Instagram - @surajv354
               </span>
-            </LinkPreview>
+            </Link>
           </p>
           <p>
-            <LinkPreview url="https://www.linkedin.com/in/surajv354">
+            <Link href="https://www.linkedin.com/in/surajv354">
               <span className="hover:text-white transition-colors duration-300 cursor-pointer">
                 LinkedIn - @surajv354
               </span>
-            </LinkPreview>
+            </Link>
           </p>
           <p>
-            <LinkPreview url="https://twitter.com/surajv354">
+            <Link href="https://twitter.com/surajv354">
               <span className="hover:text-white transition-colors duration-300 cursor-pointer">
                 Twitter - @surajv354
               </span>
-            </LinkPreview>
+            </Link>
           </p>
         </div>
       </div>
