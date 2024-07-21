@@ -37,14 +37,14 @@
         "isFeatured": true
       },
       {
-        "title": "Cryptocurrency Price Tracker",
+        "title": "Cryptocurrency Tracker",
         "description": "Track your favourite crypto and analyse your coin  with the help of the graph. ",
         "link":"https://cryptopricetracking.streamlit.app/",
         "slug": "https://github.com/smartcraze/Cryptocurrency-Price-Tracker",
         "isFeatured": true
       },
       {
-        "title": "Google Generatie Ai-Invoice Extractor",
+        "title": "Ai-Invoice Extractor",
         "description": "This is a Invoice extractor < upload your invoice and can ask any question related to it .",
         "link": "https://khunchusobillse.streamlit.app/",
         "slug": "https://github.com/smartcraze/Invoice-Extractor",
