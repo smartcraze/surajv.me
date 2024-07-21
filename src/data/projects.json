@@ -28,19 +28,28 @@
         "slug": "https://github.com/smartcraze/E-commerce-WebRT",
         "isFeatured": true
       },
-      {
-        "title": "Bank management system",
-        "description": "Build all the functionality such as creating an account and transaction related work using structure in C language.",
-        "link": "https://github.com/smartcraze/Bank-management-system",
-        "slug": "https://github.com/smartcraze/Bank-management-system",
-        "isFeatured": true
-      },
+      
       {
         "title": "Ai-Techhub",
         "description": "Explore the latest advancements in artificial intelligence and technology on this platform.",
         "link": "https://ai-techhub.vercel.app/",
         "slug": "https://github.com/smartcraze/Ai-Techhub",
         "isFeatured": true
+      },
+      {
+        "title": "Cryptocurrency Price Tracker",
+        "description": "Track your favourite crypto and analyse your coin  with the help of the graph. ",
+        "link":"https://cryptopricetracking.streamlit.app/",
+        "slug": "https://github.com/smartcraze/Cryptocurrency-Price-Tracker",
+        "isFeatured": true
+      },
+      {
+        "title": "Google Generatie Ai-Invoice Extractor",
+        "description": "This is a Invoice extractor < upload your invoice and can ask any question related to it .",
+        "link": "https://khunchusobillse.streamlit.app/",
+        "slug": "https://github.com/smartcraze/Invoice-Extractor",
+        "isFeatured": true
+
       }
     ]
   }
