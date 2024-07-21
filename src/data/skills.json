@@ -16,13 +16,6 @@
       "image": "/skillsImage/cpp.png" 
     },
     {
-      "id": 4,
-      "title": "HTML",
-      "slug": "html",
-      "description": "Learn the basics and advanced techniques of HTML for web development.",
-      "image": "/skillsImage/html.png"
-    },
-    {
       "id": 5,
       "title": "CSS",
       "slug": "css",
@@ -38,7 +31,7 @@
     },
     {
       "id": 7,
-      "title": "React.js",
+      "title": "React js",
       "slug": "react-js",
       "description": "Build dynamic and interactive user interfaces with React.js library.",
       "image": "/skillsImage/react js.png"
