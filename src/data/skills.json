@@ -43,14 +43,19 @@
       "description": "Build dynamic and interactive user interfaces with React.js library.",
       "image": "/skillsImage/react js.png"
     },
-    
-    
     {
       "id": 10,
       "title": "MongoDB",
       "slug": "mongodb",
       "description": "Master MongoDB, a NoSQL database for building scalable and flexible applications.",
       "image": "/skillsImage/mongodb.png"
+    },
+    {
+      "id": 11,
+      "title": "Django",
+      "slug": "Django",
+      "description": "Learn the basics and advanced techniques of HTML for web development.",
+      "image": "/skillsImage/django.png"
     }
   ]
 }
