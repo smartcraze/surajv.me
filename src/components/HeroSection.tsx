@@ -50,12 +50,17 @@ function HeroSection() {
               />
             </div>
             <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 mt-4 md:justify-start items-center">
-              <Button
-                borderRadius="1.75rem"
-                className="bg-white dark:bg-slate-800 text-black dark:text-white border-white dark:border-slate-800 group/btn relative"
+              <a
+                href="/resume.pdf"
+                download="Suraj_Vishwakarma_Resume.pdf"
               >
-                Download Resume
-              </Button>
+                <Button
+                  borderRadius="1.75rem"
+                  className="bg-white dark:bg-slate-800 text-black dark:text-white border-white dark:border-slate-800 group/btn relative"
+                >
+                  Download Resume
+                </Button>
+              </a>
               <Link
                 href={"https://github.com/smartcraze"}
                 target="_blank"
