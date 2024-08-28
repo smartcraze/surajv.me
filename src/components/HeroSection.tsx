@@ -45,20 +45,16 @@ function HeroSection() {
             <div className="h-8 w-auto mb-2">
               <span
                 id="element"
-                className="text-2xl md:text-3xl text-yellow-400"
+                className="text-2xl md:text-3xl text-orange-500"
                 ref={typedElement}
               />
             </div>
             <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 mt-4 md:justify-start items-center">
-              <a
-                href="/resume.pdf"
-                download="Suraj_Vishwakarma_Resume.pdf"
-              >
+              <a href="/resume.pdf" target="_blank">
                 <Button
-                  borderRadius="1.75rem"
-                  className="bg-white dark:bg-slate-800 text-black dark:text-white border-white dark:border-slate-800 group/btn relative"
+                  
                 >
-                  Download Resume
+                   Resume
                 </Button>
               </a>
               <Link
@@ -67,13 +63,17 @@ function HeroSection() {
                 className="mx-2"
               >
                 <Button
-                  borderRadius="1.75rem"
-                  className="bg-white dark:bg-slate-800 text-black dark:text-white border-white dark:border-slate-800 group/btn relative flex items-center justify-center"
+                
                 >
                   <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300 mr-2" />
                   <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                     GitHub
                   </span>
+                </Button>
+              </Link>
+              <Link href="/events" className="">
+                <Button className="text-orange-400">
+                  View Events
                 </Button>
               </Link>
             </div>

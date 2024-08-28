@@ -20,7 +20,7 @@ export function Project() {
       >
         Projects
       </p>
-      <div className="flex flex-wrap justify-center items-center gap-5 py-2">
+      <div className="flex flex-wrap justify-center items-center gap-5 py-2 pb-10">
         {projectsData.projects.map((project: Project) => (
           <div
             className="w-full sm:w-80 md:w-96 lg:w-[350px] hover:transform hover:scale-105 transition-transform duration-300 relative max-w-xs"
