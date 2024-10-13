@@ -79,14 +79,14 @@ function HeroSection() {
             </div>
           </div>
           <div className="flex items-center justify-center md:justify-end p-4">
-            <div className="relative overflow-hidden h-64 w-64 md:h-screen md:w-screen">
+            <div className="relative overflow-hidden h-64 w-64 md:h-screen md:w-screen ">
               <Image
                 src="/portfoliodp.png"
                 alt="Profile Picture"
                 layout="fill"
                 objectFit="contain"
                 objectPosition="center"
-                className=""
+                className="rounded-full"
               />
             </div>
           </div>
