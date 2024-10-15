@@ -71,7 +71,7 @@ function HeroSection() {
                   </span>
                 </Button>
               </Link>
-              <Link href="/events" className="">
+              <Link href="https://events.smartcraze.online/" className="">
                 <Button className="text-orange-400">
                   View Events
                 </Button>
