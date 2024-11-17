@@ -76,6 +76,11 @@ function HeroSection() {
                   View Events
                 </Button>
               </Link>
+              <Link href="https://docs.smartcraze.online/docs/getting-started/introduction" className="">
+                <Button className="text-orange-400">
+                  docs
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="flex items-center justify-center md:justify-end p-4">
