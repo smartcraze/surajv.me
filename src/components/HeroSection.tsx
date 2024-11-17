@@ -71,11 +71,11 @@ function HeroSection() {
                   </span>
                 </Button>
               </Link>
-              <Link href="https://events.smartcraze.online/" className="">
+              {/* <Link href="https://events.smartcraze.online/" className="">
                 <Button className="text-orange-400">
                   View Events
                 </Button>
-              </Link>
+              </Link> */}
               <Link href="https://docs.smartcraze.online/docs/getting-started/introduction" className="">
                 <Button className="text-orange-400">
                   docs
