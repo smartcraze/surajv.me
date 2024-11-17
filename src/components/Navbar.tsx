@@ -51,7 +51,7 @@ function Navbar({ className }: { className?: string }) {
           ></MenuItem>
         </Link>
 
-        <Link href={"https://docs.smartcraze.online/docs/"} className=" relative group/btn">
+        <Link href={"https://docs.smartcraze.online/docs/getting-started/introduction"} className=" relative group/btn">
           <MenuItem
             setActive={setActive}
             active={active}
