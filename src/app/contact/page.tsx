@@ -29,10 +29,10 @@ function SmartcrazeContactUs() {
   };
 
   return (
-    <div className="relative min-h-screen bg-gray-100 dark:bg-gray-900 py-8 pt-36">
+    <div className="relative min-h-screen bg-slate-900 dark:bg-gray-900 py-8 pt-36">
       <BackgroundBeams className="absolute top-0 left-0 w-full h-full z-0" />
-      <div className="max-w-md mx-auto p-4 md:p-8 relative z-10 bg-white dark:bg-black rounded-none md:rounded-2xl shadow-input">
-        <h1 className="text-neutral-600 mb-4 text-xl max-w-sm dark:text-neutral-300 text-center">
+      <div className="max-w-md mx-auto p-4 md:p-8 relative z-10 bg-slate-950 dark:bg-black rounded-none md:rounded-2xl shadow-input">
+        <h1 className="text-neutral-600 mb-4 text-xl max-w-sm dark:text-gray-200 text-center">
           Hey everyone, you can reach out to me
           <p className="text-yellow-500">Drop your mail here!</p>
         </h1>

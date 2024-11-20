@@ -58,7 +58,7 @@ export function Project() {
               <div className="flex flex-wrap justify-center items-center gap-3 mb-4">
                 <Link href={project.slug} passHref>
                   <button className="border px-4 py-1 rounded-lg border-gray-500 text-gray-300">
-                    Github Repo
+                    Github
                   </button>
                 </Link>
                 {project.link && (

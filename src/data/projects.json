@@ -1,56 +1,60 @@
 {
-    "projects": [
-      {
-        "title": "QR-password-Manager",
-        "description": "Manage your passwords securely with QR codes using this password manager application.",
-        "slug": "https://github.com/smartcraze/QR-password-Manager",
-        "link": "",
-        "isFeatured": true
-      },
-      {
-        "title": "zealify",
-        "description": "Discover and share your passion for music with like-minded individuals on this platform.",
-        "link": "https://zealify.vercel.app/",
-        "slug": "https://github.com/smartcraze/zealify",
-        "isFeatured": true
-      },
-      {
-        "title": "E-learning-platform",
-        "description": "Create and access educational content easily with this E-learning platform.",
-        "link": "https://studyspher.vercel.app",
-        "slug": "https://github.com/smartcraze/E-learning-platform",
-        "isFeatured": true
-      },
-      {
-        "title": "E-commerce-WebRT",
-        "description": "Build a robust e-commerce website with real-time features using WebRTC technology.",
-        "link": "https://cn-080.vercel.app/",
-        "slug": "https://github.com/smartcraze/E-commerce-WebRT",
-        "isFeatured": true
-      },
-      
-      {
-        "title": "Ai-Techhub",
-        "description": "Explore the latest advancements in artificial intelligence and technology on this platform.",
-        "link": "https://ai-techhub.vercel.app/",
-        "slug": "https://github.com/smartcraze/Ai-Techhub",
-        "isFeatured": true
-      },
-      {
-        "title": "Cryptocurrency Tracker",
-        "description": "Track your favourite crypto and analyse your coin  with the help of the graph. ",
-        "link":"https://cryptopricetracking.streamlit.app/",
-        "slug": "https://github.com/smartcraze/Cryptocurrency-Price-Tracker",
-        "isFeatured": true
-      },
-      {
-        "title": "Ai-Invoice Extractor",
-        "description": "This is a Invoice extractor < upload your invoice and can ask any question related to it .",
-        "link": "https://khunchusobillse.streamlit.app/",
-        "slug": "https://github.com/smartcraze/Invoice-Extractor",
-        "isFeatured": true
-
-      }
-    ]
-  }
-  
+  "projects": [
+    {
+      "title": "QR-password-Manager",
+      "description": "Manage your passwords securely with QR codes using this password manager application.",
+      "slug": "https://github.com/smartcraze/QR-password-Manager",
+      "link": "",
+      "isFeatured": true,
+      "images": ["/image1", "/image2", "/image3"]
+    },
+    {
+      "title": "zealify",
+      "description": "Discover and share your passion for music with like-minded individuals on this platform.",
+      "link": "https://zealify.vercel.app/",
+      "slug": "https://github.com/smartcraze/zealify",
+      "isFeatured": true,
+      "images": ["/image4", "/image5", "/image6"]
+    },
+    {
+      "title": "E-learning-platform",
+      "description": "Create and access educational content easily with this E-learning platform.",
+      "link": "https://studyspher.vercel.app",
+      "slug": "https://github.com/smartcraze/E-learning-platform",
+      "isFeatured": true,
+      "images": ["/image7", "/image8", "/image9"]
+    },
+    {
+      "title": "E-commerce-WebRT",
+      "description": "Build a robust e-commerce website with real-time features using WebRTC technology.",
+      "link": "https://cn-080.vercel.app/",
+      "slug": "https://github.com/smartcraze/E-commerce-WebRT",
+      "isFeatured": true,
+      "images": ["/image10", "/image11", "/image12"]
+    },
+    {
+      "title": "Ai-Techhub",
+      "description": "Explore the latest advancements in artificial intelligence and technology on this platform.",
+      "link": "https://ai-techhub.vercel.app/",
+      "slug": "https://github.com/smartcraze/Ai-Techhub",
+      "isFeatured": true,
+      "images": ["/image13", "/image14", "/image15"]
+    },
+    {
+      "title": "Cryptocurrency Tracker",
+      "description": "Track your favorite crypto and analyze your coin with the help of graphs.",
+      "link": "https://cryptopricetracking.streamlit.app/",
+      "slug": "https://github.com/smartcraze/Cryptocurrency-Price-Tracker",
+      "isFeatured": true,
+      "images": ["/image16", "/image17", "/image18"]
+    },
+    {
+      "title": "Ai-Invoice Extractor",
+      "description": "Upload your invoice and ask any question related to it using this AI-powered tool.",
+      "link": "https://khunchusobillse.streamlit.app/",
+      "slug": "https://github.com/smartcraze/Invoice-Extractor",
+      "isFeatured": true,
+      "images": [ "Projects/Ai-Invoice/image19.png"]
+    }
+  ]
+}
