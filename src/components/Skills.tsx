@@ -30,8 +30,8 @@ function Skill() {
       <div className="mt-10 mx-8">
         <div    className="flex flex-wrap justify-center  gap-3">
           {featuredCourses.map((skill: skills) => (
-            <div   className="hover:transform hover:scale-105 transition-transform duration-300" key={skill.id}>
-              <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900 hover:will-change-transform">
+            <div   className="hover:transform  hover:scale-105 transition-transform duration-300" key={skill.id}>
+              <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-slate-950 dark:bg-zinc-900 hover:will-change-transform">
                 <Image
                   
                   src={skill.image}
@@ -47,7 +47,7 @@ function Skill() {
             </div>
           ))}
           <div className="hover:transform hover:scale-105 transition-transform duration-300" >
-              <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900 hover:will-change-transform">
+              <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-slate-950 dark:bg-zinc-900 hover:will-change-transform">
                 <Image
                   style={{ filter: 'invert(1)' }}
                   src={"/skillsImage/nodejs.png"}
@@ -62,7 +62,7 @@ function Skill() {
               </BackgroundGradient>
             </div>
           <div className="hover:transform hover:scale-105 transition-transform duration-300" >
-              <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900 hover:will-change-transform">
+              <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-slate-950 dark:bg-zinc-900 hover:will-change-transform">
                 <Image
                   style={{ filter: 'invert(1)' }}
                   src={"/skillsImage/c.png"}

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import {  Menu, MenuItem } from "./ui/navbar-menu";
 
 import { cn } from "@/utils/cn";
 import Link from "next/link";
@@ -42,12 +42,12 @@ function Navbar({ className }: { className?: string }) {
           ></MenuItem>
         </Link>
           
-        <Link href={"/Social"} className=" relative group/btn" >
+        <Link href={"/contact"} className=" relative group/btn" >
         <BottomGradient />
           <MenuItem
             setActive={setActive}
             active={active}
-            item="Social Media"
+            item="Contact"
           ></MenuItem>
         </Link>
 
