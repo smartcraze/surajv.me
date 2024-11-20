@@ -25,7 +25,7 @@ function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive} >
         <Link href={"/"}>
         <Image
-          src={"/smartcraze.png"}
+          src={"/Socialicon/smartcraze.png"}
           alt="jordans"
           height="40"
           width="40"

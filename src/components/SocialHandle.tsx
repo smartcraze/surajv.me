@@ -10,7 +10,7 @@ const handle = [
       designation: 'Surajv354',
       link:"https://www.instagram.com/surajv354/",
       image:
-        '/insta.avif',
+        '/Socialicon/insta.avif',
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const handle = [
       designation: 'Surajv354',
       link:"https://www.linkedin.com/in/surajv354/",
       image:
-        '/linkedin.jpg',
+        '/Socialicon/linkedin.jpg',
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const handle = [
       link:"https://twitter.com/Surajv354",
       designation: 'Surajv354',
       image:
-        '/x.png',
+        '/Socialicon/x.png',
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ const handle = [
       link:"https://github.com/smartcraze",
       designation: 'smartcraze',
       image:
-        '/github.png',
+        '/Socialicon/github.png',
     },
   ];
 
