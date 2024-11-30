@@ -1,6 +1,22 @@
 {
   "projects": [
     {
+      "title": "Heap visualiser",
+      "description": "how the max and min heap works and heapify process using react js heap data structure",
+      "slug": "https://github.com/smartcraze/heap-visualiser",
+      "link": "https://heap.smartcraze.online/",
+      "isFeatured": true,
+      "images": ["/image1", "/image2", "/image3"]
+    },
+    {
+      "title": "Binary seach visualiser",
+      "description": "Learn how binary searach works visualisation",
+      "link": "https://binarysearch.smartcraze.online/",
+      "slug": "https://github.com/smartcraze/Binarysearch-visualiser",
+      "isFeatured": true,
+      "images": [ "Projects/Ai-Invoice/image19.png"]
+    },
+    {
       "title": "QR-password-Manager",
       "description": "Manage your passwords securely with QR codes using this password manager application.",
       "slug": "https://github.com/smartcraze/QR-password-Manager",
@@ -56,13 +72,6 @@
       "isFeatured": true,
       "images": [ "Projects/Ai-Invoice/image19.png"]
     },
-    {
-      "title": "Binary seach visualiser",
-      "description": "Learn how binary searach works visualisation",
-      "link": "https://binarysearch.smartcraze.online/",
-      "slug": "https://github.com/smartcraze/Binarysearch-visualiser",
-      "isFeatured": true,
-      "images": [ "Projects/Ai-Invoice/image19.png"]
-    }
+    
   ]
 }
