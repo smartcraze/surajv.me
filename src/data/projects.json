@@ -55,6 +55,14 @@
       "slug": "https://github.com/smartcraze/Invoice-Extractor",
       "isFeatured": true,
       "images": [ "Projects/Ai-Invoice/image19.png"]
+    },
+    {
+      "title": "Binary seach visualiser",
+      "description": "Learn how binary searach works visualisation",
+      "link": "https://binarysearch.smartcraze.online/",
+      "slug": "https://github.com/smartcraze/Binarysearch-visualiser",
+      "isFeatured": true,
+      "images": [ "Projects/Ai-Invoice/image19.png"]
     }
   ]
 }
