@@ -1,77 +1,76 @@
 {
   "projects": [
     {
-      "title": "Heap visualiser",
-      "description": "how the max and min heap works and heapify process using react js heap data structure",
+      "title": "Heap Visualizer",
+      "description": "Understand how max and min heaps work and the heapify process using React.js.",
       "slug": "https://github.com/smartcraze/heap-visualiser",
       "link": "https://heap.smartcraze.online/",
       "isFeatured": true,
-      "images": ["/image1", "/image2", "/image3"]
+      "images": ["/images/heap/image1.png", "/images/heap/image2.png", "/images/heap/image3.png"]
     },
     {
-      "title": "Binary seach visualiser",
-      "description": "Learn how binary searach works visualisation",
-      "link": "https://binarysearch.smartcraze.online/",
+      "title": "Binary Search Visualizer",
+      "description": "Learn how binary search works with an interactive visualization.",
       "slug": "https://github.com/smartcraze/Binarysearch-visualiser",
+      "link": "https://binarysearch.smartcraze.online/",
       "isFeatured": true,
-      "images": [ "Projects/Ai-Invoice/image19.png"]
+      "images": ["/images/binarysearch/image1.png", "/images/binarysearch/image2.png", "/images/binarysearch/image3.png"]
     },
     {
-      "title": "QR-password-Manager",
+      "title": "QR Password Manager",
       "description": "Manage your passwords securely with QR codes using this password manager application.",
       "slug": "https://github.com/smartcraze/QR-password-Manager",
       "link": "",
       "isFeatured": true,
-      "images": ["/image1", "/image2", "/image3"]
+      "images": ["/images/qrmanager/image1.png", "/images/qrmanager/image2.png", "/images/qrmanager/image3.png"]
     },
     {
-      "title": "zealify",
+      "title": "Zealify",
       "description": "Discover and share your passion for music with like-minded individuals on this platform.",
-      "link": "https://zealify.vercel.app/",
       "slug": "https://github.com/smartcraze/zealify",
+      "link": "https://zealify.vercel.app/",
       "isFeatured": true,
-      "images": ["/image4", "/image5", "/image6"]
+      "images": ["/images/zealify/image4.png", "/images/zealify/image5.png", "/images/zealify/image6.png"]
     },
     {
-      "title": "E-learning-platform",
-      "description": "Create and access educational content easily with this E-learning platform.",
-      "link": "https://studyspher.vercel.app",
+      "title": "E-Learning Platform",
+      "description": "Create and access educational content easily with this e-learning platform.",
       "slug": "https://github.com/smartcraze/E-learning-platform",
+      "link": "https://studyspher.vercel.app/",
       "isFeatured": true,
-      "images": ["/image7", "/image8", "/image9"]
+      "images": ["/images/elearning/image7.png", "/images/elearning/image8.png", "/images/elearning/image9.png"]
     },
     {
-      "title": "E-commerce-WebRT",
+      "title": "E-Commerce WebRT",
       "description": "Build a robust e-commerce website with real-time features using WebRTC technology.",
-      "link": "https://cn-080.vercel.app/",
       "slug": "https://github.com/smartcraze/E-commerce-WebRT",
+      "link": "https://cn-080.vercel.app/",
       "isFeatured": true,
-      "images": ["/image10", "/image11", "/image12"]
+      "images": ["/images/ecommerce/image10.png", "/images/ecommerce/image11.png", "/images/ecommerce/image12.png"]
     },
     {
-      "title": "Ai-Techhub",
+      "title": "AI TechHub",
       "description": "Explore the latest advancements in artificial intelligence and technology on this platform.",
-      "link": "https://ai-techhub.vercel.app/",
       "slug": "https://github.com/smartcraze/Ai-Techhub",
+      "link": "https://ai-techhub.vercel.app/",
       "isFeatured": true,
-      "images": ["/image13", "/image14", "/image15"]
+      "images": ["/images/aitechhub/image13.png", "/images/aitechhub/image14.png", "/images/aitechhub/image15.png"]
     },
     {
       "title": "Cryptocurrency Tracker",
-      "description": "Track your favorite crypto and analyze your coin with the help of graphs.",
-      "link": "https://cryptopricetracking.streamlit.app/",
+      "description": "Track your favorite cryptocurrencies and analyze trends with interactive graphs.",
       "slug": "https://github.com/smartcraze/Cryptocurrency-Price-Tracker",
+      "link": "https://cryptopricetracking.streamlit.app/",
       "isFeatured": true,
-      "images": ["/image16", "/image17", "/image18"]
+      "images": ["/images/crypto/image16.png", "/images/crypto/image17.png", "/images/crypto/image18.png"]
     },
     {
-      "title": "Ai-Invoice Extractor",
-      "description": "Upload your invoice and ask any question related to it using this AI-powered tool.",
-      "link": "https://khunchusobillse.streamlit.app/",
+      "title": "AI Invoice Extractor",
+      "description": "Upload your invoice and get answers to any related questions using this AI-powered tool.",
       "slug": "https://github.com/smartcraze/Invoice-Extractor",
+      "link": "https://khunchusobillse.streamlit.app/",
       "isFeatured": true,
-      "images": [ "Projects/Ai-Invoice/image19.png"]
-    },
-    
+      "images": ["/images/invoice/image19.png"]
+    }
   ]
 }
