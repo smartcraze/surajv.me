@@ -1,20 +1,12 @@
 {
   "projects": [
     {
-      "title": "Heap Visualizer",
-      "description": "Understand how max and min heaps work and the heapify process using React.js.",
-      "slug": "https://github.com/smartcraze/heap-visualiser",
-      "link": "https://heap.smartcraze.online/",
+      "title": "Zealify",
+      "description": "Discover and share your passion for music with like-minded individuals on this platform.",
+      "slug": "https://github.com/smartcraze/zealify",
+      "link": "https://zealify.vercel.app/",
       "isFeatured": true,
-      "images": ["/images/heap/image1.png", "/images/heap/image2.png", "/images/heap/image3.png"]
-    },
-    {
-      "title": "Binary Search Visualizer",
-      "description": "Learn how binary search works with an interactive visualization.",
-      "slug": "https://github.com/smartcraze/Binarysearch-visualiser",
-      "link": "https://binarysearch.smartcraze.online/",
-      "isFeatured": true,
-      "images": ["/images/binarysearch/image1.png", "/images/binarysearch/image2.png", "/images/binarysearch/image3.png"]
+      "images": ["/images/zealify/image4.png", "/images/zealify/image5.png", "/images/zealify/image6.png"]
     },
     {
       "title": "QR Password Manager",
@@ -23,14 +15,6 @@
       "link": "",
       "isFeatured": true,
       "images": ["/images/qrmanager/image1.png", "/images/qrmanager/image2.png", "/images/qrmanager/image3.png"]
-    },
-    {
-      "title": "Zealify",
-      "description": "Discover and share your passion for music with like-minded individuals on this platform.",
-      "slug": "https://github.com/smartcraze/zealify",
-      "link": "https://zealify.vercel.app/",
-      "isFeatured": true,
-      "images": ["/images/zealify/image4.png", "/images/zealify/image5.png", "/images/zealify/image6.png"]
     },
     {
       "title": "E-Learning Platform",
