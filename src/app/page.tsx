@@ -5,6 +5,8 @@ import { Project } from "@/components/Projects";
 import Skill from "@/components/Skills";
 import SocialHandle from "@/components/SocialHandle";
 // import projectscard from "@/ProjectCards/projectscard";
+import GitHubCalendar from 'react-github-calendar';
+
 
 export default function Home() {
   return (
