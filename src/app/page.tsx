@@ -10,7 +10,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
       <HeroSection />
-      {/* <ProjectCard/> */}
+     <div className="flex flex-col justify-center m-2 items-center">
+        <h2 className="text-center text-4xl  m-2 p-2">Proof of works </h2>
+        <GitHubCalendar username="smartcraze" />
+      </div>
       <Project/>
       <Skill/>
       <SocialHandle/>
