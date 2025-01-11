@@ -12,6 +12,7 @@
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@tabler/icons-react": "^3.7.0",
+    "react-github-calendar": "^4.5.3",
     "@tsparticles/react": "^3.0.0",
     "axios": "^1.7.2",
     "class-variance-authority": "^0.7.0",
