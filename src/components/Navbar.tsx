@@ -6,6 +6,7 @@ import {  Menu, MenuItem } from "./ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import Image from "next/image";
+
 export const BottomGradient = () => {
   return (
     <>
@@ -14,6 +15,7 @@ export const BottomGradient = () => {
     </>
   );
 };
+
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   
