@@ -1,5 +1,5 @@
 import React from "react";
-import events from "@/data/events.json";
+// import events from "@/data/events.json";
 
 function Page() {
   interface Event {

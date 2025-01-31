@@ -21,21 +21,22 @@ function Navbar({ className }: { className?: string }) {
   
   return (
     <div
-      className={cn("fixed top-10 justify-center flex items-center inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn(
+        "fixed top-10 justify-center flex items-center inset-x-0 max-w-2xl mx-auto z-50",
+        className
+      )}
     >
-    
-      <Menu setActive={setActive} >
+      <Menu setActive={setActive}>
         <Link href={"/"}>
-        <Image
-          src={"/Socialicon/smartcraze.png"}
-          alt="jordans"
-          height="40"
-          width="40"
-          className="object-contain  "
+          <Image
+            src={"/Socialicon/smartcraze.png"}
+            alt="jordans"
+            height="40"
+            width="40"
+            className="object-contain  "
           />
-          </Link>
+        </Link>
         <Link href={"/"} className=" relative group/btn ">
-          
           <BottomGradient />
           <MenuItem
             setActive={setActive}
@@ -43,9 +44,9 @@ function Navbar({ className }: { className?: string }) {
             item="Home"
           ></MenuItem>
         </Link>
-          
-        <Link href={"/contact"} className=" relative group/btn" >
-        <BottomGradient />
+
+        <Link href={"/contact"} className=" relative group/btn">
+          <BottomGradient />
           <MenuItem
             setActive={setActive}
             active={active}
@@ -53,7 +54,10 @@ function Navbar({ className }: { className?: string }) {
           ></MenuItem>
         </Link>
 
-        <Link href={"https://docs.smartcraze.online/docs/getting-started/introduction"} className=" relative group/btn">
+        <Link
+          href={"https://docs.smartcraze.online/docs/dsa/bst"}
+          className=" relative group/btn"
+        >
           <MenuItem
             setActive={setActive}
             active={active}
@@ -63,7 +67,6 @@ function Navbar({ className }: { className?: string }) {
         </Link>
       </Menu>
     </div>
-    
   );
   
 }
