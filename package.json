@@ -35,7 +35,6 @@
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
-    "@types/axios": "^0.14.0",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",
