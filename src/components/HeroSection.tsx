@@ -71,7 +71,7 @@ function HeroSection() {
               </Link>
 
               <Link
-                href={"https://github.com/smartcraze"}
+                href={"https://docs.smartcraze.online"}
                 target="_blank"
                 className="mx-2"
               >
