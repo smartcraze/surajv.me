@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "title": "Paytm Clone",
+      "description": "A responsive full-stack Paytm clone with secure transactions using Prisma, Next.js, and PostgreSQL.",
+      "techStack": [
+        "Next.js",
+        "Prisma",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "TypeScript"
+      ],
+      "imageUrl": "/api/placeholder/800/600",
+      "githubUrl": "https://github.com/smartcraze/paytm",
+      "liveUrl": "https://paytm.surajv.me/"
+    },
+    {
+      "title": "FeedMeBack Backend",
+      "description": "A backend service that collects company feedback and provides an embeddable script for displaying user reviews.",
+      "techStack": ["Node.js", "Express", "MongoDB", "JavaScript"],
+      "imageUrl": "/api/placeholder/800/600",
+      "githubUrl": "https://github.com/smartcraze/feedmeback",
+      "liveUrl": "https://feedmeback.surajv.me/"
+    },
+    {
+      "title": "Second Brain API",
+      "description": "A backend for a Second Brain app that stores links and notes, tracking their purpose and details.",
+      "techStack": ["Node.js", "Express", "MongoDB", "REST API"],
+      "imageUrl": "/api/placeholder/800/600",
+      "githubUrl": "https://github.com/smartcraze/Second-brain-Backends",
+      "liveUrl": "https://brainlyapi.surajv.me/"
+    },
+    {
+      "title": "Zealify",
+      "description": "Discover and share your passion for music with like-minded individuals on this platform.",
+      "techStack": ["React", "Node.js", "MongoDB", "Express", "Socket.io"],
+      "imageUrl": "/api/placeholder/800/600",
+      "githubUrl": "https://github.com/smartcraze/zealify",
+      "liveUrl": "https://zealify.vercel.app/"
+    },
+
+    {
+      "title": "E-Learning Platform",
+      "description": "Create and access educational content easily with this e-learning platform.",
+      "techStack": ["Next.js", "MongoDB", "Tailwind CSS", "TypeScript"],
+      "imageUrl": "/api/placeholder/800/600",
+      "githubUrl": "https://github.com/smartcraze/E-learning-platform",
+      "liveUrl": "https://studyspher.vercel.app/"
+    },
+    {
+      "title": "E-Commerce WebRT",
+      "description": "Build a robust e-commerce website with real-time features using WebRTC technology.",
+      "techStack": ["React", "WebRTC", "Node.js", "MongoDB"],
+      "imageUrl": "/api/placeholder/800/600",
+      "githubUrl": "https://github.com/smartcraze/E-commerce-WebRT",
+      "liveUrl": "https://cn-080.vercel.app/"
+    },
+
+    {
+      "title": "Cryptocurrency Tracker",
+      "description": "Track your favorite cryptocurrencies and analyze trends with interactive graphs.",
+      "techStack": ["Python", "Streamlit", "Pandas", "APIs"],
+      "imageUrl": "/api/placeholder/800/600",
+      "githubUrl": "https://github.com/smartcraze/Cryptocurrency-Price-Tracker",
+      "liveUrl": "https://cryptopricetracking.streamlit.app/"
+    },
+    {
+      "title": "AI Invoice Extractor",
+      "description": "Upload your invoice and get answers to any related questions using this AI-powered tool.",
+      "techStack": ["Python", "Streamlit", "OpenAI", "LangChain"],
+      "imageUrl": "/api/placeholder/800/600",
+      "githubUrl": "https://github.com/smartcraze/Invoice-Extractor",
+      "liveUrl": "https://khunchusobillse.streamlit.app/"
+    }
+  ]
+}

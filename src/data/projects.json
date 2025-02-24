@@ -4,118 +4,62 @@
       "title": "Paytm Clone",
       "description": "A responsive full-stack Paytm clone with secure transactions using Prisma, Next.js, and PostgreSQL.",
       "slug": "https://github.com/smartcraze/paytm",
-      "link": "https://paytm.surajv.me/",
-      "isFeatured": true,
-      "images": [
-        "/images/paytm/image1.png",
-        "/images/paytm/image2.png",
-        "/images/paytm/image3.png"
-      ]
+      "link": "https://paytm.surajv.me/"
     },
 
     {
       "title": "FeedMeBack Backend",
       "description": "A backend service that collects company feedback and provides an embeddable script for displaying user reviews.",
       "slug": "https://github.com/smartcraze/feedmeback",
-      "link": "https://feedmeback.surajv.me/",
-      "isFeatured": false,
-      "images": [
-        "/images/feedmeback/image1.png",
-        "/images/feedmeback/image2.png",
-        "/images/feedmeback/image3.png"
-      ]
+      "link": "https://feedmeback.surajv.me/"
     },
     {
       "title": "Second Brain API",
       "description": "A backend for a Second Brain app that stores links and notes, tracking their purpose and details.",
       "slug": "https://github.com/smartcraze/Second-brain-Backends",
-      "link": "https://brainlyapi.surajv.me/",
-      "isFeatured": false,
-      "images": [
-        "/images/brainlyapi/image1.png",
-        "/images/brainlyapi/image2.png",
-        "/images/brainlyapi/image3.png"
-      ]
+      "link": "https://brainlyapi.surajv.me/"
     },
     {
       "title": "Zealify",
       "description": "Discover and share your passion for music with like-minded individuals on this platform.",
       "slug": "https://github.com/smartcraze/zealify",
-      "link": "https://zealify.vercel.app/",
-      "isFeatured": true,
-      "images": [
-        "/images/zealify/image4.png",
-        "/images/zealify/image5.png",
-        "/images/zealify/image6.png"
-      ]
+      "link": "https://zealify.vercel.app/"
     },
     {
       "title": "QR Password Manager",
       "description": "Manage your passwords securely with QR codes using this password manager application.",
       "slug": "https://github.com/smartcraze/QR-password-Manager",
-      "link": "",
-      "isFeatured": true,
-      "images": [
-        "/images/qrmanager/image1.png",
-        "/images/qrmanager/image2.png",
-        "/images/qrmanager/image3.png"
-      ]
+      "link": ""
     },
     {
       "title": "E-Learning Platform",
       "description": "Create and access educational content easily with this e-learning platform.",
       "slug": "https://github.com/smartcraze/E-learning-platform",
-      "link": "https://studyspher.vercel.app/",
-      "isFeatured": true,
-      "images": [
-        "/images/elearning/image7.png",
-        "/images/elearning/image8.png",
-        "/images/elearning/image9.png"
-      ]
+      "link": "https://studyspher.vercel.app/"
     },
     {
       "title": "E-Commerce WebRT",
       "description": "Build a robust e-commerce website with real-time features using WebRTC technology.",
       "slug": "https://github.com/smartcraze/E-commerce-WebRT",
-      "link": "https://cn-080.vercel.app/",
-      "isFeatured": true,
-      "images": [
-        "/images/ecommerce/image10.png",
-        "/images/ecommerce/image11.png",
-        "/images/ecommerce/image12.png"
-      ]
+      "link": "https://cn-080.vercel.app/"
     },
     {
       "title": "AI TechHub",
       "description": "Explore the latest advancements in artificial intelligence and technology on this platform.",
       "slug": "https://github.com/smartcraze/Ai-Techhub",
-      "link": "https://ai-techhub.vercel.app/",
-      "isFeatured": true,
-      "images": [
-        "/images/aitechhub/image13.png",
-        "/images/aitechhub/image14.png",
-        "/images/aitechhub/image15.png"
-      ]
+      "link": "https://ai-techhub.vercel.app/"
     },
     {
       "title": "Cryptocurrency Tracker",
       "description": "Track your favorite cryptocurrencies and analyze trends with interactive graphs.",
       "slug": "https://github.com/smartcraze/Cryptocurrency-Price-Tracker",
-      "link": "https://cryptopricetracking.streamlit.app/",
-      "isFeatured": true,
-      "images": [
-        "/images/crypto/image16.png",
-        "/images/crypto/image17.png",
-        "/images/crypto/image18.png"
-      ]
+      "link": "https://cryptopricetracking.streamlit.app/"
     },
     {
       "title": "AI Invoice Extractor",
       "description": "Upload your invoice and get answers to any related questions using this AI-powered tool.",
       "slug": "https://github.com/smartcraze/Invoice-Extractor",
-      "link": "https://khunchusobillse.streamlit.app/",
-      "isFeatured": true,
-      "images": ["/images/invoice/image19.png"]
+      "link": "https://khunchusobillse.streamlit.app/"
     }
   ]
 }

@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
-import { Project } from "@/components/Projects";
+import ProjectnewLook from "@/components/ProjectnewLook";
 import Skill from "@/components/Skills";
 import SocialHandle from "@/components/SocialHandle";
 
@@ -16,7 +16,7 @@ export default function Home() {
         <GitHubCalendar username="smartcraze" />
         <Githubstats />
       </div>
-      <Project />
+      <ProjectnewLook />
       <Skill />
       <SocialHandle />
       <Footer />
