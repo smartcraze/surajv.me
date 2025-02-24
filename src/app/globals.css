@@ -27,7 +27,8 @@ html {
 }
 
 .glow-effect {
-  box-shadow: 0 33 20px rgba(255, 255, 0, 0.8); }
+  box-shadow: 0 33 20px rgba(255, 255, 0, 0.8);
+}
 
 @layer base {
   :root {
@@ -92,4 +93,8 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.purple {
+  --color: #280137;
 }
