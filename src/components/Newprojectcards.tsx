@@ -29,12 +29,12 @@ export default function ProjectCard({
   title = "Projects",
 }: ProjectCardProps) {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="max-w-7xl m-10 px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/10 hover:border-teal-500/50"
+            className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/10 hover:border-teal-500/50 "
           >
             <div className="aspect-video w-full relative">
               <Image

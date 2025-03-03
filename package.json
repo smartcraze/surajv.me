@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.22.0",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@tabler/icons-react": "^3.7.0",
     "@tsparticles/react": "^3.0.0",
     "axios": "^1.7.2",
+    "cheerio": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.4.0",
