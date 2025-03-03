@@ -1,7 +1,8 @@
 "use client";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { scrapeWebsite } from "@/utils/scraper";
+import ReactMarkdown from "react-markdown";
 
 function Chat() {
   const [messages, setMessages] = useState<{ role: string; content: string }[]>(
@@ -10,6 +11,7 @@ function Chat() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [siteContext, setSiteContext] = useState<string>("");
+  const chatEndRef = useRef<HTMLDivElement>(null);
 
   // Load website context when component mounts
   useEffect(() => {
@@ -20,14 +22,17 @@ function Chat() {
     loadContext();
   }, []);
 
+  // Auto-scroll to the latest message
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (!input.trim()) return;
+
     setIsLoading(true);
-
-    // Add user message to chat
     setMessages((prev) => [...prev, { role: "user", content: input }]);
-
-    // Add an empty message for the model's response
     setMessages((prev) => [...prev, { role: "model", content: "" }]);
 
     const genAI = new GoogleGenerativeAI(
@@ -35,7 +40,7 @@ function Chat() {
     );
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    const systemContext = `You are a helpful assistant with knowledge about my portfolio website. i am suraj vishwakarma. i am a software developer and a competitive programmer. i am a student of computer science and engineering. studying in lovely professional university. currently in 2nd  year. Here's the context about the website: ${siteContext}`;
+    const systemContext = `You are a helpful assistant with knowledge about my portfolio website. I am Suraj Vishwakarma, a software developer and competitive programmer. I study computer science and engineering at Lovely Professional University, currently in 2nd year. Here's context about my website: ${siteContext}`;
 
     const chat = model.startChat({
       history: [
@@ -50,7 +55,6 @@ function Chat() {
     let response = "";
     const result = await chat.sendMessageStream(input);
 
-    // Update the model's response incrementally
     for await (const chunk of result.stream) {
       response += chunk.text();
       setMessages((prev) => [
@@ -64,40 +68,44 @@ function Chat() {
   }
 
   return (
-    <div className="p-4 max-w-2xl mx-auto">
-      <div className="space-y-4 mb-4">
+    <div className="flex flex-col h-screen w-full p-4 bg-black text-white">
+      <div
+        className="flex-1 overflow-y-auto space-y-4 pr-2"
+        style={{ scrollbarWidth: "none" }}
+      >
         {messages.map((msg, i) => (
           <div
             key={i}
-            className={`p-3 rounded-lg ${
+            className={`max-w-lg p-3 rounded-lg shadow-md ${
               msg.role === "user"
-                ? "bg-blue-100 ml-auto text-black"
-                : "bg-gray-100 text-red-900"
+                ? "bg-blue-500 text-white ml-auto"
+                : "bg-gray-700 text-white mr-auto"
             }`}
           >
-            {msg.content}
-            {isLoading && i === messages.length - 1 && msg.role === "model" && (
-              <span className="animate-pulse">▊</span>
-            )}
+            <ReactMarkdown>{msg.content}</ReactMarkdown>
           </div>
         ))}
+        <div ref={chatEndRef} />
       </div>
 
-      <form onSubmit={handleSubmit} className="flex gap-2">
+      <form
+        onSubmit={handleSubmit}
+        className="flex gap-2   justify-center items-center shadow-md fixed bottom-2 p-4 w-full"
+      >
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="flex-1 text-black mt-24 p-2 border rounded"
+          className="w-80 p-2 border rounded-lg focus:outline-none bg-gray-800 text-white"
           placeholder="Type your message..."
           disabled={isLoading}
         />
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 mt-24 text-white rounded"
+          className="p-2 bg-blue-600 text-white rounded-lg"
           disabled={isLoading}
         >
-          {isLoading ? "Sending..." : "Send"}
+          {isLoading ? "..." : "Send"}
         </button>
       </form>
     </div>
