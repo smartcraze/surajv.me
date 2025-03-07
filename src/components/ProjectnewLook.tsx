@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import projectsData from "@/data/newproject.json";
 
 function ProjectnewLook() {
-  const [ui, setUi] = useState(false);
+  const [ui, setUi] = useState(true);
 
   return (
     <div className="container mx-auto px-4 py-12">
