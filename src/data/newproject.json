@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "title": " Component Delivery Network",
+      "description": "A Cli based Components Delivery Network that allow developers to integrate components into Their Projects",
+      "techStack": ["TypeScript","javascipt"],
+      "imageUrl": "/pro/npm.png",
+      "githubUrl": "https://github.com/smartcraze/ezsnipe",
+      "liveUrl": "https://www.npmjs.com/package/ezsnipe"
+    },
+    {
       "title": "Paytm Clone",
       "description": "A responsive full-stack Paytm clone with secure transactions using Prisma, Next.js, and PostgreSQL.",
       "techStack": [
