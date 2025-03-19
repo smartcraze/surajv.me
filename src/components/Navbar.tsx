@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {  Menu, MenuItem } from "./ui/navbar-menu";
+import { Menu, MenuItem } from "./ui/navbar-menu";
 
 import { cn } from "@/utils/cn";
 import Link from "next/link";
@@ -18,7 +18,7 @@ export const BottomGradient = () => {
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
-  
+
   return (
     <div
       className={cn(
@@ -68,7 +68,6 @@ function Navbar({ className }: { className?: string }) {
       </Menu>
     </div>
   );
-  
 }
 
 export default Navbar;
