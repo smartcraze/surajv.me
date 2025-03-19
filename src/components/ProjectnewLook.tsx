@@ -10,13 +10,13 @@ function ProjectnewLook() {
   const [ui, setUi] = useState(true);
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto  py-12">
       <div className="flex flex-col items-center gap-4 text-center">
         <h1 className="text-3xl font-bold">Projects</h1>
         <Button
           variant="secondary"
           onClick={() => setUi(!ui)}
-          className="bg-purple-500 hover:bg-purple-700"
+          className="bg-purple-500 hover:bg-purple-700  max-w-xs sm:max-w-sm md:max-w-md"
         >
           {ui ? "Old UI" : "New UI"}
         </Button>
