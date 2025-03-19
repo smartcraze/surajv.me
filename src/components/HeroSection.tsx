@@ -216,8 +216,8 @@ function HeroContent({
       </h1>
 
       <p className="text-base sm:text-lg text-gray-300 mb-4 max-w-md mx-auto md:mx-0">
-        I build websites and apps from start to finish. I handle both frontend
-        and backend, plus DevOps. I love creating products and learning new
+        I build websites from start to finish. I handle both frontend and
+        backend, plus DevOps. I love creating products and learning new
         technologies.
       </p>
 
@@ -251,11 +251,11 @@ function HeroContent({
           icon={<IconBrandGithub className="h-4 w-4 mr-2" />}
           text="GitHub"
         />
-        <ActionButton
+        {/* <ActionButton
           href="https://docs.smartcraze.online"
           icon={<BookCheck className="h-4 w-4 mr-2" />}
           text="Docs/Blog"
-        />
+        />  */}
       </div>
     </motion.div>
   );
