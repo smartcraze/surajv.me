@@ -285,7 +285,9 @@ export default function HeroSection() {
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#0a0a0a] via-[#111] to-[#0a0a0a] overflow-hidden py-12">
       {/* Navbar space adjustment */}
-      <div className="h-16 w-full absolute top-0 left-0"></div>
+      <div className="h-16  w-full absolute top-0 left-0">
+        <DevOpsFlex />
+      </div>
 
       {/* Background effects */}
       <div className={GLOWING_BG}></div>
@@ -313,3 +315,11 @@ export default function HeroSection() {
     </section>
   );
 }
+
+export const DevOpsFlex = () => {
+  return (
+    <h1 className="text-xl  text-center font-extrabold  animate-pulse">
+      Proudly Dockerised 🚀
+    </h1>
+  );
+};
