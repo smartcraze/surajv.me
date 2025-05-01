@@ -85,7 +85,8 @@ function Footer() {
           </p>
         </div>
       </div>
-      <p className="text-center text-xl pt-8">© 2024 Smartcraze-suraj Vishwakarma. All rights reserved.</p>
+      <p className="text-center text-xl pt-8">© {new Date().getFullYear()} Smartcraze-suraj Vishwakarma. All rights reserved.</p>
+
     </footer>
   );
 }
