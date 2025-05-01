@@ -55,7 +55,7 @@ function Navbar({ className }: { className?: string }) {
         </Link>
 
         <Link
-          href={"https://docs.smartcraze.online/docs/dsa/bst"}
+          href={"https://docs.surajv.me/docs/dsa/bst"}
           className=" relative group/btn"
         >
           <MenuItem
