@@ -35,6 +35,13 @@
         "slug": "javascript",
         "description": "Learn the fundamentals and advanced concepts of JavaScript for web development.",
         "icon": "SiJavascript"
+      },
+      {
+        "id": 6,
+        "title": "TypeScript",
+        "slug": "typescript",
+        "description": "Write scalable and type-safe JavaScript with TypeScript.",
+        "icon": "SiTypescript"
       }
     ],
     "Frontend": [
@@ -109,7 +116,7 @@
         "id": 15,
         "title": "Hono",
         "slug": "Hono",
-        "description": "serverless framework for building fast and efficient applications.",
+        "description": "Serverless framework for building fast and efficient applications.",
         "icon": "SiHono"
       }
     ]
