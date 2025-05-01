@@ -1,54 +1,89 @@
 {
-  "Skill": [
-    {
-      "id": 1,
-      "title": "Python",
-      "slug": "python-programming",
-      "description": "Master the fundamentals and advanced concepts of Python programming language.",
-      "image": "/skillsImage/python.png" 
-    },
-    
-    {
-      "id": 3,
-      "title": "C++ ",
-      "slug": "c++-programming",
-      "description": "Master the principles and advanced features of C++ programming language.",
-      "image": "/skillsImage/cpp.png" 
-    },
-    {
-      "id": 5,
-      "title": "CSS",
-      "slug": "css",
-      "description": "Master the styling language CSS for designing visually appealing web pages.",
-      "image": "/skillsImage/css.png"
-    },
-    {
-      "id": 6,
-      "title": "JavaScript",
-      "slug": "javascript",
-      "description": "Learn the fundamentals and advanced concepts of JavaScript for web development.",
-      "image": "/skillsImage/javascript.png"
-    },
-    {
-      "id": 7,
-      "title": "React js",
-      "slug": "react-js",
-      "description": "Build dynamic and interactive user interfaces with React.js library.",
-      "image": "/skillsImage/react js.png"
-    },
-    {
-      "id": 10,
-      "title": "MongoDB",
-      "slug": "mongodb",
-      "description": "Master MongoDB, a NoSQL database for building scalable and flexible applications.",
-      "image": "/skillsImage/mongodb.png"
-    },
-    {
-      "id": 11,
-      "title": "Django",
-      "slug": "Django",
-      "description": "Learn the basics and advanced techniques of HTML for web development.",
-      "image": "/skillsImage/django.png"
-    }
-  ]
+  "Skill": {
+    "Languages": [
+      {
+        "id": 1,
+        "title": "Python",
+        "slug": "python-programming",
+        "description": "Master the fundamentals and advanced concepts of Python programming language.",
+        "icon": "FaPython"
+      },
+      {
+        "id": 2,
+        "title": "C++",
+        "slug": "c++-programming",
+        "description": "Master the principles and advanced features of C++ programming language.",
+        "icon": "SiCplusplus"
+      },
+      {
+        "id": 3,
+        "title": "C",
+        "slug": "c-programming",
+        "description": "Understand low-level programming concepts with the C language.",
+        "icon": "SiC"
+      },
+      {
+        "id": 4,
+        "title": "Java",
+        "slug": "java",
+        "description": "Develop robust, object-oriented applications using Java.",
+        "icon": "FaJava"
+      },
+      {
+        "id": 5,
+        "title": "JavaScript",
+        "slug": "javascript",
+        "description": "Learn the fundamentals and advanced concepts of JavaScript for web development.",
+        "icon": "SiJavascript"
+      }
+    ],
+    "Frontend": [
+      {
+        "id": 6,
+        "title": "React js",
+        "slug": "react-js",
+        "description": "Build dynamic and interactive user interfaces with React.js library.",
+        "icon": "FaReact"
+      },
+      {
+        "id": 12,
+        "title": "Next.js",
+        "slug": "next-js",
+        "description": "Build full-stack web applications with server-side rendering using Next.js.",
+        "icon": "SiNextdotjs"
+      }
+    ],
+    "Backend": [
+      {
+        "id": 8,
+        "title": "Node js",
+        "slug": "node-js",
+        "description": "Learn server-side programming with Node.js for building scalable applications.",
+        "icon": "FaNodeJs"
+      },
+      {
+        "id": 9,
+        "title": "MongoDB",
+        "slug": "mongodb",
+        "description": "Master MongoDB, a NoSQL database for building scalable and flexible applications.",
+        "icon": "SiMongodb"
+      }
+    ],
+    "DevOps": [
+      {
+        "id": 10,
+        "title": "Docker",
+        "slug": "docker",
+        "description": "Containerize your applications with Docker for consistency across environments.",
+        "icon": "FaDocker"
+      },
+      {
+        "id": 11,
+        "title": "AWS",
+        "slug": "aws",
+        "description": "Deploy and manage applications using Amazon Web Services cloud platform.",
+        "icon": "FaAws"
+      }
+    ]
+  }
 }
