@@ -1,8 +1,12 @@
 "use client";
 import courseData from "../data/skills.json";
 import { BackgroundGradient } from "./ui/background-gradient";
-import { FaPython, FaJava, FaReact, FaGithub, FaGitAlt, FaNodeJs, FaDocker, FaAws } from "react-icons/fa";
-import { SiCplusplus, SiC, SiHono, SiJavascript, SiMongodb, SiNextdotjs, SiPostgresql } from "react-icons/si";
+import {
+  FaPython, FaJava, FaReact, FaGithub, FaGitAlt, FaNodeJs, FaDocker, FaAws
+} from "react-icons/fa";
+import {
+  SiCplusplus, SiC, SiHono, SiJavascript, SiTypescript, SiMongodb, SiNextdotjs, SiPostgresql
+} from "react-icons/si";
 
 interface skills {
   id: number;
@@ -31,6 +35,7 @@ function Skill() {
     SiCplusplus: <SiCplusplus size={40} className="text-[#00599C]" />,
     SiC: <SiC size={40} className="text-[#A8B9CC]" />,
     SiJavascript: <SiJavascript size={40} className="text-[#F7DF1E]" />,
+    SiTypescript: <SiTypescript size={40} className="text-[#3178C6]" />, // TypeScript icon added here
     SiMongodb: <SiMongodb size={40} className="text-[#47A248]" />,
     SiNextdotjs: <SiNextdotjs size={40} className="text-white" />,
     SiHono: <SiHono size={40} className="text-[#ff6b81]" />,
@@ -50,7 +55,7 @@ function Skill() {
           {featuredCourses.map((skill: skills) => (
             <BackgroundGradient
               key={skill.id}
-              className="rounded-[22px] w-[140px] h-[160px] p-4 bg-slate-950 dark:bg-zinc-900  flex flex-col items-center justify-center text-center "
+              className="rounded-[22px] w-[140px] h-[160px] p-4 bg-slate-950 dark:bg-zinc-900 flex flex-col items-center justify-center text-center"
             >
               <div className="flex items-center justify-center h-[60px] hover:scale-125 transition-transform">
                 {iconMap[skill.icon]}
@@ -59,7 +64,6 @@ function Skill() {
                 {skill.title}
               </h2>
             </BackgroundGradient>
-
           ))}
         </div>
       </div>
