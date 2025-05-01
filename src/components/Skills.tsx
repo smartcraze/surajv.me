@@ -50,9 +50,9 @@ function Skill() {
           {featuredCourses.map((skill: skills) => (
             <BackgroundGradient
               key={skill.id}
-              className="rounded-[22px] w-[140px] h-[160px] p-4 bg-slate-950 dark:bg-zinc-900  flex flex-col items-center justify-center text-center hover"
+              className="rounded-[22px] w-[140px] h-[160px] p-4 bg-slate-950 dark:bg-zinc-900  flex flex-col items-center justify-center text-center "
             >
-              <div className="flex items-center justify-center h-[60px] hover:scale-110 transition-transform">
+              <div className="flex items-center justify-center h-[60px] hover:scale-125 transition-transform">
                 {iconMap[skill.icon]}
               </div>
               <h2 className="text-sm text-indigo-200 font-semibold tracking-wide uppercase">
