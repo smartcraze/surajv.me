@@ -150,12 +150,12 @@ function ProfileImage({ isVisible }: { isVisible: boolean }) {
         {/* Profile image */}
         <div className="relative bg-black rounded-full overflow-hidden border-2 border-purple-500/50 h-full w-full">
           <Image
-            src="/profile2.png"
+            src="/profile21.png"
             alt="Profile Picture"
             fill
             sizes="(max-width: 640px) 160px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 288px"
             style={{ objectFit: "cover", objectPosition: "center" }}
-            className="rounded-full"
+            className="rounded-full bg-white/10"
             priority
           />
         </div>

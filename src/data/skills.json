@@ -46,7 +46,7 @@
         "icon": "FaReact"
       },
       {
-        "id": 12,
+        "id": 7,
         "title": "Next.js",
         "slug": "next-js",
         "description": "Build full-stack web applications with server-side rendering using Next.js.",
@@ -67,22 +67,50 @@
         "slug": "mongodb",
         "description": "Master MongoDB, a NoSQL database for building scalable and flexible applications.",
         "icon": "SiMongodb"
+      },
+      {
+        "id": 10,
+        "title": "postgreSQL",
+        "slug": "postgresql",
+        "description": "Learn the fundamentals of PostgreSQL, a powerful open-source relational database.",
+        "icon": "SiPostgresql"
       }
     ],
     "DevOps": [
       {
-        "id": 10,
+        "id": 11,
         "title": "Docker",
         "slug": "docker",
         "description": "Containerize your applications with Docker for consistency across environments.",
         "icon": "FaDocker"
       },
       {
-        "id": 11,
+        "id": 12,
         "title": "AWS",
         "slug": "aws",
         "description": "Deploy and manage applications using Amazon Web Services cloud platform.",
         "icon": "FaAws"
+      },
+      {
+        "id": 13,
+        "title": "Git",
+        "slug": "git",
+        "description": "Version control your code with Git for better collaboration and management.",
+        "icon": "FaGitAlt"
+      },
+      {
+        "id": 14,
+        "title": "GitHub",
+        "slug": "github",
+        "description": "Host and manage your code repositories with GitHub.",
+        "icon": "FaGithub"
+      },
+      {
+        "id": 15,
+        "title": "Hono",
+        "slug": "Hono",
+        "description": "serverless framework for building fast and efficient applications.",
+        "icon": "SiHono"
       }
     ]
   }

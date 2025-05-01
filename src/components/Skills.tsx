@@ -1,8 +1,8 @@
 "use client";
 import courseData from "../data/skills.json";
 import { BackgroundGradient } from "./ui/background-gradient";
-import { FaPython, FaJava, FaReact, FaCss3Alt, FaNodeJs, FaDocker, FaAws } from "react-icons/fa";
-import { SiCplusplus, SiC, SiJavascript, SiMongodb, SiNextdotjs } from "react-icons/si";
+import { FaPython, FaJava, FaReact,FaGithub, FaGitAlt, FaNodeJs, FaDocker, FaAws } from "react-icons/fa";
+import { SiCplusplus, SiC, SiHono,SiJavascript, SiMongodb, SiNextdotjs, SiPostgresql } from "react-icons/si";
 
 interface skills {
   id: number;
@@ -20,18 +20,24 @@ function Skill() {
   );
 
   const iconMap: { [key: string]: JSX.Element } = {
-    FaPython: <FaPython size={50} className="text-yellow-500" />,
-    FaJava: <FaJava size={50} className="text-orange-600" />,
-    FaReact: <FaReact size={50} className="text-blue-500" />,
-    FaNodeJs: <FaNodeJs size={50} className="text-green-600" />,
-    FaDocker: <FaDocker size={50} className="text-blue-700" />,
-    FaAws: <FaAws size={50} className="text-orange-400" />,
-    SiCplusplus: <SiCplusplus size={50} className="text-blue-400" />,
-    SiC: <SiC size={50} className="text-white" />,
-    SiJavascript: <SiJavascript size={50} className="text-yellow-400" />,
-    SiMongodb: <SiMongodb size={50} className="text-green-500" />,
-    SiNextdotjs: <SiNextdotjs size={50} className="text-white" />
-  };
+  FaPython: <FaPython size={50} className="text-[#3776AB]" />,
+  FaJava: <FaJava size={50} className="text-[#007396]" />,
+  FaGithub: <FaGithub size={50} className="text-white" />,
+  FaGitAlt: <FaGitAlt size={50} className="text-[#F05032]" />,
+  FaReact: <FaReact size={50} className="text-[#61DAFB]" />,
+  FaNodeJs: <FaNodeJs size={50} className="text-[#339933]" />,
+  FaDocker: <FaDocker size={50} className="text-[#2496ED]" />,
+  FaAws: <FaAws size={50} className="text-[#FF9900]" />,
+  SiCplusplus: <SiCplusplus size={50} className="text-[#00599C]" />,
+  SiC: <SiC size={50} className="text-[#A8B9CC]" />,
+  SiJavascript: <SiJavascript size={50} className="text-[#F7DF1E]" />,
+  SiMongodb: <SiMongodb size={50} className="text-[#47A248]" />,
+  SiNextdotjs: <SiNextdotjs size={50} className="text-white" />,
+  SiHono: <SiHono size={50} className="text-[#ff6b81]" />,
+  SiPostgresql:<SiPostgresql size={50} className="text-[#336791]" />,
+
+};
+
 
   return (
     <div className="py-12 bg-gray-900">
