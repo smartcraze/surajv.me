@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "Suraj Vishwakarma|smartcraze",
+  title: "Suraj Vishwakarma | smartcraze",
   description: "Portfolio of Suraj Vishwakarma Cse",
   keywords: ["portfolio", "computer science", "engineering", "Suraj Vishwakarma"],
-  // authors: "Suraj Vishwakarma",
+  authors: [{ name: "Suraj Vishwakarma", url: "surajv.me" }],
+  creator: "Suraj Vishwakarma",
+  publisher: "Suraj Vishwakarma",
 };
 
 export default function RootLayout({
@@ -28,6 +31,7 @@ export default function RootLayout({
           <Navbar />
         </div>
         {children}
+        <SpeedInsights />
       </body>
       </head>
     </html>
