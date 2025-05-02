@@ -23,23 +23,25 @@ function Skill() {
     courseData.Skill.DevOps
   );
 
+  const iconSize = 56;
+
   const iconMap: { [key: string]: JSX.Element } = {
-    FaPython: <FaPython size={40} className="text-[#3776AB]" />,
-    FaJava: <FaJava size={40} className="text-[#007396]" />,
-    FaGithub: <FaGithub size={40} className="text-white" />,
-    FaGitAlt: <FaGitAlt size={40} className="text-[#F05032]" />,
-    FaReact: <FaReact size={40} className="text-[#61DAFB]" />,
-    FaNodeJs: <FaNodeJs size={40} className="text-[#339933]" />,
-    FaDocker: <FaDocker size={40} className="text-[#2496ED]" />,
-    FaAws: <FaAws size={40} className="text-[#FF9900]" />,
-    SiCplusplus: <SiCplusplus size={40} className="text-[#00599C]" />,
-    SiC: <SiC size={40} className="text-[#A8B9CC]" />,
-    SiJavascript: <SiJavascript size={40} className="text-[#F7DF1E]" />,
-    SiTypescript: <SiTypescript size={40} className="text-[#3178C6]" />, // TypeScript icon added here
-    SiMongodb: <SiMongodb size={40} className="text-[#47A248]" />,
-    SiNextdotjs: <SiNextdotjs size={40} className="text-white" />,
-    SiHono: <SiHono size={40} className="text-[#ff6b81]" />,
-    SiPostgresql: <SiPostgresql size={40} className="text-[#336791]" />,
+    FaPython: <FaPython size={iconSize} className="text-[#3776AB]" />,
+    FaJava: <FaJava size={iconSize} className="text-[#007396]" />,
+    FaGithub: <FaGithub size={iconSize} className="text-white" />,
+    FaGitAlt: <FaGitAlt size={iconSize} className="text-[#F05032]" />,
+    FaReact: <FaReact size={iconSize} className="text-[#61DAFB]" />,
+    FaNodeJs: <FaNodeJs size={iconSize} className="text-[#339933]" />,
+    FaDocker: <FaDocker size={iconSize} className="text-[#2496ED]" />,
+    FaAws: <FaAws size={iconSize} className="text-[#FF9900]" />,
+    SiCplusplus: <SiCplusplus size={iconSize} className="text-[#00599C]" />,
+    SiC: <SiC size={iconSize} className="text-[#A8B9CC]" />,
+    SiJavascript: <SiJavascript size={iconSize} className="text-[#F7DF1E]" />,
+    SiTypescript: <SiTypescript size={iconSize} className="text-[#3178C6]" />,
+    SiMongodb: <SiMongodb size={iconSize} className="text-[#47A248]" />,
+    SiNextdotjs: <SiNextdotjs size={iconSize} className="text-white" />,
+    SiHono: <SiHono size={iconSize} className="text-[#ff6b81]" />,
+    SiPostgresql: <SiPostgresql size={iconSize} className="text-[#336791]" />,
   };
 
   return (
@@ -57,10 +59,10 @@ function Skill() {
               key={skill.id}
               className="rounded-[22px] w-[140px] h-[160px] p-4 bg-slate-950 dark:bg-zinc-900 flex flex-col items-center justify-center text-center"
             >
-              <div className="flex items-center justify-center h-[60px] hover:scale-125 transition-transform">
+              <div className="flex items-center justify-center h-[72px] hover:scale-125 transition-transform duration-300 ease-in-out">
                 {iconMap[skill.icon]}
               </div>
-              <h2 className="text-sm text-indigo-200 font-semibold tracking-wide uppercase">
+              <h2 className="text-sm text-indigo-200 font-semibold tracking-wide uppercase mt-2">
                 {skill.title}
               </h2>
             </BackgroundGradient>
