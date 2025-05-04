@@ -1,11 +1,10 @@
+"use client";
 import * as React from "react";
 import { cn } from "@/utils/cn";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> { }
-
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+// Directly use React.InputHTMLAttributes<HTMLInputElement> without the empty interface
+const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
   ({ className, type, ...props }, ref) => {
     const radius = 100; // change this to increase the radius of the hover effect
     const [visible, setVisible] = React.useState(false);
