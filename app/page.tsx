@@ -4,11 +4,8 @@ import ProjectnewLook from "@/components/ProjectnewLook";
 import Skill from "@/components/Skills";
 import SocialHandle from "@/components/SocialHandle";
 import { GridBackgroundDemo } from "@/components/ui/grid-box";
-
 import Link from "next/link";
-// @ts-ignore
 import GitHubCalendar from "react-github-calendar";
-
 export default function Home() {
   return (
     <GridBackgroundDemo className="min-h-screen">

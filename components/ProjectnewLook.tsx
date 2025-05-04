@@ -18,9 +18,10 @@ function ProjectnewLook() {
         >
           Projects
         </h2>
-        <p className=" text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-          Here are some of the projects I've built with passion and a pinch of chaos 😎
+        <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+          Here are some of the projects I&apos;ve built with passion and a pinch of chaos 😎
         </p>
+
         <div className="mt-6 flex justify-center">
           <Button
             variant="secondary"

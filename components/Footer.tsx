@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link"; // Import Link from Next.js
-import { motion } from "framer-motion";
+import Link from "next/link";
 
 function Footer() {
   return (

@@ -42,7 +42,9 @@ interface Tech {
   icon: JSX.Element;
 }
 
-function TechPill({ tech, index }: { tech: Tech; index: number }) {
+function TechPill(props: { tech: Tech; index: number }) {
+  const { tech, index } = props;
+
   return (
     <motion.div
       className="flex items-center space-x-1 bg-gray-800/50 backdrop-blur-sm px-3 py-1 rounded-full border border-purple-700"
