@@ -1,25 +1,43 @@
 'use client';
 
 import React, { useState, FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/utils/cn';
 import { BackgroundBeams } from '@/components/ui/background-beams';
+import toast from 'react-hot-toast';
 
 function SmartcrazeContactUs() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
-  const [status, setStatus] = useState('');
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    try {
 
-      setStatus('Email sent successfully!');
+    const EMAIL_SERVICE_ID = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!;
+    const EMAIL_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!;
+    const EMAIL_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!;
+
+    try {
+      emailjs.init(EMAIL_PUBLIC_KEY);
+
+      const templateParams = {
+        from_name: name,
+        from_email: email,
+        message,
+      };
+
+      await emailjs.send(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, templateParams);
+
+      toast.success('Email sent successfully!');
+      setName('');
+      setEmail('');
+      setMessage('');
     } catch (error) {
-      setStatus('Error sending email.');
-      console.error(error);
+      toast.error('Error sending email.');
+      console.error('EmailJS Error:', error);
     }
   };
 
@@ -32,7 +50,7 @@ function SmartcrazeContactUs() {
           <p className="text-yellow-500">Drop your mail here!</p>
         </h1>
 
-        <form onSubmit={handleSubmit} className="">
+        <form onSubmit={handleSubmit}>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="name">Name</Label>
             <Input
@@ -41,6 +59,7 @@ function SmartcrazeContactUs() {
               onChange={(e) => setName(e.target.value)}
               placeholder="Your Name"
               type="text"
+              required
             />
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
@@ -51,6 +70,7 @@ function SmartcrazeContactUs() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your Email"
               type="email"
+              required
             />
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
@@ -62,7 +82,7 @@ function SmartcrazeContactUs() {
               className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full p-4 bg-neutral-950 placeholder:text-neutral-700"
               rows={3}
               required
-            ></textarea>
+            />
             <BottomGradient />
           </LabelInputContainer>
 
@@ -74,13 +94,6 @@ function SmartcrazeContactUs() {
             <BottomGradient />
           </button>
         </form>
-        <p className="text-center text-neutral-600 text-sm mt-2 dark:text-neutral-300">
-          {status && (
-            <span className="inline-block bg-green-500 text-white px-2 py-1 rounded-md">
-              {status}
-            </span>
-          )}
-        </p>
       </div>
     </div>
   );
@@ -100,9 +113,9 @@ const LabelInputContainer = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <div className={cn('flex flex-col space-y-2 w-full', className)}>
-    {children}
-  </div>
+  <div className={cn('flex flex-col space-y-2 w-full', className)}>{children}</div>
 );
 
 export default SmartcrazeContactUs;
+
+

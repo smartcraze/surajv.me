@@ -26,15 +26,10 @@ const TechBadge = ({ tech }: { tech: string }) => (
 
 export default function ProjectCard({
   projects,
-  title = "Projects",
+
 }: ProjectCardProps) {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-      {title && (
-        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8 text-center">
-          {title}
-        </h2>
-      )}
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-12">
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
         {projects.map((project, index) => (
@@ -96,16 +91,7 @@ export default function ProjectCard({
         ))}
       </div>
 
-      {/* Add global styles for hiding scrollbar on tech stack */}
-      <style jsx global>{`
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
+
     </div>
   );
 }

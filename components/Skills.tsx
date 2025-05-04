@@ -46,15 +46,21 @@ function Skill() {
   };
 
   return (
-    <div className="py-12 bg-gray-900">
-      <div className="text-center">
-        <p id="skill" className="mt-2 text-3xl text-teal-600 leading-8 font-extrabold tracking-tight sm:text-4xl">
-          Skills I know
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="text-center mb-16">
+        <h2
+          id="skill"
+          className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 inline-block"
+        >
+          Technical Arsenal
+        </h2>
+        <p className="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">
+          Crafting exceptional digital experiences with expertise across the full tech stack
         </p>
       </div>
 
-      <div className="mt-10 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 justify-items-center">
+      <div className="mt-10 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-50 rounded-lg shadow-lg p-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 justify-items-center">
           {featuredCourses.map((skill: skills) => (
             <BackgroundGradient
               key={skill.id}

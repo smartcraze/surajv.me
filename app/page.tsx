@@ -16,7 +16,12 @@ export default function Home() {
         <HeroSection />
 
         <div className="flex flex-col justify-center m-2 items-center">
-          <h2 className="text-center text-4xl m-2 p-2">Proof of works</h2>
+          <h2
+            id="skill"
+            className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 inline-block m"
+          >
+            proof of work
+          </h2>
           <GitHubCalendar username="smartcraze" />
           <Githubstats />
         </div>

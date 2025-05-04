@@ -10,25 +10,36 @@ function ProjectnewLook() {
   const [ui, setUi] = useState(true);
 
   return (
-    <div className="container mx-auto  py-12">
-      <div className="flex flex-col items-center gap-4 text-center">
-        <h1 className="text-3xl font-bold">Projects</h1>
-        <Button
-          variant="secondary"
-          onClick={() => setUi(!ui)}
-          className="bg-purple-500 hover:bg-purple-700  max-w-xs sm:max-w-sm md:max-w-md"
+    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="text-center mb-12">
+        <h2
+          id="skill"
+          className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-500 inline-block m"
         >
-          {ui ? "Old UI" : "New UI"}
-        </Button>
+          Projects
+        </h2>
+        <p className=" text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+          Here are some of the projects I've built with passion and a pinch of chaos 😎
+        </p>
+        <div className="mt-6 flex justify-center">
+          <Button
+            variant="secondary"
+            onClick={() => setUi(!ui)}
+            className="bg-purple-500 hover:bg-purple-700 transition-all duration-200 ease-in-out px-6 py-2 text-white font-semibold rounded-xl shadow-md"
+          >
+            {ui ? "Switch to Old UI" : "Switch to New UI"}
+          </Button>
+        </div>
       </div>
-      <div className="mt-8">
+
+      <div className="animate-fade-in-up">
         {ui ? (
-          <ProjectCard projects={projectsData.projects} title="My Projects" />
+          <ProjectCard projects={projectsData.projects} />
         ) : (
           <Project />
         )}
       </div>
-    </div>
+    </section>
   );
 }
 
