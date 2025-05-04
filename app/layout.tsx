@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+// imports 
 import Navbar from "@/components/Navbar"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Suraj Vishwakarma | smartcraze",
   description: "Portfolio of Suraj Vishwakarma Cse",
@@ -14,22 +15,34 @@ export const metadata: Metadata = {
   publisher: "Suraj Vishwakarma",
 };
 
+
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html  lang="en" className="dark smooth">
-      <head>
-      <body className={inter.className}>
-        <div className="relative w-full flex items-center justify-center ">
+    <html lang="en" className="dark smooth">
+      <head />
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <div className="relative w-full flex items-center justify-center">
           <Navbar />
         </div>
         {children}
         <SpeedInsights />
       </body>
-      </head>
     </html>
   );
 }

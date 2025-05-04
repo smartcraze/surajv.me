@@ -1,4 +1,5 @@
 "use client";
+import { JSX } from "react";
 import courseData from "../data/skills.json";
 import { BackgroundGradient } from "./ui/background-gradient";
 import {

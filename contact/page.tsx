@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, FormEvent } from 'react';
-import axios from 'axios';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/utils/cn';
@@ -16,11 +15,7 @@ function SmartcrazeContactUs() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      const response = await axios.post('/api/sendmail', {
-        email,
-        message,
-        name,
-      });
+
       setStatus('Email sent successfully!');
     } catch (error) {
       setStatus('Error sending email.');

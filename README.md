@@ -1,28 +1,36 @@
-# Portfolio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Welcome to my portfolio repository! This project showcases my skills, achievements, and recent work as a full-stack developer.
+## Getting Started
 
-## About Me
+First, run the development server:
 
-I'm a passionate and driven full-stack developer with expertise in React, Node.js, Next.js, Python, Django, and SEO. I’ve built a variety of web applications, from dynamic front-end interfaces to complex back-end systems. Whether you need a sleek website, a custom web application, or even improvements in performance and SEO, I’m here to help.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Alongside my development experience, I've also participated in hackathons, winning multiple competitions, and I am a selected participant in the prestigious Smart India Hackathon (SIH). My coding journey has also led me to be selected as a Tier 1 coder at Outlier, where I actively engage in honing my skills and sharing knowledge in the field of programming.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## What I Do
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- **Full-Stack Development**: Experienced in building robust web applications using the latest technologies.
-- **Open Source**: Actively looking to contribute to open-source projects, especially in the Google Summer of Code (GSoC).
-- **Custom Solutions**: From e-commerce platforms to unique code-selling platforms, I’m skilled at developing solutions that fit your specific needs.
-  
-For a closer look at my skills and services, feel free to reach out or check the projects here in the repository.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Contact Me
+## Learn More
 
-I'm always open to discussing new projects, creative ideas, or collaboration opportunities. If you would like to get in touch, please reach out via:
+To learn more about Next.js, take a look at the following resources:
 
-- **Email**: [dev.surajv@gmail.com]
-- **LinkedIn**: [https://linkedin.com/in/surajv354]
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Let’s connect and bring your ideas to life!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

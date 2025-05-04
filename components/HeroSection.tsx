@@ -1,6 +1,5 @@
 "use client";
-
-import { useEffect, useRef, useState } from "react";
+import { JSX, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Typed from "typed.js";
@@ -85,29 +84,45 @@ function ProjectBubble({ index }: { index: number }) {
  * FloatingBubble Component - Background decoration element
  */
 function FloatingBubble({ index }: { index: number }) {
-  const randomSize = Math.random() * 50 + 20;
-  const randomX = `${Math.random() * 100}%`;
-  const randomY = `${Math.random() * 100}%`;
-  const randomDuration = Math.random() * 30 + 20;
+  const [style, setStyle] = useState<{
+    size: number;
+    x: string;
+    y: string;
+    scale: number;
+    duration: number;
+  }>();
+
+  useEffect(() => {
+    setStyle({
+      size: Math.random() * 50 + 20,
+      x: `${Math.random() * 100}%`,
+      y: `${Math.random() * 100}%`,
+      scale: Math.random() * 0.5 + 0.5,
+      duration: Math.random() * 30 + 20,
+    });
+  }, []);
+
+  if (!style) return null;
 
   return (
     <motion.div
       className="absolute opacity-20 rounded-full bg-gradient-to-r from-purple-500 to-purple-300"
-      initial={{ x: randomX, y: randomY, scale: Math.random() * 0.5 + 0.5 }}
+      initial={{ x: style.x, y: style.y, scale: style.scale }}
       animate={{
         x: `${Math.random() * 100}%`,
         y: `${Math.random() * 100}%`,
         transition: {
-          duration: randomDuration,
+          duration: style.duration,
           repeat: Infinity,
           repeatType: "reverse",
           ease: "easeInOut",
         },
       }}
-      style={{ width: `${randomSize}px`, height: `${randomSize}px` }}
+      style={{ width: `${style.size}px`, height: `${style.size}px` }}
     />
   );
 }
+
 
 /**
  * ActionButton Component - Navigation button with icon
@@ -180,7 +195,7 @@ function ScrollIndicator({ isVisible }: { isVisible: boolean }) {
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -10 }}
       transition={{ delay: 1.2, duration: 0.5 }}
     >
-      <p className="text-gray-400 text-sm mb-2">Scroll to explore</p>
+      <p className="text-gray-400 text-sm mb-2 text-center">Scroll to explore</p>
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
@@ -265,7 +280,7 @@ function HeroContent({
  * HeroSection Component - Main hero section
  */
 export default function HeroSection() {
-  const typedRef = useRef(null);
+  const typedRef = useRef<HTMLSpanElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

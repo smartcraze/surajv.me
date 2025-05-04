@@ -3,25 +3,30 @@ import HeroSection from "@/components/HeroSection";
 import ProjectnewLook from "@/components/ProjectnewLook";
 import Skill from "@/components/Skills";
 import SocialHandle from "@/components/SocialHandle";
+import { GridBackgroundDemo } from "@/components/ui/grid-box";
 
 import Link from "next/link";
+// @ts-ignore
 import GitHubCalendar from "react-github-calendar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
-      <HeroSection />
-      
-      <div className="flex flex-col justify-center m-2 items-center">
-        <h2 className="text-center text-4xl  m-2 p-2">Proof of works </h2>
-        <GitHubCalendar username="smartcraze" />
-        <Githubstats />
-      </div>
-      <ProjectnewLook />
-      <Skill />
-      <SocialHandle />
-      <Footer />
-    </main>
+    <GridBackgroundDemo className="min-h-screen">
+      <main className="antialiased">
+        <HeroSection />
+
+        <div className="flex flex-col justify-center m-2 items-center">
+          <h2 className="text-center text-4xl m-2 p-2">Proof of works</h2>
+          <GitHubCalendar username="smartcraze" />
+          <Githubstats />
+        </div>
+
+        <ProjectnewLook />
+        <Skill />
+        <SocialHandle />
+        <Footer />
+      </main>
+    </GridBackgroundDemo>
   );
 }
 
