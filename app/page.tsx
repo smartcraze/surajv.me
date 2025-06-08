@@ -1,11 +1,11 @@
 import Introduction from "@/components/Introduction";
-import GithubCalendar from "@/components/github-calendar";
+import ProofOfWork from "@/components/proof-of-work";
 export default function Home() {
   return (
 
     <main className="flex flex-col gap-y-8 justify-center items-start mx-auto">
       <Introduction />
-      <GithubCalendar />
+      <ProofOfWork />
     </main>
   );
 }
