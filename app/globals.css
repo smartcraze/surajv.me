@@ -26,6 +26,12 @@ body {
 }
 
 /* hide scrollbar */
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
+
