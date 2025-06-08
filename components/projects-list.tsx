@@ -9,32 +9,37 @@ export default function ProjectsList() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <ProjectCard
+        slug="rapidserve"
+        title="RapidServe"
+        description="deploy your website in seconds"
+        link=""
+        techStack={["nextjs2",  "tailwindcss", "typescript", "nodejs","docker"]}
+        githubLink="https://github.com/smartcraze/vercel-deploy"
+      />
+      <ProjectCard
         slug="paytm"
         title="Paytm Clone"
         description="A clone of the Paytm website"
         link="https://paytm.surajv.me"
-        techStack={["nextjs2", "react", "tailwindcss", "typescript", "nodejs"]}
+        techStack={["nextjs2", "tailwindcss", "typescript","prisma"]}
+        githubLink="https://github.com/smartcraze/paytm"
+      />
+
+      <ProjectCard
+        slug="ezsnipe"
+        title="EzSnipe"
+        description="component delivery cli tool"
+        link="https://www.npmjs.com/package/ezsnipe"
+        techStack={["typescript", "nodejs"]}
+        githubLink="https://github.com/smartcraze/ezsnipe-npm-package"
       />
       <ProjectCard
-        slug="rapidserve"
-        title="RapidServe"
-        description="deploy your website in seconds"
-        link="https://paytm.surajv.me"
-        techStack={["nextjs2", "react", "tailwindcss", "typescript", "nodejs"]}
-      />
-      <ProjectCard
-        slug="suraj"
-        title="Paytm Clone"
-        description="A clone of the Paytm website"
-        link="https://paytm.surajv.me"
-        techStack={["nextjs2", "react", "tailwindcss", "typescript", "nodejs"]}
-      />
-      <ProjectCard
-        slug="suraj1"
-        title="Paytm Clone"
-        description="A clone of the Paytm website"
-        link="https://paytm.surajv.me"
-        techStack={["nextjs2", "react", "tailwindcss", "typescript", "nodejs"]}
+        slug="cursor"
+        title="Cursor for 2d animation"
+        description="AI powered animation tool for 2d animation"
+        link="https://cursor-for-2d-animation.surajv.me"
+        techStack={["nextjs2",  "tailwindcss", "typescript", "python"]}
+        githubLink="https://github.com/smartcraze/cursor-for-2d-animation"
       />
     </div>
   );
@@ -48,9 +53,10 @@ interface ProjectCardProps {
   link: string;
   techStack: string[];
   slug: string;
+  githubLink: string;
 }
 
-function ProjectCard({ title, description, link, techStack, slug }: ProjectCardProps) {
+function ProjectCard({ title, description, link, techStack, slug, githubLink }: ProjectCardProps) {
   return (
     <div className="border border-zinc-200 rounded-md p-4 max-w-sm shadow-sm flex flex-col gap-2">
       <div className='flex flex-row justify-between'>
@@ -70,7 +76,7 @@ function ProjectCard({ title, description, link, techStack, slug }: ProjectCardP
           <Link href={link} passHref>
             <ExternalLink />
           </Link>
-          <Link href={link} passHref>
+          <Link href={githubLink} passHref>
             <Github />
           </Link>
         </div>
