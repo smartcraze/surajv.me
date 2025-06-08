@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Iframe from './ResponsiveIframe';
 import StackIcon from 'tech-stack-icons';
 import Link from 'next/link';
 import { ExternalLink, Github, MonitorPlay } from 'lucide-react';

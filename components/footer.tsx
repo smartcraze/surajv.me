@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import {
     Github,
-    X,
     Instagram,
     Linkedin,
     Twitter,

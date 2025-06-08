@@ -3,6 +3,7 @@ import ProofOfWork from "@/components/proof-of-work";
 import Footer from "@/components/footer";
 import SkillsSection from "@/components/SkillsSection";
 import WhatAmILearning from "@/components/what-am-i-leanring";
+
 export default function Home() {
   return (
 
