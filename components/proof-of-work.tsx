@@ -7,7 +7,9 @@ export default function ProofOfWork() {
       <h1 className="text-2xl font-bold">Proof of Work</h1>
       <p className="text-zinc-600 dark:text-zinc-500 max-w-md p-2">All projects i have worked so far </p>
       <GithubCalendar />
+      <div className="pt-4">
       <ProjectsList />
+      </div>
     </div>
   )
 }
