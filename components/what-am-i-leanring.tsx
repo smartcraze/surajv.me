@@ -6,7 +6,7 @@ export default function WhatAmILearning() {
     return (
         <div>
             <h2 className="text-2xl font-bold pb-4">What I&apos;m Learning</h2>
-            <div className="flex flex-col gap-4 w-full ">
+            <div className="flex flex-col gap-3 w-full ">
                 {learning.map((x, index) => (
                     <LearningCard key={index} title={x.title} link={x.link} />
                 ))}

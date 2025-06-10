@@ -2,7 +2,7 @@ interface Project {
   slug: string;
   title: string;
   video: string;
-  status: "Completed" | "WIP" | "Learning";
+  status: string;
   github: string;
   live: string;
 }   

@@ -1,8 +1,7 @@
 import { projects } from '@/lib/projects';
 import Link from 'next/link';
 import RoutesHeaderBreadcrumb from '@/components/routes-header-breadcrumb';
-import { Github, ArrowRight } from 'lucide-react'; // Assuming you're using lucide-react icons
-
+import { Github, ArrowRight } from 'lucide-react'; 
 export default function ProjectsList() {
   return (
     <div className="min-h-screen px-4 py-6">
@@ -19,6 +18,7 @@ export default function ProjectsList() {
               <span className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
                 {project.title}
               </span>
+              
               <span className="text-sm text-zinc-500">
                 {project.status}
               </span>
