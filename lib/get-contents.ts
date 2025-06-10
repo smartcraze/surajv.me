@@ -1,14 +1,8 @@
-import { Suspense } from 'react';
-import { MarkdownRenderer } from '@/components/markdown-rendered';
 import matter from 'gray-matter';
 import fs from 'fs';
 import path from 'path';
 
-interface   PageProps {
-  params: Promise<{
-    slug: string;
-  }>;
-}
+
 
 
 
