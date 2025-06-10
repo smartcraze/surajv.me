@@ -69,7 +69,8 @@ function ProjectCard({ title, description, link, techStack, slug, githubLink }: 
       <div className="flex flex-row justify-between">
         <div className="flex flex-row  gap-2 mb-3">
           {techStack.map((tech) => (
-            <StackIcon key={tech} name={tech} className="w-4 h-4" />
+            <StackIcon key={tech} name={tech} className="w-6 h-6 text-zinc-600" />
+            // <span key={tech} className="text-zinc-600 text-sm">{tech}</span>
           ))}
         </div>
         <div className="flex flex-row justify-end gap-2">

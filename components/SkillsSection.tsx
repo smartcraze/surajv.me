@@ -1,24 +1,6 @@
 import React from 'react';
 import StackIcon from 'tech-stack-icons';
-
-const skills = [
-  'react',
-  'nextjs',
-  'tailwindcss',
-  'nodejs',
-  'prisma',
-  'docker',
-  'python',
-  'c++',
-  'typescript',
-  'mongodb',
-  'postgresql',
-  'aws',
-  'git',
-  'github',
-
-];
-
+import { skills } from '@/lib/skills';
 export default function SkillsSection() {
   return (
     <>
