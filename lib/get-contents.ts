@@ -10,12 +10,7 @@ interface   PageProps {
   }>;
 }
 
-// const blogSchema = z.object({
-//   title: z.string(),
-//   date: z.string(),
-//   tags: z.array(z.string()).optional(),
-//   description: z.string().optional(),
-// });
+
 
 export async function getProject(slug: string) {
   try {
@@ -46,26 +41,4 @@ export async function generateStaticParams() {
   }
 }
 
-/*
-export async function generateMetadata(props: PageProps) {
-  const params = await props.params;
-  const project = await getProject(params.slug);
 
-  if (!project) {
-    return notFound();
-  }
-
-  return {
-    openGraph: {
-      title: params.slug,
-      description: post.title,
-      images: [
-        {
-          url: `/og-image/${params.slug}`,
-        },
-      ],
-    },
-  };
-}
-
-*/

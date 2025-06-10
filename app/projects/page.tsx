@@ -2,6 +2,15 @@ import { projects } from '@/lib/projects';
 import Link from 'next/link';
 import RoutesHeaderBreadcrumb from '@/components/routes-header-breadcrumb';
 import { Github, ArrowRight } from 'lucide-react'; 
+import { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: 'Projects',
+  description: 'Projects I have worked on',
+};
+
+
 export default function ProjectsList() {
   return (
     <div className="min-h-screen px-4 py-6">
