@@ -5,6 +5,7 @@ import { projects } from '@/lib/projects';
 import { getProject } from '@/lib/get-contents';
 import { MarkdownRenderer } from '@/components/markdown-rendered';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -42,11 +43,42 @@ async function Projects({ params }: { params: Promise<{ slug: string }> }) {
       <div className="flex flex-col gap-6">
         <h1 className="text-2xl font-bold">{project.title}</h1>
         <Iframe id={project.slug} src={project.video} title={project.title} />
-        <div className="flex flex-col gap-2">
-          <p className="text-zinc-600">Status: {project.status}</p>
-          <p className="text-zinc-600">Github: {project.github}</p>
-          <p className="text-zinc-600">Live: {project.live}</p>
+        <div className="mt-4 rounded-lg border border-zinc-200 bg-zinc-500 p-4 shadow-sm">
+          <div className="flex flex-col gap-2 text-sm">
+            <p className="text-zinc-700">
+              <span className="font-medium text-zinc-900">Status:</span> {project.status}
+            </p>
+
+            {project.github && (
+              <p className="text-zinc-700">
+                <span className="font-medium text-zinc-900">GitHub:</span>{' '}
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-zinc-900"
+                >
+                  {project.github}
+                </Link>
+              </p>
+            )}
+
+            {project.live && (
+              <p className="text-zinc-700">
+                <span className="font-medium text-zinc-900">Live:</span>{' '}
+                <Link
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-zinc-900"
+                >
+                  {project.live}
+                </Link>
+              </p>
+            )}
+          </div>
         </div>
+
       </div>
       <Suspense fallback={<div>Loading...</div>}>
         <MarkdownRenderer content={projectmdx.content} />

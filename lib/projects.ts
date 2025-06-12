@@ -9,19 +9,18 @@ interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "solpay",
-    title: "SolPay",
-    video: "https://www.tella.tv/video/cmbmiebi800100cju3uv7alr1/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
+    slug: "token-launchpad",
+    title: "Token Launchpad",
+    video: "https://www.tella.tv/video/cmbsyno0t000t0bky1lg412i3/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
     status: "Completed",
-   
-    github: "https://github.com/smartcraze/solpay",
-    live: "https://solpay.vercel.app",
+    github: "https://github.com/smartcraze/100xdev-web3/tree/main/token-lounchpad-2",
+    live: "",
   },
   {
     slug: "paytm",
     title: "Paytm Clone",
    
-    video: "https://www.tella.tv/video/cmbmiebi800100cju3uv7alr1/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
+    video: "https://www.tella.tv/video/cmbqd5mpb00000bl52thb4njf/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
     status: "Completed",
    
     github: "https://github.com/smartcraze/paytm-clone",
@@ -59,3 +58,4 @@ export const projects: Project[] = [
     live: "https://rapidserve.surajv.me",
   }
 ];
+

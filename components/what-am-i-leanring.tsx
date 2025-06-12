@@ -1,5 +1,5 @@
 import { learning } from "@/lib/what-im-learning";
-import {  ArrowRight, Github } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 import Link from "next/link";
 
 export default function WhatAmILearning() {
@@ -15,15 +15,15 @@ export default function WhatAmILearning() {
     )
 }
 
-
-function LearningCard({ title, link }: { title: string, link: string}) {
-    return (
-        <div className="w-full border border-zinc-600 rounded-md p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 flex flex-row gap-2 items-center">
-            <Link href={link} className="flex flex-row gap-2 items-center">
-                <Github className="w-4 h-4 text-zinc-600" />
-                <span className="text-zinc-600">{title}</span>
-            </Link>
-            <ArrowRight className="w-4 h-4 text-zinc-600" />
-        </div>
-    )
+function LearningCard({ title, link }: { title: string, link: string }) {
+  return (
+    <div className="w-full border border-zinc-600 rounded-md p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 flex flex-row gap-2 items-center">
+      <Link href={link} className="flex flex-row gap-2 items-center">
+        <Github className="w-4 h-4 text-zinc-600" />
+        <span className="text-zinc-400">{title}</span>
+      </Link>
+      {/* align arrow to extreme right */}
+      <ArrowRight className="w-4 h-4 text-zinc-600 ml-auto" />
+    </div>
+  )
 }

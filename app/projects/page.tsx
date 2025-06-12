@@ -28,7 +28,7 @@ export default function ProjectsList() {
                 {project.title}
               </span>
               
-              <span className="text-sm text-zinc-500">
+              <span className="text-xs px-2 py-1 rounded bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-200">
                 {project.status}
               </span>
             </div>

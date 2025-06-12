@@ -1,64 +1,42 @@
-# 💸 Paytm Payment Integration Project
+# 💸 Paytm-Style Transaction Flow (Mock)
 
-This project is a full-stack implementation of **Paytm Payment Gateway**, designed to handle secure and seamless online transactions for e-commerce or service-based platforms.
-
----
-
-## ✨ Features
-
-- 🔐 **Secure Payment Flow** with checksum-based verification
-- ⚡ **Fast Checkout** experience using Paytm’s JS SDK
-- 🔄 **Transaction Status Handling** and callback verification
-- 📦 **Modular Backend API** for order creation and response validation
-- 🔁 **Test Environment Setup** for staging and demo payments
+A simple **Next.js demo** showcasing how a Paytm-like transaction works — focusing on the backend flow, UI transitions, and callback handling (no real payment gateway integration).
 
 ---
 
-## 🧠 What I Learned
+## ✨ Key Features
 
-- How payment gateways work under the hood (merchant ID, checksum, callbacks)
-- Implementing secure backend logic to avoid tampering
-- Creating dynamic HTML forms for POST-based redirects
-- Debugging Paytm's sandbox/test environment (yes, it’s *wild*)
-- Managing environment variables safely using `.env`
-- Handling real-world async flows with payment confirmations
+* 🔁 **Simulated Payment Flow** (Create Order → Redirect → Callback)
+* 🧾 **Mock Transaction Status** handling like Paytm’s response
+* 📩 **Backend APIs** to create orders and receive simulated callbacks
+* 🌐 **Dynamic Pages** for loading, redirecting, and confirmation
 
 ---
 
 ## 🛠 Tech Stack
 
-### Frontend:
-- `HTML`, `JavaScript`, `React` (optional: for a smoother UI)
-
-### Backend:
-- `Node.js`, `Express.js`
-- `paytmchecksum` npm package
-
-### Dev Tools:
-- `Postman` for testing API routes
-- `ngrok` to test Paytm callback URL locally
-- `dotenv` for secrets
+* **Framework**: Next.js (App Router)
+* **Backend**: API Routes (Node/Express-style in Next.js)
+* **Styling**: Tailwind CSS 
 
 ---
 
-## 🧱 Architecture Overview
+## 🧱 How It Works
 
 ```plaintext
-[Client Side]
-   |
-   |-> Calls `/create-order` API
-   |
-[Node.js Backend]
-   |
-   |-> Generates Order ID + Checksum
-   |-> Responds with payment form data
-   |
-[Paytm Payment Gateway]
-   |
-   |-> Handles transaction
-   |-> Hits `/callback` with txn status
-   |
-[Backend]
-   |
-   |-> Verifies checksum + transaction
-   |-> Updates order status in DB
+User → Create Order → Mock Redirect → Callback API → Success Page
+```
+
+* `POST /api/create-order`: Simulates order creation
+* `GET /redirect`: Mocks Paytm redirect page
+* `POST /api/callback`: Simulates Paytm hitting your server with txn result
+* `GET /success`: Final confirmation screen
+
+---
+
+## 🧠 What I Learned
+
+* Mimicking real-world transaction flows
+* Handling redirect-based payments in a full-stack app
+* Structuring serverless API routes in Next.js
+* Managing state across async events and page transitions
