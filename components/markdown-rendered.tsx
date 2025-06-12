@@ -24,7 +24,7 @@ const CodeBlock = ({ children }: CodeBlockProps) => {
 
   return (
     <Highlight theme={themes.vsDark} code={rawCode} language={language}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+      {({  style, tokens, getLineProps, getTokenProps }) => (
         <div className="my-6 rounded-xl bg-[#1E1E1E] overflow-hidden border border-gray-700 shadow-md font-mono">
           
 
