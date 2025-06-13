@@ -20,7 +20,7 @@ function LearningCard({ title, link }: { title: string, link: string }) {
     <div className="w-full border border-zinc-600 rounded-md p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 flex flex-row gap-2 items-center">
       <Link href={link} className="flex flex-row gap-2 items-center">
         <Github className="w-4 h-4 text-zinc-600" />
-        <span className="text-zinc-400">{title}</span>
+        <span className="text-white font-semibold">{title}</span>
       </Link>
       {/* align arrow to extreme right */}
       <ArrowRight className="w-4 h-4 text-zinc-600 ml-auto" />
