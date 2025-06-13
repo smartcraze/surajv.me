@@ -7,11 +7,13 @@ interface Project {
   live: string;
 }
 
+
+
+
 export const projects: Project[] = [
   {
     slug: "paytm",
     title: "Paytm Clone",
-
     video: "https://www.tella.tv/video/cmbqd5mpb00000bl52thb4njf/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
     status: "web-dev",
 
@@ -19,12 +21,18 @@ export const projects: Project[] = [
     live: "https://paytm.surajv.me",
   },
   {
+    slug: "studysphere",
+    title: "StudySphere",
+    video: "https://www.tella.tv/video/cmbuybgmx00000bjo3low9jzb/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
+    status: "web-dev",
+    github: "https://github.com/smartcraze/E-learning-platform",
+    live: "https://studysphere.surajv.me",
+  },
+  {
     slug: "cursorbot",
     title: "CursorBot",
-
-    video: "https://www.tella.tv/video/cmbmiebi800100cju3uv7alr1/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
+    video: "https://www.tella.tv/video/cmbt6qj4n000i0blbfbd7dmdv/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
     status: "Ai wrapper",
-
     github: "https://github.com/smartcraze/cursorbot",
     live: "https://cursorbot.surajv.me",
   },
@@ -40,10 +48,8 @@ export const projects: Project[] = [
   {
     slug: "rapidserve",
     title: "RapidServe",
-
-    video: "https://www.tella.tv/video/cmbmiebi800100cju3uv7alr1/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0",
+    video: "https://www.tella.tv/video/cmbt6qj4n000i0blbfbd7dmdv/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
     status: "web-dev",
-
     github: "https://github.com/smartcraze/vercel-deploy",
     live: "https://rapidserve.surajv.me",
   },
@@ -56,4 +62,3 @@ export const projects: Project[] = [
     live: "",
   },
 ];
-
