@@ -8,6 +8,14 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Github, ExternalLink } from "lucide-react";
 
+interface Project {
+  slug: string;
+  title: string;
+  video: string;
+  status: string;
+  github: string;
+  live: string;
+}
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
@@ -59,7 +67,7 @@ export default Projects;
 
 
 
-export function ProjectLinks({ project }: { project: any }) {
+function ProjectLinks({ project }: { project: Project }) {
   return (
     <div className="mt-4 flex flex-col gap-2 text-sm text-zinc-700 dark:text-zinc-300">
       <p>

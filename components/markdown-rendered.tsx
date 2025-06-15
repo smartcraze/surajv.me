@@ -1,8 +1,10 @@
 'use client';
 
+import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import { Highlight, themes } from 'prism-react-renderer';
-import Image from "next/image";
+import Image from 'next/image';
+
 interface CodeBlockProps {
   children?: React.ReactNode;
 }
@@ -17,6 +19,7 @@ const CodeBlock = ({ children }: CodeBlockProps) => {
   ) {
     return null;
   }
+
   const rawCode = (codeElement.props as { children: string }).children.trim();
   const className = (codeElement.props as { className?: string }).className || '';
   const languageMatch = className.match(/language-(\w+)/);
@@ -24,16 +27,17 @@ const CodeBlock = ({ children }: CodeBlockProps) => {
 
   return (
     <Highlight theme={themes.vsDark} code={rawCode} language={language}>
-      {({  style, tokens, getLineProps, getTokenProps }) => (
-        <div className="my-6 rounded-xl bg-[#1E1E1E] overflow-hidden border border-gray-700 shadow-md font-mono">
-          
-
-          <pre className="overflow-x-auto p-4 text-sm" style={style}>
+      {({ style, tokens,  getTokenProps }) => (
+        <div className="my-6 overflow-hidden rounded-xl border border-neutral-700 bg-[#1e1e1e] shadow-lg">
+          <pre className="overflow-x-auto px-4 py-4 text-sm" style={style}>
             {tokens.map((line, i) => (
-              <div key={i} {...getLineProps({ line })}>
-                {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token })} />
-                ))}
+              <div key={i} className="table-row">
+                
+                <span className="table-cell">
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token })} />
+                  ))}
+                </span>
               </div>
             ))}
           </pre>
@@ -43,13 +47,31 @@ const CodeBlock = ({ children }: CodeBlockProps) => {
   );
 };
 
+const MarkdownImage = (props: React.JSX.IntrinsicElements['img']) => {
+  const src = props.src || '';
+  const alt = props.alt || 'Image';
+  const isStatic = typeof src === 'string' && src.startsWith('/');
+
+  return (
+    <figure  className="my-6 flex justify-center">
+      <Image
+        src={isStatic ? src : '/fallback.png'}
+        alt={alt}
+        width={800}
+        height={500}
+        className="rounded-lg shadow-md object-contain max-h-[500px] w-auto h-auto"
+      />
+    </figure>
+  );
+};
+
 interface MarkdownRendererProps {
   content: string;
 }
 
 export function MarkdownRenderer({ content }: MarkdownRendererProps) {
   return (
-    <article className="prose prose-slate max-w-none dark:prose-invert hyphens-auto">
+    <article className="prose prose-slate dark:prose-invert max-w-none hyphens-auto">
       <Markdown
         options={{
           overrides: {
@@ -57,13 +79,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
               component: CodeBlock,
             },
             img: {
-              component: (props: any) => (
-                <img
-                  {...props}
-                  alt={props.alt || "Image"}
-                  className="rounded-xl shadow-md my-4 mx-auto max-h-[500px] object-contain"
-                />
-              ),
+              component: MarkdownImage,
             },
           },
         }}
