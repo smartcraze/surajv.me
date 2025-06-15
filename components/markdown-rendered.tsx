@@ -2,7 +2,7 @@
 
 import Markdown from 'markdown-to-jsx';
 import { Highlight, themes } from 'prism-react-renderer';
-
+import Image from "next/image";
 interface CodeBlockProps {
   children?: React.ReactNode;
 }
@@ -55,6 +55,15 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
           overrides: {
             pre: {
               component: CodeBlock,
+            },
+            img: {
+              component: (props: any) => (
+                <img
+                  {...props}
+                  alt={props.alt || "Image"}
+                  className="rounded-xl shadow-md my-4 mx-auto max-h-[500px] object-contain"
+                />
+              ),
             },
           },
         }}

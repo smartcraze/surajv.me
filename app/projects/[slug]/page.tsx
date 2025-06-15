@@ -6,6 +6,7 @@ import { getProject } from '@/lib/get-contents';
 import { MarkdownRenderer } from '@/components/markdown-rendered';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Github, ExternalLink } from "lucide-react";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -43,41 +44,8 @@ async function Projects({ params }: { params: Promise<{ slug: string }> }) {
       <div className="flex flex-col gap-6">
         <h1 className="text-2xl font-bold">{project.title}</h1>
         <Iframe id={project.slug} src={project.video} title={project.title} />
-        <div className="mt-4 rounded-lg border border-zinc-200 bg-zinc-500 p-4 shadow-sm">
-          <div className="flex flex-col gap-2 text-sm">
-            <p className="text-zinc-700">
-              <span className="font-medium text-zinc-900">Status:</span> {project.status}
-            </p>
-
-            {project.github && (
-              <p className="text-zinc-700">
-                <span className="font-medium text-zinc-900">GitHub:</span>{' '}
-                <Link
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-zinc-900"
-                >
-                  {project.github}
-                </Link>
-              </p>
-            )}
-
-            {project.live && (
-              <p className="text-zinc-700">
-                <span className="font-medium text-zinc-900">Live:</span>{' '}
-                <Link
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-zinc-900"
-                >
-                  {project.live}
-                </Link>
-              </p>
-            )}
-          </div>
-        </div>
+        {/*  */}
+        <ProjectLinks project={project} />
 
       </div>
       <Suspense fallback={<div>Loading...</div>}>
@@ -88,3 +56,42 @@ async function Projects({ params }: { params: Promise<{ slug: string }> }) {
 }
 
 export default Projects;
+
+
+
+export function ProjectLinks({ project }: { project: any }) {
+  return (
+    <div className="mt-4 flex flex-col gap-2 text-sm text-zinc-700 dark:text-zinc-300">
+      <p>
+        <span className="font-medium text-zinc-900 dark:text-zinc-100">Status:</span>{" "}
+        {project.status}
+      </p>
+
+      <div className="flex gap-4">
+        {project.github && (
+          <Link
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-zinc-200 text-zinc-900 px-4 py-2 text-sm font-medium hover:bg-zinc-300 active:scale-[0.98] transition"
+          >
+            <Github className="w-4 h-4" />
+            GitHub
+          </Link>
+        )}
+
+        {project.live && (
+          <Link
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium hover:bg-blue-500 active:scale-[0.98] transition"
+          >
+            <ExternalLink className="w-4 h-4" />
+            Live Site
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+}

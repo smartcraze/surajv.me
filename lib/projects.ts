@@ -12,6 +12,14 @@ interface Project {
 
 export const projects: Project[] = [
   {
+    slug:"sketchkaro",
+    title: "SketchKaro",
+    video: "https://www.tella.tv/video/cmbuybgmx00000bjo3low9jzb/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
+    status: "web-dev",
+    github: "https://github.com/smartcraze/SketchKaro",
+    live: "https://sketchkaro.surajv.me",
+  },
+  {
     slug: "paytm",
     title: "Paytm Clone",
     video: "https://www.tella.tv/video/cmbqd5mpb00000bl52thb4njf/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
