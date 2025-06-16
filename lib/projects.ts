@@ -9,12 +9,11 @@ interface Project {
 
 
 
-
 export const projects: Project[] = [
   {
     slug:"sketchkaro",
     title: "SketchKaro",
-    video: "https://www.tella.tv/video/cmbuybgmx00000bjo3low9jzb/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
+    video: "https://www.tella.tv/video/cmbz7dul8000b0bji1p1e08a6/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
     status: "web-dev",
     github: "https://github.com/smartcraze/SketchKaro",
     live: "https://sketchkaro.surajv.me",
