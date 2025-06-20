@@ -87,7 +87,7 @@ export default function SurajGPTWidget() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="fixed right-0 top-0 h-full w-full sm:w-96 bg-[#1a1a1a] text-white shadow-xl z-50 flex flex-col"
+            className="fixed right-0 top-0 h-full w-full sm:w-96 bg-[#1a1a1a] text-white shadow-xl z-50 flex flex-col rounded-l-lg"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-white/10">
@@ -142,7 +142,7 @@ export default function SurajGPTWidget() {
                 ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask something..."
+                placeholder="Ask something...    /clear to reset"
                 className="flex-1 px-4 py-2 rounded-xl bg-white/5 border border-white/20 text-white placeholder:text-gray-400 focus:outline-none"
               />
               <button

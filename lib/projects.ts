@@ -10,6 +10,7 @@ interface Project {
 
 
 export const projects: Project[] = [
+  
   {
     slug:"sketchkaro",
     title: "SketchKaro",
@@ -17,6 +18,14 @@ export const projects: Project[] = [
     status: "web-dev",
     github: "https://github.com/smartcraze/SketchKaro",
     live: "https://sketchkaro.surajv.me",
+  },
+  {
+    slug:"surajgpt",
+    title: "SurajGPT",
+    video: "https://www.tella.tv/video/cmbz7dul8000b0bji1p1e08a6/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0",
+    status: "GenAI",
+    github: "https://github.com/smartcraze/SurajGPT",
+    live: "https://ragv2.surajv.me",
   },
   {
     slug: "paytm",
@@ -35,6 +44,7 @@ export const projects: Project[] = [
     github: "https://github.com/smartcraze/E-learning-platform",
     live: "https://studysphere.surajv.me",
   },
+  
   {
     slug: "cursorbot",
     title: "CursorBot",
