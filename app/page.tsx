@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import SkillsSection from "@/components/SkillsSection";
 import WhatAmILearning from "@/components/what-am-i-leanring";
 import ProjectsList from "@/components/projects-list";
+import SurajGPT from "@/components/Surajgpt";
 export default function Home() {
   return (
     <main className="flex flex-col gap-y-8 justify-center mx-auto">
@@ -12,6 +13,7 @@ export default function Home() {
       <ProjectsList />
       <SkillsSection />
       <WhatAmILearning />
+      <SurajGPT />
       <hr className="w-full border-zinc-600 border-1" />
       <Footer />
     </main>
