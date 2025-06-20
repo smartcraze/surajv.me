@@ -51,7 +51,7 @@ export default function SurajGPTWidget() {
   play();
 
   try {
-    const res = await axios.post('https://rag.surajv.me', { question: input });
+    const res = await axios.post('https://ragv2.surajv.me/ask', { question: input });
     const botMsg: Message = {
       sender: 'bot',
       text: res.data?.answer || 'No answer available.',
