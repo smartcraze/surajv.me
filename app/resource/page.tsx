@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ResourcePage } from "@/lib/resources";
-import { ResourcePage as ResourceType } from "@/lib/resources";
 import { ExternalLink } from "lucide-react";
 
 export default function Resource() {

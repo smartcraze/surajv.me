@@ -1,4 +1,4 @@
-import { Github, BookOpen, Globe, Link, Calendar1Icon, ProjectorIcon, StrikethroughIcon, Compass, Beer, MessageCircleCode, SchoolIcon, ShoppingBag, AtomIcon, Book, BookDashedIcon, Search, Flame, BookCopy, FlameIcon, ListChecks, ListTodo, Banknote } from "lucide-react";
+import { Github, BookOpen, Globe, Link, Calendar1Icon, Compass, Beer, MessageCircleCode, SchoolIcon, ShoppingBag, AtomIcon, Book, BookDashedIcon, Search, Flame, BookCopy, FlameIcon,ListTodo, Banknote } from "lucide-react";
 import { ElementType } from "react";
 
 export interface Resource {
