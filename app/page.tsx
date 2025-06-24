@@ -5,11 +5,13 @@ import SkillsSection from "@/components/SkillsSection";
 import WhatAmILearning from "@/components/what-am-i-leanring";
 import ProjectsList from "@/components/projects-list";
 import SurajGPT from "@/components/Surajgpt";
+import Resource from "@/components/resource";
 export default function Home() {
   return (
     <main className="flex flex-col gap-y-8 justify-center mx-auto">
       <Introduction />
       <ProofOfWork />
+      <Resource/>
       <ProjectsList />
       <SkillsSection />
       <WhatAmILearning />

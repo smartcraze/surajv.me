@@ -10,7 +10,7 @@ export const learning: Learning[] = [
     },
     {
         title: "Langchain Generative AI",
-        link: "https://github.com/smartcraze/langchain"
+        link: "https://github.com/smartcraze/Genrative-AI"
     },
     {
         title: "Fullstack projects driven learning Both frontend and backend(node)",
