@@ -6,8 +6,17 @@ import Link from 'next/link';
 import { Github, ExternalLink } from "lucide-react";
 import { Typography } from '@/components/typography';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const { slug } = params;
+/**
+ * This file handles the dynamic route for project pages based on the slug.
+ * It fetches project data and renders the project details.
+ */
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
   const res = await getCompiledDocsForSlug(slug);
 
   if (!res) {
@@ -23,8 +32,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-async function Projects({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function Projects({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
 
   const res = await getCompiledDocsForSlug(slug);
   if (!res) {
@@ -45,14 +58,16 @@ async function Projects({ params }: { params: { slug: string } }) {
 
       <Typography>
         <h1 className="sm:text-3xl text-2xl !-mt-0.5">{title}</h1>
-        <p className="-mt-4 text-muted-foreground sm:text-[16.5px] text-[14.5px]">{description}</p>
-        <div className="prose dark:prose-invert max-w-none mt-6">{res.content}</div>
+        <p className="-mt-4 text-muted-foreground sm:text-[16.5px] text-[14.5px]">
+          {description}
+        </p>
+        <div className="prose dark:prose-invert max-w-none mt-6">
+          {res.content}
+        </div>
       </Typography>
     </div>
   );
 }
-
-export default Projects;
 
 function ProjectLinks({ github, live }: { github?: string; live?: string }) {
   return (
