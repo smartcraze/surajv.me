@@ -1,40 +1,51 @@
+---
+title: "Sketch Karo"
+description: "A real-time collaborative whiteboard built with Next.js, Canvas, WebSockets, and Turborepo."
+date: "2025-06-26"
+tags: ["canvas", "realtime", "websocket", "turborepo", "whiteboard", "bun"]
+video: "https://www.tella.tv/video/cmbz7dul8000b0bji1p1e08a6/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0"
+github: "https://github.com/smartcraze/SketchKaro"
+live: "https://sketchkaro.surajv.me"
+---
 
+<Note type="info">
+  This is a test note or info box to show extra context.
+</Note>
 
 # ✨ Sketch Karo — Real-time Collaborative Whiteboard
 
-> Built with **Next.js**, **Turborepo**, **Canvas**, **WebSocket**, and **ShadCN UI**
+> Built with **Next.js**, **Turborepo**, **Canvas**, **WebSocket**, and **ShadCN UI**  
 > Create, Collaborate & Innovate — all in real-time.
 
 ---
 
 ![Preview](/preview.png)
 
-
 ## 🚀 Features
 
-* 🎨 Interactive whiteboard with pencil drawing
-* 🤝 Real-time collaboration with WebSockets
-* 🔐 JWT-based authentication (Sign In / Sign Up)
-* 🖥️ Full canvas preview with room joining by slug
-* 🌗 Dark/light mode toggle (ShadCN-powered)
-* 📬 Email capture form and responsive footer
-* 🔧 Built using **Turborepo** for modularity and speed
+* 🎨 Interactive whiteboard with pencil drawing  
+* 🤝 Real-time collaboration with WebSockets  
+* 🔐 JWT-based authentication (Sign In / Sign Up)  
+* 🖥️ Full canvas preview with room joining by slug  
+* 🌗 Dark/light mode toggle (ShadCN-powered)  
+* 📬 Email capture form and responsive footer  
+* 🔧 Built using **Turborepo** for modularity and speed  
 
 ---
 
 ## 🧱 Tech Stack
 
-* **Frontend:** React, Next.js, Tailwind CSS, ShadCN UI
-* **Backend:** Node.js, Express, Socket
-* **Auth:** JWT + Cookie-based session management
-* **Canvas:** HTML5 Canvas API with freehand drawing
-* **Monorepo:** Turborepo + Shared Configurations
+* **Frontend:** React, Next.js, Tailwind CSS, ShadCN UI  
+* **Backend:** Node.js, Express, WebSocket (via Bun)  
+* **Auth:** JWT + Cookie-based session management  
+* **Canvas:** HTML5 Canvas API with freehand drawing  
+* **Monorepo:** Turborepo + Shared Configurations  
 
 ---
 
 ## 🖥️ Demo
 
-> 🔗 [Live Demo](https://sketchkaro.surajv.me)
+🔗 [Live Demo](https://sketchkaro.surajv.me)
 
 Login, draw with friends in real-time, and watch as ideas come to life — all inside your browser.
 
@@ -54,7 +65,7 @@ bun install
 
 # 4. Start dev environment
 bun dev
-```
+````
 
 🧠 Pro Tip: Use `bun build` to test production builds across the monorepo.
 
@@ -82,16 +93,16 @@ bun dev
 apps/
   web/                → Frontend (Next.js)
   http-backend/       → Express backend http
-  ws-backend/         → Bun inbuilt Websocket
+  ws-backend/         → Bun inbuilt WebSocket
 
 packages/
-  ui/            → ShadCN components
-  config/        → Tailwind + tsconfig + eslint
-  db/            → backend Primsa
-  common         → common zod schema
-  backend-commom → backend common config
+  ui/                → ShadCN components
+  config/            → Tailwind + tsconfig + eslint
+  db/                → Backend Prisma
+  common             → Common Zod schema
+  backend-common     → Shared backend config
 
-public/          → Static assets
+public/              → Static assets
 ```
 
 ---
@@ -99,7 +110,7 @@ public/          → Static assets
 ## 🙌 Acknowledgements
 
 * [ShadCN UI](https://ui.shadcn.com)
-* [webSocket](https://bun.sh)
+* [WebSocket + Bun](https://bun.sh)
 * [Turborepo](https://turbo.build)
 * [Lucide Icons](https://lucide.dev)
 

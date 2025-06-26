@@ -1,9 +1,74 @@
+---
+title: "CursorBot: AI to Animation"
+description: "An AI agent that transforms prompts into stunning 2D animations using the Manim engine."
+date: "2025-06-26"
+tags: ["ai-agent", "animation", "manim", "genai", "cursor"]
+video: "https://www.tella.tv/video/cmbt6qj4n000i0blbfbd7dmdv/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0"
+github: "https://github.com/smartcraze/cursorbot"
+live: "https://cursorbot.surajv.me"
+---
 
-## ✨ Features
+<Note type="success">
+  <strong>CursorBot</strong> is your AI-powered animation assistant that takes a simple idea and transforms it into a clean, elegant animation using the <code>manim</code> engine — no manual frame-by-frame coding required.
+</Note>
 
-- 🔐 **Secure Payment Flow** with checksum-based verification
-- ⚡ **Fast Checkout** experience using Paytm’s JS SDK
-- 🔄 **Transaction Status Handling** and callback verification
-- 📦 **Modular Backend API** for order creation and response validation
-- 🔁 **Test Environment Setup** for staging and demo payments
+## 🧠 What is CursorBot?
 
+CursorBot is a GenAI-powered tool that converts **natural language prompts** into **Manim-based 2D animations**.
+
+You describe what you want — CursorBot writes the code, compiles it, and serves you back a rendered animation.
+
+## ✨ Key Features
+
+- ✍️ **Prompt-to-Animation**: Converts natural language into Python animation scripts  
+- 🎞️ **Powered by Manim**: Uses the Manim engine for precision, math visuals, and graphing  
+- 🤖 **AI Agent Backend**: Parses intent, builds scenes, and dynamically configures camera/objects  
+- 💬 **Live Preview + Replay**: Preview animations instantly or tweak them with follow-up prompts  
+- 🧩 **Modular Output**: Export MP4s, GIFs, or raw Manim Python code for full control  
+- 🧪 **CLI + Web UI**: Use it via terminal or modern web interface (built with React + Tailwind)
+
+---
+
+## 📸 Example Prompt
+
+> "Animate a sine wave with axes and label the peak points."
+
+**Resulting Animation:**
+
+```py
+class SineWaveScene(Scene):
+    def construct(self):
+        axes = Axes()
+        sine = axes.plot(lambda x: np.sin(x), color=BLUE)
+        self.add(axes, sine)
+````
+
+
+
+---
+
+## 🚀 Built With
+
+* 🧠 OpenAI / LLM agents for prompt interpretation
+* 🎥 ManimCE for animation rendering
+* 🛠️ Python backend with dynamic code execution sandbox
+* 🧱 Web UI built with Next.js, Tailwind, and ShadCN
+* ☁️ Deployed on Vercel
+
+---
+
+<Note type="warning">
+  CursorBot is currently in **alpha**. Animations are single-scene only. Multi-stage support and prompt chaining coming soon!
+</Note>
+
+```
+
+---
+
+### ✅ Output Summary:
+- Beautifully structured MDX using your own components
+- Full `frontmatter` with your extended schema
+- Code blocks, image, and feature list to demo the product
+- Designed for docs, portfolios, or project showcases
+
+Want this templated for all your projects auto-magically? I can generate them from your `projects` array in seconds. Just say the word 😎

@@ -1,76 +1,64 @@
+---
+title: "EzSnipe CLI"
+description: "A powerful component and backend delivery CLI tool for rapid development — install UI blocks and server modules instantly."
+date: "2025-06-26"
+tags: ["npm-package", "cli", "developer-tools", "automation"]
+video: "https://www.tella.tv/video/cmbt6qj4n000i0blbfbd7dmdv/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0"
+github: "https://github.com/smartcraze/ezsnipe-npm-package"
+live: "https://www.npmjs.com/package/ezsnipe"
+---
+
 # **Ezsnipe (Ezsnipete) - Component & Backend Delivery Network**
 
-Ezsnipe is a powerful component and backend file delivery network that allows developers to easily integrate UI components and backend modules into their projects with a simple CLI command. saving time and streamlining development.
+<Note type="info">
+  Ezsnipe is a CLI-powered delivery engine that allows developers to instantly fetch UI components and backend logic modules, streamlining project setup and scaling faster.
+</Note>
 
-## 🚀 **Features**
+## 🚀 Features
 
-✅ Install UI components effortlessly  
-✅(Building..) Add backend modules alongside UI components  
-✅(Building..) Supports multiple frameworks & libraries  
-✅ Simple CLI for easy integration
+- ✅ Install UI components effortlessly  
+- ⚙️ Backend modules support *(coming soon)*  
+- 🧩 Framework-agnostic CLI  
+- 🛠️ Easily extensible via `.ezsniperc` config
 
-## 📦 **Installation**
+---
 
-To install **Ezsnipe**, use npm:
+## 📦 Installation
 
-```sh
+```bash
 npm install -g ezsnipe
-```
-
-Verify installation:
-
-```sh
 npx ezsnipe --version
-```
+````
 
+---
 
-## 🔧 **Usage**
+## 🔧 Usage
 
-### **Adding a Component**
+### ➕ Add a Component
 
-To install a UI component from the Ezsnipe registry:
-
-```sh
-npx ezsnipe add <component-name>
-```
-
-Example:
-
-```sh
+```bash
 npx ezsnipe add bento-grid
 ```
 
-This will download the **Bento Grid** component and place it in your project.
+This drops `BentoGrid.tsx` into your configured `components/ui` folder.
 
-### **Adding a Backend Module**
-(Building..)
-Ezsnipe supports backend files too. To add a backend module:
+### ➕ Add a Backend Module *(Coming Soon)*
 
-```sh
-npx ezsnipe add <module-name>
-```
-
-Example:
-
-```sh
+```bash
 npx ezsnipe add auth-middleware
 ```
 
-This will install an authentication middleware into your backend.
+Installs reusable middleware to `server/modules`.
 
-### **List Available Components**
+### 📄 List Available Resources *(Coming Soon)*
 
-To see all available components and backend modules:
-(Building..)
-```sh
+```bash
 npx ezsnipe list
 ```
 
-## 🛠 **Configuration** (Building..)
+---
 
-You can configure Ezsnipe by creating a `.ezsniperc` file in your project root.
-
-Example `.ezsniperc` file:
+## ⚙️ Configuration
 
 ```json
 {
@@ -79,39 +67,41 @@ Example `.ezsniperc` file:
 }
 ```
 
-This ensures all UI components go inside **`components/ui`** and backend modules into **`server/modules`**.
+File: `.ezsniperc`
 
-## 📜 **Example Project Structure**
+---
 
-After installing a few components, your project may look like this:
+## 📁 Example Project Structure
 
 ```
 /my-project
  ├── /components
- │   ├── /ui
- │   │   ├── BentoGrid.tsx
- │   │   ├── Footer.tsx
- │   │   ├── Button.tsx
+ │   └── /ui
+ │       ├── BentoGrid.tsx
  ├── /server
- │   ├── /modules
- │   │   ├── authMiddleware.ts
- │   │   ├── loggingMiddleware.ts
+ │   └── /modules
+ │       ├── authMiddleware.ts
  ├── .ezsniperc
  ├── package.json
 ```
 
-## 🔄 **Updating Ezsnipe**
+---
 
-To update Ezsnipe to the latest version:
+## 🔄 Updating
 
-```sh
+```bash
 npm update -g ezsnipe
 ```
 
-## 🤝 **Contributing**
+---
 
-Want to add your own components to Ezsnipe? You can submit your component to the registry by opening a pull request in our [GitHub repository](https://github.com/smartcraze/ezsnipe).
+## 🤝 Contribute
 
-## ❤️ **Support**
+Want your component listed in Ezsnipe? Submit a PR to the [GitHub repo](https://github.com/smartcraze/ezsnipe).
 
-For issues, bug reports, or feature requests, please open an issue on [GitHub](https://github.com/smartcraze/ezsnipe/issues).
+---
+
+## 🐞 Support
+
+Found a bug? Have a feature request?
+Head to the [Issues Page](https://github.com/smartcraze/ezsnipe/issues) and let us know!

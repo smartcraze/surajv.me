@@ -1,19 +1,66 @@
+---
+title: "Solana Token Launchpad"
+description: "Create and mint SPL tokens on Solana Devnet with metadata, wallet integration, and a single-click minting experience."
+date: "2025-06-26"
+tags: ["solana", "web3", "spl-token", "react", "wallet", "blockchain"]
+video: "https://www.tella.tv/video/cmbsyno0t000t0bky1lg412i3/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0"
+github: "https://github.com/smartcraze/100xdev-web3/tree/main/token-lounchpad-2"
+live: ""
+---
 
 # 🪙 **Solana Token Launchpad**
 
-**Tech Stack:** React, Tailwind CSS, Solana Web3.js, SPL Token, ShadCN UI
+> A fully functional token creation platform on **Solana Devnet** — create, mint, and receive SPL tokens in your wallet in seconds.
 
-**Description:**
-A fully functional token creation platform built on Solana Devnet. Users can input token details (name, symbol, metadata URI, and supply) and mint their own SPL tokens directly into their wallet using the Solana Wallet Adapter.
+---
 
-**Key Features:**
+## 🛠 Tech Stack
 
-* 🔗 Wallet connect using Solana Wallet Adapter (e.g., Phantom)
-* 🪙 Token creation & minting via `@solana/spl-token`
-* 🧠 Metadata setup via `@solana/spl-token-metadata`
-* 🎨 Responsive UI with a custom color palette: #000000, #F4E7F2, #9B7197
-* 🧾 JSON metadata preview using a custom `CodeBlock` component
-* ⚙️ Fully on-chain logic executed in a single transaction
+- ⚛️ **React**  
+- 🎨 **Tailwind CSS**  
+- 🔗 **Solana Web3.js**  
+- 🪙 **@solana/spl-token** + **@solana/spl-token-metadata**  
+- 💼 **Wallet Adapter** (Phantom, Solflare, etc.)  
+- 💅 **ShadCN UI**
 
-**Outcome:**
-With one click, users can generate a new token, initialize metadata, and mint it to their Devnet wallet — ideal for demo tokens or test deployments.
+---
+
+## ✨ Key Features
+
+- 🔐 **Wallet Integration** using Solana Wallet Adapter  
+- 🪙 **Token Minting** on Devnet with user-supplied token metadata  
+- 🧠 **Metadata Initialization** using SPL Token Metadata  
+- 🎨 **Custom UI Palette** — #000000, #F4E7F2, #9B7197  
+- 💻 **Live Metadata Preview** via `CodeBlock` component  
+- ⚙️ **On-chain Execution**: All logic happens in a single Solana transaction  
+
+---
+
+## 🎯 User Flow
+
+1. Connect your Solana wallet (Phantom, Solflare, etc.)  
+2. Fill in token details:  
+   - Name  
+   - Symbol  
+   - Metadata URI  
+   - Initial Supply  
+3. Hit "Mint Token"  
+4. Your SPL token is created on-chain and added to your Devnet wallet  
+
+---
+
+## 📦 Perfect For:
+
+- Solana devs testing token flows  
+- Hackathon demos  
+- Projects needing custom tokens for Devnet simulation  
+- Builders learning SPL & Web3
+
+---
+
+## 🔁 Live Deployment
+
+> This tool runs fully on **Solana Devnet**, making it a safe space to experiment with token minting without real SOL.
+
+You can extend this to Mainnet by modifying connection config and paying for SOL gas fees.
+

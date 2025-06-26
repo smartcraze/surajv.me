@@ -1,26 +1,16 @@
 import Iframe from '@/components/ResponsiveIframe';
 import RoutesHeaderBreadcrumb from '@/components/routes-header-breadcrumb';
-import React, { Suspense } from 'react';
-import { projects } from '@/lib/projects';
-import { getProject } from '@/lib/get-contents';
-import { MarkdownRenderer } from '@/components/markdown-rendered';
+import { getCompiledDocsForSlug } from '@/lib/get-contents';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Github, ExternalLink } from "lucide-react";
+import { Typography } from '@/components/typography';
 
-interface Project {
-  slug: string;
-  title: string;
-  video: string;
-  status: string;
-  github: string;
-  live: string;
-}
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const { slug } = params;
+  const res = await getCompiledDocsForSlug(slug);
 
-  if (!project) {
+  if (!res) {
     return {
       title: 'Project Not Found',
       description: 'The requested project could not be found.',
@@ -28,57 +18,49 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: project.title,
-    description: project.status,
+    title: res.frontmatter.title,
+    description: res.frontmatter.description,
   };
 }
 
-async function Projects({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const projectmdx = await getProject(slug);
+async function Projects({ params }: { params: { slug: string } }) {
+  const { slug } = params;
 
-  if (!projectmdx) {
-    return <div>Project not found</div>;
+  const res = await getCompiledDocsForSlug(slug);
+  if (!res) {
+    return <div className="p-8 text-red-500">Project not found.</div>;
   }
 
-  const project = projects.find((p) => p.slug === slug);
-  if (!project) {
-    return <div>Project not found</div>;
-  }
+  const { title, description, video, github, live } = res.frontmatter;
 
   return (
     <div className="min-h-screen px-4 py-6">
       <RoutesHeaderBreadcrumb />
-      <div className="flex flex-col gap-6">
-        <h1 className="text-2xl font-bold">{project.title}</h1>
-        <Iframe id={project.slug} src={project.video} title={project.title} />
-        {/*  */}
-        <ProjectLinks project={project} />
 
+      <div className="flex flex-col gap-6 mb-8">
+        <h1 className="text-2xl font-bold">{title}</h1>
+        {video && <Iframe id={slug} src={video} title={title} />}
+        <ProjectLinks github={github} live={live} />
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <MarkdownRenderer content={projectmdx.content} />
-      </Suspense>
+
+      <Typography>
+        <h1 className="sm:text-3xl text-2xl !-mt-0.5">{title}</h1>
+        <p className="-mt-4 text-muted-foreground sm:text-[16.5px] text-[14.5px]">{description}</p>
+        <div className="prose dark:prose-invert max-w-none mt-6">{res.content}</div>
+      </Typography>
     </div>
   );
 }
 
 export default Projects;
 
-
-
-function ProjectLinks({ project }: { project: Project }) {
+function ProjectLinks({ github, live }: { github?: string; live?: string }) {
   return (
     <div className="mt-4 flex flex-col gap-2 text-sm text-zinc-700 dark:text-zinc-300">
-      <p>
-        <span className="font-medium text-zinc-900 dark:text-zinc-100">Status:</span>{" "}
-        {project.status}
-      </p>
-
       <div className="flex gap-4">
-        {project.github && (
+        {github && (
           <Link
-            href={project.github}
+            href={github}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-zinc-200 text-zinc-900 px-4 py-2 text-sm font-medium hover:bg-zinc-300 active:scale-[0.98] transition"
@@ -88,9 +70,9 @@ function ProjectLinks({ project }: { project: Project }) {
           </Link>
         )}
 
-        {project.live && (
+        {live && (
           <Link
-            href={project.live}
+            href={live}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium hover:bg-blue-500 active:scale-[0.98] transition"

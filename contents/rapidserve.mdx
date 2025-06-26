@@ -1,1 +1,86 @@
-## Rapid serve
+---
+title: "RapidServe"
+description: "A Vercel-style platform to deploy apps from GitHub repos with Docker, AWS Lambda, and S3 integration — all from a simple dashboard."
+date: "2025-06-26"
+tags: ["web-dev", "devops", "docker", "aws", "paas", "deployment"]
+video: "https://www.tella.tv/video/cmbt6qj4n000i0blbfbd7dmdv/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0"
+github: "https://github.com/smartcraze/vercel-deploy"
+live: "https://rapidserve.surajv.me"
+---
+
+# 🚀 RapidServe – Vercel-Style App Deployment Platform
+
+<Note type="success">
+  RapidServe is a PaaS (Platform as a Service) that lets developers deploy full-stack apps directly from their GitHub repositories using Docker-based builds and cloud infrastructure — think of it like your own mini-Vercel.
+</Note>
+
+---
+
+## ⚙️ Key Features
+
+- 🐳 **Docker-Based Builds**  
+  Pulls repo code, generates Docker images, and deploys containers.
+
+- 🖥️ **GitHub Integration**  
+  Auto-deploy from your GitHub repos with webhook triggers.
+
+- ☁️ **AWS Lambda Functions**  
+  Supports dynamic serverless functions for APIs or compute logic.
+
+- 🗃️ **S3 Storage Integration**  
+  Store static assets or build outputs in S3 buckets seamlessly.
+
+- 📊 **Dashboard UI**  
+  Monitor deployments, check logs, and manage build status visually.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: Next.js (App Router) + Tailwind CSS  
+- **Backend**: Node.js + Express + Docker CLI  
+- **Cloud**: AWS Lambda, S3, ECR (optional)  
+- **CI/CD**: GitHub Webhooks + Custom Build Pipeline  
+- **Infra**: Docker, Nginx (for reverse proxy)
+
+---
+
+## 🔄 Deployment Workflow
+
+```plaintext
+[ GitHub Push ] 
+      ↓
+[ Webhook Trigger ]
+      ↓
+[ Build Image with Docker ]
+      ↓
+[ Deploy to AWS Lambda / Container ]
+      ↓
+[ Store Artifacts in S3 ]
+      ↓
+[ Preview on Custom Domain / URL ]
+````
+
+---
+
+## 🧠 What I Learned
+
+* Containerizing apps and running builds in an automated CI pipeline
+* Managing cloud infrastructure using SDKs & APIs
+* Creating custom webhooks and handling asynchronous deploy logic
+* Building a clean dashboard to track deploy logs & status
+
+---
+
+## 💡 Future Add-ons
+
+* 🌍 Custom Domain Mapping
+* 🔐 Authenticated Deployments
+* 📦 Team Projects and Collaboration
+* 🔄 Rollbacks and Deploy History
+
+---
+
+RapidServe is a great example of how far you can go building a custom deployment platform using nothing but Docker, AWS, and some clean code.
+Try it here: [rapidserve.surajv.me](https://rapidserve.surajv.me)
+
