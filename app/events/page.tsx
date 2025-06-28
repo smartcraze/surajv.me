@@ -4,10 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { devEvents } from "@/lib/events";
 import { ExternalLink, ArrowRight } from "lucide-react";
+import Breadcrumbs from "@/components/routes-header-breadcrumb";
 
 export default function EventsPage() {
   return (
     <div className="max-w-4xl mx-auto py-12 px-4">
+      <Breadcrumbs/>
       <motion.h1
         className="text-3xl md:text-4xl font-bold mb-6"
         initial={{ opacity: 0, y: -10 }}

@@ -26,7 +26,7 @@ export function LearningCard({ title, link }: { title: string; link: string }) {
 export default function WhatAmILearning() {
   return (
     <div className=" px-4 py-6">
-      <h2 className="text-2xl font-bold pb-2 text-zinc-900 dark:text-zinc-100">What I&aposm Learning</h2>
+      <h2 className="text-2xl font-bold pb-2 text-zinc-900 dark:text-zinc-100">What I&apos;m Learning</h2>
       <div className="flex flex-col gap-3 max-w-3xl mx-auto">
         {learning.map((x, index) => (
           <LearningCard key={index} title={x.title} link={x.link} />
