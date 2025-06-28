@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Suraj Vishwakarma — Full Stack & GenAI Developer",
   description: "I'm Suraj Vishwakarma, a full stack developer exploring GenAI and DevOps. Based on Banglore India ,Discover my projects and journey.",
   keywords: [
-    "Suraj Vishwakarma", "Full Stack Developer", "GenAI Developer", "DevOps", "Next.js Portfolio", "Node.js Developer"
+    "Suraj Vishwakarma", "Full Stack Developer", "GenAI Developer", "DevOps", "Next.js Portfolio", "Node.js Developer","smartcraze"
   ],
   metadataBase: new URL("https://surajv.me"),
   openGraph: {

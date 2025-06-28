@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next'
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Suraj Vishwakarma — Full Stack & GenAI Developer',
-    short_name: 'SurajV',
+    short_name: 'SurajV | smartcraze',
     description: 'Portfolio of Suraj Vishwakarma — Full Stack Developer exploring GenAI and DevOps.',
     start_url: '/',
     display: 'standalone',
