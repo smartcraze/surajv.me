@@ -1,4 +1,4 @@
-import { Dock, DockIcon, Github, ServerCrash } from "lucide-react";
+import {  DockIcon, Github, ServerCrash } from "lucide-react";
 
 export interface Learning {
     title: string;

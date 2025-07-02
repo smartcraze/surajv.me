@@ -1,5 +1,5 @@
 import { learning } from "@/lib/what-im-learning";
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from 'next';
 import {Learning as LearningType} from "@/lib/what-im-learning";
