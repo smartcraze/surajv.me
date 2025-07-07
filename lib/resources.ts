@@ -1,4 +1,4 @@
-import { Github, BookOpen, Globe, Link, Calendar1Icon, Compass, Beer, MessageCircleCode, SchoolIcon, ShoppingBag, AtomIcon, Book, BookDashedIcon, Search, Flame, BookCopy, FlameIcon,ListTodo, Banknote,  Code2Icon } from "lucide-react";
+import { Github, BookOpen, Globe, Link, Calendar1Icon, Compass, Beer, MessageCircleCode, SchoolIcon, ShoppingBag, AtomIcon, Book, BookDashedIcon, Search, Flame, BookCopy, FlameIcon,ListTodo, Banknote,  Code2Icon, RocketIcon } from "lucide-react";
 import { ElementType } from "react";
 
 export interface Resource {
@@ -10,12 +10,12 @@ export interface Resource {
 
 export const resources: Resource[] = [
   {
-    title: "Lab",
+    title: "Lab(building)",
     link: "https://www.whatever.codes",
     icon: Code2Icon,
   },
   {
-    title: "Links",
+    title: "code playground ",
     link: "/resource",
     icon: Link,
   },
@@ -44,6 +44,11 @@ export interface ResourcePage {
 }
 
 export const ResourcePage:ResourcePage[] = [
+  {
+    label:"TakeUforward redesign landing page",
+    url: "https://tufplus.surajv.me",
+    icon: RocketIcon ,
+  },
     {
       label: "Personal Portfolio",
       url: "https://surajv.me",
@@ -73,6 +78,11 @@ export const ResourcePage:ResourcePage[] = [
       label: "Ed tech platform studysphere",
       url: "https://studysphere.surajv.me",
       icon: SchoolIcon,
+    },
+    {
+        label: "Paytm Clone",
+        url: "https://paytm.surajv.me/",
+        icon: Banknote,
     },
     {
       label: "WebRT X smartcraze",
@@ -123,11 +133,6 @@ export const ResourcePage:ResourcePage[] = [
         label: "Smart events",
         url: "https://smartevents-frontend-suraj-vishwakarmas-projects.vercel.app/",
         icon: Calendar1Icon,
-    },
-    {
-        label: "Paytm Clone",
-        url: "https://paytm.surajv.me/",
-        icon: Banknote,
     },
   ];
   
