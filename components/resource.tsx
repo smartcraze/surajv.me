@@ -7,10 +7,17 @@ import { Resource as ResourceType } from "@/lib/resources";
 
 export default function ResourceBar() {
   return (
-    <div className="w-full overflow-x-auto px-2">
-      <div className="flex gap-2 py-2 min-w-max">
+    <div className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-wrap gap-3 py-3 justify-center">
         {resources.map((res, index) => (
-          <ResourceItem key={index} {...res} />
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.05 }}
+          >
+            <ResourceItem {...res} />
+          </motion.div>
         ))}
       </div>
     </div>
@@ -19,20 +26,15 @@ export default function ResourceBar() {
 
 function ResourceItem({ title, link, icon: Icon }: ResourceType) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.04 }}
-      whileTap={{ scale: 0.97 }}
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.25, ease: "easeOut" }}
+    <Link
+      href={link}
+      className="flex items-center gap-2 px-3 py-2 rounded-lg border border-zinc-300/50 dark:border-zinc-700/50
+                 bg-white/60 dark:bg-zinc-900/60 backdrop-blur-md
+                 text-xs sm:text-sm font-medium text-zinc-800 dark:text-zinc-100
+                 shadow-sm hover:shadow-md transition-all duration-200"
     >
-      <Link
-        href={link}
-        className="flex items-center gap-1 px-2.5 py-1.5 border rounded-md text-xs sm:text-sm text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-shadow shadow-sm hover:shadow-md"
-      >
-        <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-        <span className="whitespace-nowrap">{title}</span>
-      </Link>
-    </motion.div>
+      <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-zinc-500 dark:text-zinc-400" />
+      <span className="whitespace-nowrap">{title}</span>
+    </Link>
   );
 }

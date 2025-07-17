@@ -1,4 +1,4 @@
-import { Github, BookOpen, Globe, Link, Calendar1Icon, Compass, Beer, MessageCircleCode, SchoolIcon, ShoppingBag, AtomIcon, Book, BookDashedIcon, Search, Flame, BookCopy, FlameIcon,ListTodo, Banknote,  Code2Icon, RocketIcon } from "lucide-react";
+import { Github, BookOpen, Globe, Link, Calendar1Icon, Compass, Beer, MessageCircleCode, SchoolIcon, ShoppingBag, AtomIcon, Book, BookDashedIcon, Search, Flame, BookCopy, FlameIcon,ListTodo, Banknote,  Code2Icon, RocketIcon, Component } from "lucide-react";
 import { ElementType } from "react";
 
 export interface Resource {
@@ -13,6 +13,11 @@ export const resources: Resource[] = [
     title: "Lab(building)",
     link: "https://www.whatever.codes",
     icon: Code2Icon,
+  },
+  {
+    title: "UI Library",
+    link: "https://ui.whatever.codes",
+    icon: Component,
   },
   {
     title: "code playground ",

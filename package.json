@@ -31,6 +31,7 @@
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.3.1",
+    "tailwind-scrollbar-hide": "^4.0.0",
     "tech-stack-icons": "^3.3.1",
     "use-sound": "^5.0.0"
   },
