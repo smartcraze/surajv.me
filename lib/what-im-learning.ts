@@ -16,7 +16,7 @@ export interface Learning {
 export const learning: Learning[] = [
     {
         title: "100xdev DevOps",
-        link: "",
+        link: "https://github.com/smartcraze/DevOpsPilot",
         icon: Settings2 // more relevant to infrastructure/devops
     },
     {
