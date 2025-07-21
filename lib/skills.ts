@@ -13,6 +13,5 @@ export const skills = [
     'aws',
     'git',
     'github',
-  
   ];
   

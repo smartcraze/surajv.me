@@ -1,4 +1,11 @@
-import {  DockIcon, Github, ServerCrash } from "lucide-react";
+import { 
+    ServerCrash, 
+    Network, 
+    BrainCircuit, 
+    Code2, 
+    Container, 
+    Settings2 
+} from "lucide-react";
 
 export interface Learning {
     title: string;
@@ -8,29 +15,33 @@ export interface Learning {
 
 export const learning: Learning[] = [
     {
-        title: "Blockchain Development(solana)",
+        title: "100xdev DevOps",
+        link: "",
+        icon: Settings2 // more relevant to infrastructure/devops
+    },
+    {
+        title: "Blockchain Development (Solana)",
         link: "https://github.com/smartcraze/100xdev-web3",
-        icon: Github
-
+        icon: Network // suitable for blockchain/distributed networks
     },
     {
         title: "Langchain Generative AI",
         link: "https://github.com/smartcraze/Genrative-AI",
-        icon: Github
+        icon: BrainCircuit // represents AI/ML/LLM
     },
     {
-        title: "Fullstack projects driven learning Both frontend and backend(node)",
+        title: "Fullstack Projects Driven Learning (Frontend + Backend Node.js)",
         link: "https://github.com/smartcraze/100xdev-webcohort",
-        icon: Github
+        icon: Code2 // represents general fullstack/code
     },
     {
-        title: "Docker Containering multiple applications",
+        title: "Docker Containerizing Multiple Applications",
         link: "https://github.com/smartcraze/devops-assignment",
-        icon: DockIcon
+        icon: Container // perfect for Docker
     },
     {
         title: "GitHub Actions Cron Job Exhausted My Render Free Tier",
         link: "https://github.com/whateverui/cron-job/actions",
-        icon: ServerCrash
+        icon: ServerCrash // good fit for this context
     }
-]   
+];
