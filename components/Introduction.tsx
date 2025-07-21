@@ -23,7 +23,7 @@ function Introduction() {
       </div>
       <div>
         <Image
-          src="/suraj.jpg"
+          src="/me.png"
           alt="suraj's photo"
           height={200}
           width={200}
