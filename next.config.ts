@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/twitter", 
+        source: "/twitter",
         destination: "https://x.com/surajv354",
         permanent: true,
       },
@@ -33,7 +33,25 @@ const nextConfig: NextConfig = {
         destination: "https://www.youtube.com/@Smartcraze17",
         permanent: true,
       },
-      
+      // very soon temporary redirect to soon page for the incomplete projects
+      {
+        source: "/",
+        has: [
+          { type: "host", value: "betteruptime.surajv.me" }
+        ],
+        destination: "/soon",
+        permanent: false,
+      },
+      {
+        source: "/",
+        has: [
+          { type: "host", value: "rapidserve.surajv.me" }
+        ],
+        destination: "/soon",
+        permanent: false,
+      }
+
+
     ];
   },
 };
