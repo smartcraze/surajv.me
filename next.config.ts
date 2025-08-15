@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
       {
         source: "/instagram",
         destination: "https://instagram.com/surajv354",
-        permanent: false,
+        permanent: true,
       },
       {
         source: "/x",
@@ -28,6 +28,12 @@ const nextConfig: NextConfig = {
         destination: "https://linkedin.com/in/surajv354",
         permanent: true,
       },
+      {
+        source: "/youtube",
+        destination: "https://www.youtube.com/@Smartcraze17",
+        permanent: true,
+      },
+      
     ];
   },
 };
