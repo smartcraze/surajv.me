@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ViewTransitions } from 'next-view-transitions';
-import { Inter } from 'next/font/google';
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from '@vercel/speed-insights/next';
-const inter = Inter({ subsets: ['latin'] });
-
-
+import { ViewTransitions } from "next-view-transitions";
+import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import LayoutWrapper from "@/components/layout-wrapper";
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Suraj Vishwakarma — Full Stack & GenAI Developer",
-  description: "I'm Suraj Vishwakarma, a full stack developer exploring GenAI and DevOps. Based on Banglore India ,Discover my projects and journey.",
+  description:
+    "I'm Suraj Vishwakarma, a full stack developer exploring GenAI and DevOps. Based on Banglore India ,Discover my projects and journey.",
   keywords: [
-    "Suraj Vishwakarma", "Full Stack Developer", "GenAI Developer", "DevOps", "Next.js Portfolio", "Node.js Developer","smartcraze"
+    "Suraj Vishwakarma",
+    "Full Stack Developer",
+    "GenAI Developer",
+    "DevOps",
+    "Next.js Portfolio",
+    "Node.js Developer",
+    "smartcraze",
   ],
   metadataBase: new URL("https://surajv.me"),
   openGraph: {
@@ -48,16 +54,12 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en">
-        <body
-          className={`${inter.className} dark`}
-      >
-        <main className="bg-white dark:border-zinc-800 border-zinc-200 border-2 dark:bg-zinc-900 min-h-screen max-w-2xl mx-auto my-1 px-4 py-4 rounded">
-            {children}
-            <Analytics />
-            <SpeedInsights />
-          </main>
-      </body>
-    </html>
+        <body className={`${inter.className} dark`}>
+          <LayoutWrapper>{children}</LayoutWrapper>
+          <Analytics />
+          <SpeedInsights />
+        </body>
+      </html>
     </ViewTransitions>
   );
 }
