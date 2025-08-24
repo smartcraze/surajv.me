@@ -8,8 +8,8 @@ export default function LayoutWrapper({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-
-  if (pathname === "/soon") {
+  const FullWidth = ["/meet","/soon"];
+  if (FullWidth.includes(pathname)) {
     return <>{children}</>;
   }
 
