@@ -1,9 +1,9 @@
-'use client';
-import dynamic from 'next/dynamic';
-import { useCallback, useState } from 'react';
-import { Activity } from 'react-github-calendar';
+"use client";
+import dynamic from "next/dynamic";
+import { useCallback, useState } from "react";
+import { Activity } from "react-github-calendar";
 
-const GitHubCalendar = dynamic(() => import('react-github-calendar'), {
+const GitHubCalendar = dynamic(() => import("react-github-calendar"), {
   ssr: false,
   loading: () => <div className="h-[159px] w-full" />,
 });

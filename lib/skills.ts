@@ -1,17 +1,24 @@
 export const skills = [
-    'react',
-    'nextjs',
-    'tailwindcss',
-    'nodejs',
-    'prisma',
-    'docker',
-    'python',
-    'c++',
-    'typescript',
-    'mongodb',
-    'postgresql',
-    'aws',
-    'git',
-    'github',
-  ];
-  
+  "c++",
+  "python",
+  "typescript",
+  "js",
+  "html5",
+  "css3",
+
+  "react",
+  "nextjs",
+  "tailwindcss",
+  "prisma",
+  "bunjs",
+  "nodejs",
+
+  "mongodb",
+  "postgresql",
+
+  "docker",
+  "aws",
+
+  "git",
+  "github",
+];
