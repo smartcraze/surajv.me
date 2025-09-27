@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import React from 'react';
-import { Calendar, MapPin } from 'lucide-react';
-import Link from 'next/link';
+import Image from "next/image";
+import React from "react";
+import { Calendar, MapPin } from "lucide-react";
+import Link from "next/link";
 
 function Introduction() {
   return (
@@ -12,14 +12,13 @@ function Introduction() {
         </h1>
         <div className="flex items-center gap-2">
           <MapPin className="w-4 h-4" />
-          <p className="text-zinc-600 dark:text-zinc-500">
-            Bangalore, India
-          </p>
+          <p className="text-zinc-600 dark:text-zinc-500">Bangalore, India</p>
         </div>
 
         <p className="text-zinc-600 dark:text-zinc-500 max-w-md p-2">
-          Fullstack developer with a love for clean code and real-world problem-solving.
-          Always building, always learning from JS to Rust to cloud infra.
+          Fullstack developer with a love for clean code and real-world
+          problem-solving. Always building, always learning from JS to Rust to
+          cloud infra.
         </p>
         <Link
           href="/meet"
@@ -31,7 +30,7 @@ function Introduction() {
       </div>
       <div>
         <Image
-          src="/me.png"
+          src="https://avatars.githubusercontent.com/u/133375708?v=4"
           alt="suraj's photo"
           height={200}
           width={200}

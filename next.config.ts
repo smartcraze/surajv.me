@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+    ],
+  },
   async redirects() {
     return [
       {
@@ -36,22 +44,16 @@ const nextConfig: NextConfig = {
       // very soon temporary redirect to soon page for the incomplete projects
       {
         source: "/",
-        has: [
-          { type: "host", value: "betteruptime.surajv.me" }
-        ],
+        has: [{ type: "host", value: "betteruptime.surajv.me" }],
         destination: "/soon",
         permanent: false,
       },
       {
         source: "/",
-        has: [
-          { type: "host", value: "rapidserve.surajv.me" }
-        ],
+        has: [{ type: "host", value: "rapidserve.surajv.me" }],
         destination: "/soon",
         permanent: false,
-      }
-
-
+      },
     ];
   },
 };
