@@ -37,16 +37,10 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/youtube",
+        source: "/yt",
         destination: "https://www.youtube.com/@Smartcraze17",
         permanent: true,
       },
-      {
-        source: "/sih",
-        destination: "https://surajvishwakarma.notion.site/sih-gearup25",
-        permanent: true,
-      },
-      // very soon temporary redirect to soon page for the incomplete projects
       {
         source: "/",
         has: [{ type: "host", value: "betteruptime.surajv.me" }],
