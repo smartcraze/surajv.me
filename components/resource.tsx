@@ -20,7 +20,7 @@ export default function ResourceBar() {
             Quick Access
           </h2>
           <p className="text-muted-foreground text-sm">
-            Projects, tools, and platforms I've built
+            Projects, tools, and platforms I&apos;ve built
           </p>
         </motion.div>
 

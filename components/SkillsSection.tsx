@@ -33,8 +33,8 @@ export default function SkillsSection() {
           Skills I Play With
         </h2>
         <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
-          Technologies and tools I've worked with, always learning and exploring
-          new possibilities
+          Technologies and tools I&apos;ve worked with, always learning and
+          exploring new possibilities
         </p>
       </div>
 

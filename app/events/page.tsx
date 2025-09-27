@@ -5,11 +5,9 @@ import { motion } from "framer-motion";
 import { devEvents } from "@/lib/events";
 import {
   ExternalLink,
-  ArrowRight,
   Trophy,
   Users,
   Code,
-  Zap,
   Calendar,
   MapPin,
   Award,
