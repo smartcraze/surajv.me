@@ -8,32 +8,35 @@ github: "https://github.com/smartcraze/paytm-clone"
 live: "https://paytm.surajv.me"
 ---
 
-## 💸 Paytm-Style Transaction Flow (Mock)
+### Paytm Clone – Mock Transaction Flow
 
 <Note type="info">
-  This is a simulated payment experience built with <strong>Next.js</strong>. It recreates Paytm's order–redirect–callback cycle for learning and prototyping.
+This project is a simulated payment experience built with <strong>Next.js</strong>. It recreates Paytm's order → redirect → callback cycle for learning, prototyping, and demonstration purposes.
 </Note>
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- 🔁 **Simulated Payment Flow** — Create Order → Redirect → Callback  
-- 🧾 **Mock Transaction Status** — Pretend payment result from gateway  
-- 📩 **Backend APIs** — Serverless handlers for callbacks  
-- 🌐 **Dynamic Routing** — App Router pages for success & loading screens  
-
----
-
-## 🛠 Tech Stack
-
-- **Framework**: Next.js (App Router)
-- **Backend**: Serverless API routes (`/api`)
-- **Styling**: Tailwind CSS
+| Feature                     | Description                                           |
+|-----------------------------|-------------------------------------------------------|
+| Simulated Payment Flow      | Full cycle: Create Order → Redirect → Callback       |
+| Mock Transaction Status     | Pretend payment results from a gateway               |
+| Backend APIs                | Serverless handlers for callback and order logic     |
+| Dynamic Routing             | App Router pages for success, loading, and error screens |
 
 ---
 
-## 🧱 How It Works
+## Technologies Used
+
+| Layer       | Tech Stack / Tools             |
+|------------|-------------------------------|
+| Framework   | Next.js (App Router)           |
+| Backend     | Serverless API routes (`/api`) |
+| Styling    | Tailwind CSS                   |
+
+
+## How It Works
 
 ```plaintext
 User → Create Order → Mock Redirect → Callback API → Success Page
@@ -41,20 +44,15 @@ User → Create Order → Mock Redirect → Callback API → Success Page
 
 | Endpoint                 | Purpose                        |
 | ------------------------ | ------------------------------ |
-| `POST /api/create-order` | Simulates order creation       |
-| `GET /redirect`          | Mocks payment redirection page |
-| `POST /api/callback`     | Handles fake gateway callback  |
-| `GET /success`           | Final screen with success info |
+| POST `/api/create-order` | Simulates order creation       |
+| GET `/redirect`          | Mocks payment redirection page |
+| POST `/api/callback`     | Handles fake gateway callback  |
+| GET `/success`           | Final screen with success info |
 
----
 
-## 🧠 What I Learned
+## What I Learned
 
-* 🧩 Building realistic payment flow simulations
-* 🌐 Handling full redirect-based payments in Next.js
-* 📦 Using API routes for backend control in the App Router
-* 🔁 Managing async transitions across UI screens
-
----
-
-Want to mimic payment gateways for learning or demos? This mock Paytm flow gives you a sandbox for experimenting with serverless transactions.
+* Building realistic payment flow simulations
+* Handling full redirect-based transactions in Next.js
+* Using serverless API routes for backend logic
+* Managing asynchronous transitions across UI screens

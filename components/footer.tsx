@@ -42,13 +42,7 @@ function Footer() {
         &copy; {new Date().getFullYear()} suraj vishwakarma. All rights
         reserved.
       </div>
-      <Image
-        src={"/linkedin-headers.png"}
-        alt="logo"
-        width={200}
-        height={200}
-        className="w-full h-auto mx-auto rounded-lg"
-      />
+     
     </footer>
   );
 }

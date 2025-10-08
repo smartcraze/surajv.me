@@ -1,5 +1,5 @@
 ---
-title: "Sketch Karo"
+title: "SketchKaro"
 description: "A real-time collaborative whiteboard built with Next.js, Canvas, WebSockets, and Turborepo."
 date: "2025-06-26"
 tags: ["canvas", "realtime", "websocket", "turborepo", "whiteboard", "bun"]
@@ -8,112 +8,33 @@ github: "https://github.com/smartcraze/SketchKaro"
 live: "https://sketchkaro.surajv.me"
 ---
 
+![SketchKaro Screenshot](https://github.com/user-attachments/assets/8060a893-a431-49a7-8a7d-681bf3d08cf2)
 
+**Demo access:**  
+- Email: `demo@surajv.me`  
+- Password: `demo_credential`
 
- ✨ Sketch Karo — Real-time Collaborative Whiteboard
-<Note type="success">
- Built with **Next.js**, **Turborepo**, **Canvas**, **WebSocket**, and **ShadCN UI**  
- Create, Collaborate & Innovate — all in real-time.
-</Note>
----
+<Note type="danger" >Please wait for 30s cause backend is deployed on render So cold start problem occurs   </Note>
 
-![Preview](/preview.png)
+**Project Overview:**  
+SketchKaro is a **real-time collaborative whiteboard** that allows multiple users to draw and interact simultaneously. It’s designed to provide a smooth, responsive drawing experience with advanced tools for creative collaboration.  
 
-## 🚀 Features
+**Key Features:**  
+- Real-time live collaboration using **WebSockets**  
+- Dynamic **Canvas API** drawing with multiple tools  
+- Customizable **stroke width, colors, and shapes**  
+- **Color palette** and drawing utilities  
+- Project saving and loading via **REST API backend**  
+- Fully deployed with **Docker** and **Vercel**  
+- Optimized project structure using **Turborepo**
 
-* 🎨 Interactive whiteboard with pencil drawing  
-* 🤝 Real-time collaboration with WebSockets  
-* 🔐 JWT-based authentication (Sign In / Sign Up)  
-* 🖥️ Full canvas preview with room joining by slug  
-* 🌗 Dark/light mode toggle (ShadCN-powered)  
-* 📬 Email capture form and responsive footer  
-* 🔧 Built using **Turborepo** for modularity and speed  
+**Technologies Used:**  
+- **Frontend:** Next.js, HTML Canvas API, React  
+- **Backends:** HTTPS REST API (Node.js/Express), WebSocket server  
+- **Deployment:** Vercel (frontend), Docker (backends)  
+- **Collaboration:** WebSocket-based real-time sync  
+- **Other Tools:** Bun, Turborepo  
 
----
+**Why this project matters:**  
+This project demonstrates full-stack development skills, real-time collaboration, and production-ready deployment. It’s a showcase of handling complex frontend interactions (Canvas API), backend architecture (REST + WebSocket), and scalable deployment practices.  
 
-## 🧱 Tech Stack
-
-* **Frontend:** React, Next.js, Tailwind CSS, ShadCN UI  
-* **Backend:** Node.js, Express, WebSocket (via Bun)  
-* **Auth:** JWT + Cookie-based session management  
-* **Canvas:** HTML5 Canvas API with freehand drawing  
-* **Monorepo:** Turborepo + Shared Configurations  
-
----
-
-## 🖥️ Demo
-
-🔗 [Live Demo](https://sketchkaro.surajv.me)
-
-Login, draw with friends in real-time, and watch as ideas come to life — all inside your browser.
-
----
-
-## 💪 Local Setup
-
-```bash
-1. Clone the repo
-git clone https://github.com/smartcraze/sketchkaro
-
-2. Move into the directory
-cd sketchkaro
-
-3. Install dependencies (Turborepo handles all workspaces)
-bun install
-
-4. Start dev environment
-bun dev
-````
-
-🧠 Pro Tip: Use `bun build` to test production builds across the monorepo.
-
----
-
-## 💡 Room Flow
-
-* Authenticated users can create or join rooms via slug
-* The backend ensures secure room creation & user tracking
-* Frontend renders real-time drawing with multi-user presence
-
----
-
-## 🔒 Auth Flow
-
-* JWT stored in cookies
-* Login state is reactive across components (Navbar, Hero, etc.)
-* Protected routes and room access verification
-
----
-
-## 📁 Project Structure
-
-```
-apps/
-  web/                → Frontend (Next.js)
-  http-backend/       → Express backend http
-  ws-backend/         → Bun inbuilt WebSocket
-
-packages/
-  ui/                → ShadCN components
-  config/            → Tailwind + tsconfig + eslint
-  db/                → Backend Prisma
-  common             → Common Zod schema
-  backend-common     → Shared backend config
-
-public/              → Static assets
-```
-
----
-
-## 🙌 Acknowledgements
-
-* [ShadCN UI](https://ui.shadcn.com)
-* [WebSocket + Bun](https://bun.sh)
-* [Turborepo](https://turbo.build)
-* [Lucide Icons](https://lucide.dev)
-
----
-
-## 🧑‍💻 Author
-
-Made with ❤️ by [Suraj Vishwakarma](https://twitter.com/surajv354)

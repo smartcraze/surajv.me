@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ResourcePage } from "@/lib/resources";
@@ -25,7 +24,7 @@ export default function Resource() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        Just raw links. No filters. Just proof I’m building stuff.
+        Just raw links. No filters. Just proof I&apos;m building stuff.
       </motion.p>
 
       <div className="space-y-4">

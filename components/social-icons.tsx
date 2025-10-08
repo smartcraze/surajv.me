@@ -1,4 +1,3 @@
-// components/ActionButtons.tsx
 import React from "react";
 import Link from "next/link";
 import {
@@ -62,15 +61,7 @@ export function SocialLinks() {
 
 export function ActionButtons() {
   return (
-    <div className="flex flex-wrap items-center gap-4 mt-4">
-      <Link
-        href="/meet"
-        className="border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all px-4 py-2 shrink-0 [&_svg]:pointer-events-none [&_svg]:shrink-0"
-      >
-        <Calendar size={18} />
-        Book a Meeting
-      </Link>
-
+    <div >
       <SocialLinks />
     </div>
   );

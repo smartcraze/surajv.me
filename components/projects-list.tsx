@@ -30,11 +30,19 @@ export function ProjectCard({ title, slug, status }: ProjectCardProps) {
 }
 
 export default function ProjectsList() {
+  const statusOrder = ["fullstack", "GenAI", "npm-package", "web3"];
+  
+  const sortedProjects = [...projects].sort((a, b) => {
+    const aIndex = statusOrder.indexOf(a.status);
+    const bIndex = statusOrder.indexOf(b.status);
+    return aIndex - bIndex;
+  });
+
   return (
     <div className=" px-4 py-6">
       <h2 className="text-2xl font-bold pb-2 text-zinc-900 dark:text-zinc-100">Projects</h2>
       <div className="flex flex-col gap-3 max-w-3xl mx-auto">
-        {projects.map((project) => (
+        {sortedProjects.map((project) => (
           <ProjectCard key={project.slug} title={project.title} slug={project.slug} status={project.status} />
         ))}
       </div>

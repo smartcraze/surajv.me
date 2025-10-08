@@ -1,6 +1,6 @@
 ---
 title: "AskSuraj – Portfolio RAG Assistant"
-description: "A Retrieval-Augmented Generation assistant that can answer questions about my portfolio, projects, and experience using semantic search + LLMs."
+description: "A Retrieval-Augmented Generation assistant that answers questions about my portfolio, projects, and experience using semantic search and LLMs."
 date: "2025-06-26"
 tags: ["fastapi", "langchain", "rag", "ai", "openai", "portfolio"]
 video: "https://www.tella.tv/video/cmbz7dul8000b0bji1p1e08a6/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0"
@@ -8,58 +8,39 @@ github: "https://github.com/smartcraze/SurajGPT"
 live: "https://ragv2.surajv.me"
 ---
 
-## AskSuraj 🤖 — Portfolio RAG Assistant  
-**(LIVE AVAILABLE ON HOME PAGE)**
+## AskSuraj – Portfolio RAG Assistant
 
-**AskSuraj** is a Retrieval-Augmented Generation (RAG)-powered assistant designed to answer questions about my portfolio, skills, projects, and experiences using natural language.
-
-It uses vector-based semantic search to retrieve relevant information and generates responses using an LLM.  
-This project showcases my ability to integrate AI, NLP, and fullstack development into a smart, job-ready portfolio tool.
+**Project Overview:**  
+AskSuraj is a **Retrieval-Augmented Generation (RAG) assistant** that answers questions about my portfolio, projects, and professional experience. It combines semantic search with a language model to deliver accurate, context-aware responses.  
+This project highlights skills in **AI integration, NLP, and full-stack development**, providing a smart interface for recruiters, collaborators, and portfolio viewers.
 
 ---
 
-## 🚀 Features
+## Key Features
 
-- 🔎 Semantic Search over portfolio documents  
-- 🧠 LLM-powered Q&A system  
-- 🗂️ Supports resume, project write-ups, blogs, and more  
-- 🪄 Built with FastAPI, LangServe, and OpenAI embeddings  
-- 💡 Great for recruiters, collaborators, or curious devs!  
-
----
-
-## 🛠️ Tech Stack
-
-- ⚡ **FastAPI** – for serving the API  
-- 🔗 **LangChain + LangServe** – for RAG pipeline  
-- 📊 **FAISS / Chroma** – for vector indexing  
-- 🧠 **OpenAI / Local LLM** – for response generation  
+| Feature                        | Description |
+|--------------------------------|------------|
+| Semantic Search                | Vector-based search over portfolio documents for relevant results |
+| LLM-Powered Q&A                | Generates natural language answers using a language model |
+| Multi-Document Support         | Handles resume, project write-ups, blogs, and other portfolio content |
+| Backend API                    | Built with FastAPI for robust API serving |
+| Easy Deployment                | Runs locally or can be hosted for live interaction |
 
 ---
 
-## 📚 Use Case
+## Technologies Used
 
-> Curious about my projects? Just ask:  
-> _"Tell me about the tech stack used in your Tic Tac Toe game."_  
-> or  
-> _"What is your current DSA plan?"_  
-
-💬 The AI assistant will instantly fetch the relevant data and generate a clear answer using the documents in my repo.
-
----
-
-## 📦 How to Run Locally
-
-```bash
-git clone https://github.com/smartcraze/SurajGPT.git
-cd asksuraj
-pip install -r requirements.txt
-python rag_chain.py   # index your portfolio docs
-uvicorn app:app --reload
-````
+| Layer       | Tech Stack / Tools                   |
+|------------|-------------------------------------|
+| Backend     | FastAPI                             |
+| RAG Pipeline| LangChain + LangServe                |
+| Vector Index| FAISS / Chroma                       |
+| AI Model    | OpenAI embeddings / Local LLMs       |
+| Frontend    | Simple web interface / API endpoints |
 
 ---
 
-## 🧠 Why This Project?
+## How It Works
 
-This project combines my AI knowledge with practical backend/API experience and portfolio storytelling — all bundled into a smart assistant anyone can chat with.
+```plaintext
+User Question → Semantic Search → Retrieve Relevant Docs → LLM Generates Answer → Response to User

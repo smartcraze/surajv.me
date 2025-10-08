@@ -2,6 +2,8 @@
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 
+
+
 export default function Meetingpage() {
   return (
     <main className="flex  flex-col justify-center items-center min-h-screen">
@@ -9,7 +11,7 @@ export default function Meetingpage() {
         Book a 1-on-1 with Me 
       </h1>
       <p className="text-gray-400 text-center max-w-xl mb-8">
-        Let’s chat about projects, ideas, or collaboration. Pick a slot that
+        Let&apos;s chat about projects, ideas, or collaboration. Pick a slot that
         works for you below.
       </p>
       <div className="w-full overflow-hidden">

@@ -17,14 +17,14 @@ function Introduction() {
           </p>
         </div>
 
-        <p className="text-zinc-600 dark:text-zinc-500 max-w-md p-2">
-          Fullstack developer with a love for clean code and real-world
-          problem-solving. Always building, always learning from JS to Rust to
-          cloud infra.
+        <p className="text-zinc-600 dark:text-zinc-500 max-w-lg p-2">
+          I&apos;m a full-stack developer passionate about building scalable web apps
+          and solving real-world problems. From JavaScript to Rust and modern
+          cloud infra, I focus on writing clean, efficient code and turning
+          ideas into production-ready products.
         </p>
       </div>
 
-      {/* Right Section (Image) */}
       <div className="flex-shrink-0">
         <Image
           src="https://avatars.githubusercontent.com/u/133375708?v=4"
