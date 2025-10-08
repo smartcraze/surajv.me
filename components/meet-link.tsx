@@ -12,7 +12,7 @@ function MeetLink() {
             <Calendar className="w-5 h-5 text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors duration-200" />
             <div>
               <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-                Let's Connect
+                Let&apos;s Connect
               </h3>
               <p className="text-sm text-zinc-600 dark:text-zinc-400">
                 Schedule a chat about projects or collaboration
