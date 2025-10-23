@@ -7,47 +7,47 @@ interface Project {
 export const projects: Project[] = [
   {
     slug: "sketchkaro",
-    title: "SketchKaro Realtime Collaborative Drawing App",
+    title: "SketchKaro ",
     status: "fullstack",
   },
   {
     slug: "rapidserve",
-    title: "RapidServe cloud deployment platform",
+    title: "RapidServe ",
     status: "fullstack",
   },
   {
     slug: "cipherstudio",
-    title: "CipherStudio react editor with live preview",
+    title: "CipherStudio ",
     status: "fullstack",
   },
   {
     slug: "studysphere",
-    title: "StudySphere  Student Learning  Platform",
+    title: "StudySphere ",
     status: "fullstack",
   },
   {
     slug: "paytm",
-    title: "fullstack Paytm Clone ",
+    title: "Paytm Clone ",
     status: "fullstack",
   },
   {
     slug: "surajgpt",
-    title: "SurajGPT  AI-Powered Personal Assistant",
+    title: "SurajGPT",
     status: "GenAI",
   },
   {
     slug: "cursorbot",
-    title: "CursorBot Text-to-Animation Generator using Manim",
+    title: "CursorBot",
     status: "GenAI",
   },
   {
     slug: "ezsnipe",
-    title: "EzSnipe Component Delivery System for React Apps",
+    title: "EzSnipe",
     status: "npm-package",
   },
   {
     slug: "token-launchpad",
-    title: "Token Launchpad Solana-Based Token Deployer",
+    title: "Token Launchpad",
     status: "web3",
   },
 ];
