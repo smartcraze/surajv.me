@@ -16,9 +16,9 @@ export const projects: Project[] = [
     status: "fullstack",
   },
   {
-    slug: "surajgpt",
-    title: "SurajGPT  AI-Powered Personal Assistant",
-    status: "GenAI",
+    slug: "cipherstudio",
+    title: "CipherStudio react editor with live preview",
+    status: "fullstack",
   },
   {
     slug: "studysphere",
@@ -29,6 +29,11 @@ export const projects: Project[] = [
     slug: "paytm",
     title: "fullstack Paytm Clone ",
     status: "fullstack",
+  },
+  {
+    slug: "surajgpt",
+    title: "SurajGPT  AI-Powered Personal Assistant",
+    status: "GenAI",
   },
   {
     slug: "cursorbot",
