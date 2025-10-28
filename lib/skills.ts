@@ -18,7 +18,9 @@ export const skills = [
 
   "docker",
   "aws",
+  "kubernetes",
 
   "git",
   "github",
+  "linux",
 ];
