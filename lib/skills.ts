@@ -17,8 +17,8 @@ export const skills = [
   "postgresql",
 
   "docker",
-  "aws",
   "kubernetes",
+  "aws",
 
   "git",
   "github",
