@@ -2,7 +2,8 @@
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 
-
+// Note: metadata must be exported from a Server Component
+// This will be in the parent layout or a wrapper
 
 export default function Meetingpage() {
   return (

@@ -1,10 +1,29 @@
 import YouTubeVideos from "@/components/youtube-videos";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Passion | YouTube Channel",
-  description: "Check out my YouTube channel where I share coding tutorials, livestreams, and tech content",
+export const metadata: Metadata = {
+  title: "Passion",
+  description: "Watch Suraj Vishwakarma's YouTube channel featuring coding tutorials, tech livestreams, programming tips, and software development content.",
+  keywords: [
+    'YouTube channel',
+    'coding tutorials',
+    'tech livestreams',
+    'programming videos',
+    'developer content',
+    'software development tutorials',
+    'Suraj Vishwakarma YouTube',
+  ],
+  openGraph: {
+    title: "Passion - YouTube Channel | Suraj Vishwakarma",
+    description: "Coding tutorials, livestreams, and tech content by Suraj Vishwakarma",
+    url: 'https://surajv.me/passion',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://surajv.me/passion',
+  },
 };
 
 export default function PassionPage() {

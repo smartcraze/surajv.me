@@ -10,10 +10,6 @@ export default function FeaturedDocs() {
   
   // Memoize featured docs to prevent recalculation
   const featuredDocs = useMemo(() => docs.slice(0, 2), []);
-  
-  if (featuredDocs.length === 0) return null;
-
-  const currentDoc = featuredDocs[currentIndex];
 
   // Memoized navigation handlers
   const goToNext = useCallback(() => {
@@ -41,6 +37,11 @@ export default function FeaturedDocs() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [goToNext, goToPrevious]);
+  
+  // Early return after all hooks
+  if (featuredDocs.length === 0) return null;
+
+  const currentDoc = featuredDocs[currentIndex];
 
   return (
     <section className="px-4 py-6">
@@ -53,21 +54,21 @@ export default function FeaturedDocs() {
         </div>
         <Link
           href="/docs"
-          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors flex items-center gap-1"
+          className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-200 flex items-center gap-1 hover:gap-2 group/link"
         >
           View all
-          <ArrowRight className="w-4 h-4" />
+          <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-200" />
         </Link>
       </div>
 
       <div className="max-w-3xl mx-auto">
         {/* Featured Doc Card */}
-        <div className="border border-zinc-600 rounded-md p-6 relative group hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-all duration-200">
+        <div className="border border-zinc-600 rounded-md p-6 relative group hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-all duration-300 hover:shadow-lg hover:border-zinc-500 dark:hover:border-zinc-500 hover:-translate-y-1">
           <Link href={`/docs/${currentDoc.slug}`} className="block" prefetch={true}>
             <div className="flex items-start gap-3 mb-4">
-              <FileText className="w-6 h-6 text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors duration-200 mt-1 flex-shrink-0" />
+              <FileText className="w-6 h-6 text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-all duration-200 mt-1 flex-shrink-0 group-hover:scale-110" />
               <div className="flex-1">
-                <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-2 transition-colors">
+                <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-2 transition-colors group-hover:translate-x-1 duration-200">
                   {currentDoc.title}
                 </h3>
                 <p className="text-zinc-600 dark:text-zinc-400 mb-3">
@@ -78,7 +79,7 @@ export default function FeaturedDocs() {
                     {currentDoc.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-1 text-xs rounded-md bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300"
+                        className="px-2 py-1 text-xs rounded-md bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 transition-all duration-200 hover:bg-zinc-300 dark:hover:bg-zinc-600 hover:scale-105"
                       >
                         {tag}
                       </span>
@@ -94,7 +95,7 @@ export default function FeaturedDocs() {
             <div className="flex items-center justify-between mt-4 pt-4 border-t border-zinc-300 dark:border-zinc-700">
               <button
                 onClick={goToPrevious}
-                className="flex items-center gap-1 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                className="flex items-center gap-1 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-200 hover:scale-105 active:scale-95 hover:-translate-x-1"
                 aria-label="Previous story"
               >
                 <ChevronLeft className="w-4 h-4" />
@@ -107,10 +108,10 @@ export default function FeaturedDocs() {
                   <button
                     key={index}
                     onClick={() => goToIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                    className={`h-2 rounded-full transition-all duration-300 hover:scale-110 active:scale-90 ${
                       index === currentIndex
                         ? "bg-zinc-900 dark:bg-zinc-100 w-6"
-                        : "bg-zinc-300 dark:bg-zinc-600 hover:bg-zinc-400 dark:hover:bg-zinc-500"
+                        : "bg-zinc-300 dark:bg-zinc-600 hover:bg-zinc-400 dark:hover:bg-zinc-500 w-2"
                     }`}
                     aria-label={`Go to story ${index + 1}`}
                   />
@@ -119,7 +120,7 @@ export default function FeaturedDocs() {
 
               <button
                 onClick={goToNext}
-                className="flex items-center gap-1 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                className="flex items-center gap-1 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-200 hover:scale-105 active:scale-95 hover:translate-x-1"
                 aria-label="Next story"
               >
                 Next

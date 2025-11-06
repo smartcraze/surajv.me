@@ -37,9 +37,36 @@ export async function generateMetadata({
     };
   }
 
+  const project = projects.find(p => p.slug === slug);
+  const projectUrl = `https://surajv.me/projects/${slug}`;
+
   return {
     title: res.frontmatter.title,
     description: res.frontmatter.description,
+    keywords: [
+      res.frontmatter.title,
+      'Suraj Vishwakarma',
+      project?.status || '',
+      'web development',
+      'full stack project',
+      'portfolio project',
+    ].filter((k): k is string => Boolean(k)),
+    openGraph: {
+      title: res.frontmatter.title,
+      description: res.frontmatter.description,
+      url: projectUrl,
+      type: 'article',
+      publishedTime: new Date().toISOString(),
+      authors: ['Suraj Vishwakarma'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: res.frontmatter.title,
+      description: res.frontmatter.description,
+    },
+    alternates: {
+      canonical: projectUrl,
+    },
   };
 }
 

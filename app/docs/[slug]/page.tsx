@@ -35,9 +35,38 @@ export async function generateMetadata({
     };
   }
 
+  const docUrl = `https://surajv.me/docs/${slug}`;
+  const { title, description, date, tags } = res.frontmatter;
+
   return {
-    title: res.frontmatter.title,
-    description: res.frontmatter.description,
+    title: title,
+    description: description,
+    keywords: [
+      title,
+      'Suraj Vishwakarma',
+      ...(tags || []),
+      'developer story',
+      'technical documentation',
+    ],
+    authors: [{ name: 'Suraj Vishwakarma', url: 'https://surajv.me' }],
+    openGraph: {
+      title: title,
+      description: description,
+      url: docUrl,
+      type: 'article',
+      publishedTime: date ? new Date(date).toISOString() : undefined,
+      modifiedTime: date ? new Date(date).toISOString() : undefined,
+      authors: ['Suraj Vishwakarma'],
+      tags: tags || [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+    },
+    alternates: {
+      canonical: docUrl,
+    },
   };
 }
 

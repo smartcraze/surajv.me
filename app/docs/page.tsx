@@ -1,10 +1,31 @@
 import Footer from '@/components/footer'
 import DocsList from '@/components/docs-list'
 import Breadcrumbs from '@/components/routes-header-breadcrumb'
+import { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Docs & Stories - Suraj Vishwakarma',
-  description: 'Technical documentation, tutorials, event experiences, and stories about my journey in software development',
+export const metadata: Metadata = {
+  title: 'Docs & Stories',
+  description: 'Technical documentation, tutorials, hackathon experiences, and developer stories by Suraj Vishwakarma. Read about Smart India Hackathon, Warpspeed AI Hackathon, and my journey in software development.',
+  keywords: [
+    'developer stories',
+    'technical documentation',
+    'hackathon experience',
+    'Smart India Hackathon',
+    'Warpspeed Hackathon',
+    'AI hackathon',
+    'developer journey',
+    'coding tutorials',
+    'web development stories',
+  ],
+  openGraph: {
+    title: 'Docs & Stories - Suraj Vishwakarma',
+    description: 'Technical docs, tutorials, event experiences, and stories about my journey in software development.',
+    url: 'https://surajv.me/docs',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://surajv.me/docs',
+  },
 }
 
 export const revalidate = 3600;

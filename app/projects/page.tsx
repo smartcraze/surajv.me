@@ -1,10 +1,32 @@
 import Footer from '@/components/footer'
 import ProjectsList from '@/components/projects-list'
 import Breadcrumbs from '@/components/routes-header-breadcrumb'
+import { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Projects - Suraj Vishwakarma',
-  description: 'These are some of the projects I have worked on — from fullstack apps to AI experiments. Click around, explore the builds, and vibe with the code ⚡',
+export const metadata: Metadata = {
+  title: 'Projects',
+  description: 'Explore Suraj Vishwakarma\'s full stack and GenAI projects including StudySphere, Paytm Clone, Token Launchpad, EZSnipe, and more. Built with React, Next.js, Node.js, TypeScript, AI/ML, Web3, and modern technologies.',
+  keywords: [
+    'full stack projects',
+    'GenAI projects',
+    'AI applications',
+    'React projects',
+    'Next.js applications',
+    'Node.js projects',
+    'web3 projects',
+    'npm packages',
+    'open source projects',
+    'developer portfolio',
+  ],
+  openGraph: {
+    title: 'Projects - Suraj Vishwakarma',
+    description: 'Full stack apps, AI experiments, and web3 projects. Explore the builds and dive into the code.',
+    url: 'https://surajv.me/projects',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://surajv.me/projects',
+  },
 }
 
 // Enable static generation with revalidation
