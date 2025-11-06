@@ -17,10 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: "https://surajv.me/events",
+      url: "https://surajv.me/docs",
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: "https://surajv.me/resource",

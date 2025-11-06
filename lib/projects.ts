@@ -51,3 +51,27 @@ export const projects: Project[] = [
     status: "web3",
   },
 ];
+
+// Helper functions for project navigation
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((project) => project.slug === slug);
+}
+
+export function getAdjacentProjects(slug: string): { previous: Project | null; next: Project | null } {
+  const currentIndex = projects.findIndex((project) => project.slug === slug);
+  
+  return {
+    previous: currentIndex > 0 ? projects[currentIndex - 1] : null,
+    next: currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null,
+  };
+}
+
+export function getSortedProjects(): Project[] {
+  const statusOrder = ["fullstack", "GenAI", "npm-package", "web3"];
+  
+  return [...projects].sort((a, b) => {
+    const aIndex = statusOrder.indexOf(a.status);
+    const bIndex = statusOrder.indexOf(b.status);
+    return aIndex - bIndex;
+  });
+}

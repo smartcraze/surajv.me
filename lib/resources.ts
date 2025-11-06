@@ -42,9 +42,9 @@ export const resources: Resource[] = [
     icon: Link,
   },
   {
-    title: "Attended Events",
-    link: "/events",
-    icon: Calendar1Icon,
+    title: "Docs & Stories",
+    link: "/docs",
+    icon: BookCopy,
   },
   {
     title: "Projects",

@@ -8,6 +8,7 @@ import SurajGPT from "@/components/Surajgpt";
 import Resource from "@/components/resource";
 import { ActionButtons } from "@/components/social-icons";
 import MeetLink from "@/components/meet-link";
+import FeaturedDocs from "@/components/featured-docs";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ProofOfWork />
       <Resource />
       <ProjectsList />
+      <FeaturedDocs />
       <SkillsSection />
       <MeetLink />
       <WhatAmILearning />

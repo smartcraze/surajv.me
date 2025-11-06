@@ -1,6 +1,6 @@
 import { GitMerge } from "lucide-react";
 import Link from "next/link";
-import { projects } from '@/lib/projects';
+import { getSortedProjects } from '@/lib/projects';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -30,13 +30,7 @@ export function ProjectCard({ title, slug, status }: ProjectCardProps) {
 }
 
 export default function ProjectsList() {
-  const statusOrder = ["fullstack", "GenAI", "npm-package", "web3"];
-  
-  const sortedProjects = [...projects].sort((a, b) => {
-    const aIndex = statusOrder.indexOf(a.status);
-    const bIndex = statusOrder.indexOf(b.status);
-    return aIndex - bIndex;
-  });
+  const sortedProjects = getSortedProjects();
 
   return (
     <div className=" px-4 py-6">

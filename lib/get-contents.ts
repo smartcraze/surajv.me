@@ -8,6 +8,7 @@ import rehypePrism from "rehype-prism-plus";
 import rehypeCodeTitles from "rehype-code-titles";
 import remarkGfm from "remark-gfm";
 import { visit } from "unist-util-visit";
+import { Calendar, MapPin, Trophy } from "lucide-react";
 
 import Image from "@/components/mdx-components/image";
 import Link from "@/components/mdx-components/link";
@@ -18,7 +19,10 @@ import Pre from "@/components/mdx-components/pre";
 
 
 
-function getDocsContentPath(slug: string): string {
+function getDocsContentPath(slug: string, folder: string = ""): string {
+  if (folder) {
+    return path.join(process.cwd(), "contents", folder, `${slug}.mdx`);
+  }
   return path.join(process.cwd(), "contents", `${slug}.mdx`);
 }
 
@@ -28,7 +32,11 @@ const components = {
   pre: Pre,
   Note,
   img: Image,
+  Image: Image,
   a: Link,
+  Calendar,
+  MapPin,
+  Trophy,
 }
 
 
@@ -69,9 +77,9 @@ async function parseMdx<Frontmatter>(rawMdx: string) {
 
 
 // Cache the MDX compilation to avoid re-parsing on every request
-export const getCompiledDocsForSlug = cache(async (slug: string) => {
+export const getCompiledDocsForSlug = cache(async (slug: string, folder: string = "") => {
   try {
-    const contentPath = getDocsContentPath(slug);
+    const contentPath = getDocsContentPath(slug, folder);
     const rawMdx = await fs.readFile(contentPath, "utf-8");
     return await parseMdx<BaseMdxFrontmatter>(rawMdx);
   } catch (err) {
