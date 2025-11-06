@@ -10,7 +10,15 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "github.com",
-      }
+      },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+      },
     ],
   },
   async redirects() {
@@ -44,6 +52,11 @@ const nextConfig: NextConfig = {
         source: "/yt",
         destination: "https://www.youtube.com/@Smartcraze17",
         permanent: true,
+      },
+      {
+        source: "/youtube",
+        destination: "/passion",
+        permanent: false,
       },
       {
         source: "/",

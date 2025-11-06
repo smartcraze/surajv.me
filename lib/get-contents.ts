@@ -1,6 +1,7 @@
 import { compileMDX } from "next-mdx-remote/rsc";
 import path from "path";
 import fs from "fs/promises"; 
+import { cache } from 'react';
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrism from "rehype-prism-plus";
@@ -67,7 +68,8 @@ async function parseMdx<Frontmatter>(rawMdx: string) {
 }
 
 
-export async function getCompiledDocsForSlug(slug: string) {
+// Cache the MDX compilation to avoid re-parsing on every request
+export const getCompiledDocsForSlug = cache(async (slug: string) => {
   try {
     const contentPath = getDocsContentPath(slug);
     const rawMdx = await fs.readFile(contentPath, "utf-8");
@@ -76,7 +78,7 @@ export async function getCompiledDocsForSlug(slug: string) {
     console.error(`[getCompiledDocsForSlug] Failed for slug: ${slug}`, err);
     return null;
   }
-}
+});
 
 
 

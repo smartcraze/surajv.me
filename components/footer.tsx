@@ -41,6 +41,14 @@ function Footer() {
         &copy; {new Date().getFullYear()} suraj vishwakarma. All rights
         reserved.
       </div>
+      <div className="text-center text-sm">
+        <Link
+          href="/passion"
+          className="hover:text-zinc-200 transition-colors underline decoration-dotted"
+        >
+          Check out my YouTube channel
+        </Link>
+      </div>
      
     </footer>
   );

@@ -1,6 +1,7 @@
 import Iframe from '@/components/ResponsiveIframe';
 import RoutesHeaderBreadcrumb from '@/components/routes-header-breadcrumb';
 import { getCompiledDocsForSlug } from '@/lib/get-contents';
+import { projects } from '@/lib/projects';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Github, ExternalLink } from "lucide-react";
@@ -10,6 +11,16 @@ import { Typography } from '@/components/typography';
  * This file handles the dynamic route for project pages based on the slug.
  * It fetches project data and renders the project details.
  */
+
+// Generate static params for all projects at build time
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+// Revalidate every hour in production
+export const revalidate = 3600;
 
 export async function generateMetadata({
   params,

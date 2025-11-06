@@ -7,6 +7,9 @@ export const metadata = {
   description: 'These are some of the projects I have worked on — from fullstack apps to AI experiments. Click around, explore the builds, and vibe with the code ⚡',
 }
 
+// Enable static generation with revalidation
+export const revalidate = 3600; // Revalidate every hour
+
 export default function ProjectsPage() {
   return (
     <main className="flex flex-col gap-y-2 justify-center mx-auto px-4">
