@@ -1,7 +1,6 @@
 import YouTubeVideos from "@/components/youtube-videos";
-import Footer from "@/components/footer";
 import Link from "next/link";
-import { ArrowLeft, Youtube } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
   title: "Passion | YouTube Channel",

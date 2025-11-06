@@ -1,5 +1,3 @@
-// lib/youtube.ts
-// YouTube Data API integration
 
 export interface YouTubeVideo {
   id: string;
@@ -10,15 +8,55 @@ export interface YouTubeVideo {
   isLive?: boolean;
 }
 
-/**
- * Fetch latest videos from a YouTube channel
- * You'll need a YouTube Data API key from: https://console.cloud.google.com/
- * 
- * To use this:
- * 1. Get API key from Google Cloud Console
- * 2. Add to .env.local: YOUTUBE_API_KEY=your_key_here
- * 3. Add your channel ID: YOUTUBE_CHANNEL_ID=your_channel_id
- */
+interface YouTubeThumbnail {
+  url: string;
+  width: number;
+  height: number;
+}
+
+interface YouTubeThumbnails {
+  default?: YouTubeThumbnail;
+  medium?: YouTubeThumbnail;
+  high?: YouTubeThumbnail;
+  standard?: YouTubeThumbnail;
+  maxres?: YouTubeThumbnail;
+}
+
+interface YouTubeSnippet {
+  publishedAt: string;
+  channelId: string;
+  title: string;
+  description: string;
+  thumbnails: YouTubeThumbnails;
+  channelTitle: string;
+  liveBroadcastContent: string;
+}
+
+interface YouTubeVideoId {
+  kind: string;
+  videoId: string;
+}
+
+interface YouTubeSearchItem {
+  kind: string;
+  etag: string;
+  id: YouTubeVideoId;
+  snippet: YouTubeSnippet;
+}
+
+interface YouTubeSearchResponse {
+  kind: string;
+  etag: string;
+  nextPageToken?: string;
+  prevPageToken?: string;
+  pageInfo: {
+    totalResults: number;
+    resultsPerPage: number;
+  };
+  items: YouTubeSearchItem[];
+}
+
+
 export async function getLatestVideos(maxResults = 6): Promise<YouTubeVideo[]> {
   const apiKey = process.env.YOUTUBE_API_KEY;
   const channelId = process.env.YOUTUBE_CHANNEL_ID;
@@ -32,7 +70,7 @@ export async function getLatestVideos(maxResults = 6): Promise<YouTubeVideo[]> {
     const response = await fetch(
       `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet&order=date&maxResults=${maxResults}&type=video`,
       { 
-        next: { revalidate: 3600 }, // Cache for 1 hour
+        next: { revalidate: 3600 },
         headers: {
           'Accept': 'application/json',
         }
@@ -45,18 +83,18 @@ export async function getLatestVideos(maxResults = 6): Promise<YouTubeVideo[]> {
       return [];
     }
 
-    const data = await response.json();
+    const data: YouTubeSearchResponse = await response.json();
 
     if (!data.items || data.items.length === 0) {
       console.warn("No videos found for channel");
       return [];
     }
 
-    return data.items.map((item: any) => ({
+    return data.items.map((item: YouTubeSearchItem) => ({
       id: item.id.videoId,
       title: item.snippet.title,
       description: item.snippet.description,
-      thumbnail: item.snippet.thumbnails.high?.url || item.snippet.thumbnails.medium?.url || item.snippet.thumbnails.default?.url,
+      thumbnail: item.snippet.thumbnails.high?.url || item.snippet.thumbnails.medium?.url || item.snippet.thumbnails.default?.url || '',
       publishedAt: item.snippet.publishedAt,
       isLive: item.snippet.liveBroadcastContent === "live",
     }));
@@ -87,7 +125,7 @@ export async function getLatestLivestream(): Promise<YouTubeVideo | null> {
       throw new Error(`YouTube API error: ${response.status}`);
     }
 
-    const data = await response.json();
+    const data: YouTubeSearchResponse = await response.json();
 
     if (data.items.length === 0) {
       return null;
@@ -98,7 +136,7 @@ export async function getLatestLivestream(): Promise<YouTubeVideo | null> {
       id: item.id.videoId,
       title: item.snippet.title,
       description: item.snippet.description,
-      thumbnail: item.snippet.thumbnails.high.url,
+      thumbnail: item.snippet.thumbnails.high?.url || item.snippet.thumbnails.medium?.url || item.snippet.thumbnails.default?.url || '',
       publishedAt: item.snippet.publishedAt,
       isLive: item.snippet.liveBroadcastContent === "live",
     };
