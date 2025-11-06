@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function PassionPage() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-zinc-900 dark:bg-zinc-900">
      
       <main className="flex-1 px-4 py-8">
         <div className="max-w-6xl mx-auto">
