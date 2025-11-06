@@ -53,17 +53,17 @@ export default function DocsList() {
 
       {/* Tag Filter */}
       {allTags.length > 0 && (
-        <div className="mb-6 max-w-3xl mx-auto">
+        <div className="mb-6 max-w-3xl mx-auto overflow-hidden">
           <div className="flex items-center gap-2 mb-3">
-            <Tag className="w-4 h-4 text-zinc-600 dark:text-zinc-400" />
+            <Tag className="w-4 h-4 text-zinc-600 dark:text-zinc-400 flex-shrink-0" />
             <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
               Filter by tag:
             </span>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 overflow-x-auto pb-2 -mx-1 px-1">
             <button
               onClick={() => handleTagSelect(null)}
-              className={`px-3 py-1.5 text-sm rounded-md transition-all duration-200 hover:scale-105 active:scale-95 ${
+              className={`px-3 py-1.5 text-sm rounded-md transition-all duration-200 hover:scale-105 active:scale-95 whitespace-nowrap flex-shrink-0 ${
                 selectedTag === null
                   ? "bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 shadow-md"
                   : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:bg-zinc-600"
@@ -75,7 +75,7 @@ export default function DocsList() {
               <button
                 key={tag}
                 onClick={() => handleTagSelect(tag)}
-                className={`px-3 py-1.5 text-sm rounded-md transition-all duration-200 hover:scale-105 active:scale-95 ${
+                className={`px-3 py-1.5 text-sm rounded-md transition-all duration-200 hover:scale-105 active:scale-95 whitespace-nowrap flex-shrink-0 ${
                   selectedTag === tag
                     ? "bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 shadow-md"
                     : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:bg-zinc-600"
@@ -112,11 +112,11 @@ export default function DocsList() {
                   <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-2">
                     {doc.description}
                   </p>
-                  <div className="flex items-center gap-4 text-xs text-zinc-500 dark:text-zinc-500">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs text-zinc-500 dark:text-zinc-500">
                     {doc.date && (
-                      <div className="flex items-center gap-1">
+                      <div className="flex items-center gap-1 flex-shrink-0">
                         <Calendar className="w-3 h-3" />
-                        <span>
+                        <span className="whitespace-nowrap">
                           {new Date(doc.date).toLocaleDateString("en-US", {
                             month: "short",
                             day: "numeric",
@@ -126,11 +126,11 @@ export default function DocsList() {
                       </div>
                     )}
                     {doc.tags && doc.tags.length > 0 && (
-                      <div className="flex gap-1.5">
+                      <div className="flex flex-wrap gap-1.5 min-w-0">
                         {doc.tags.map((tag: string) => (
                           <span
                             key={tag}
-                            className="px-2 py-0.5 rounded bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 transition-all duration-200 group-hover:bg-zinc-300 dark:group-hover:bg-zinc-600"
+                            className="px-2 py-0.5 rounded bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 transition-all duration-200 group-hover:bg-zinc-300 dark:group-hover:bg-zinc-600 whitespace-nowrap text-xs"
                           >
                             {tag}
                           </span>
