@@ -72,22 +72,22 @@ export interface ResourcePage {
 export const ResourcePage: ResourcePage[] = [
   {
     label: "TakeUforward redesign landing page",
-    url: "https://tufplus.surajv.me",
+    url: "https://tufplus.surajv.dev",
     icon: RocketIcon,
   },
   {
     label: "Personal Portfolio",
-    url: "https://surajv.me",
+    url: "https://surajv.dev",
     icon: BookOpen,
   },
   {
     label: "Suraj Enterprise CMS",
-    url: "https://cms.surajv.me/",
+    url: "https://cms.surajv.dev/",
     icon: Globe,
   },
   {
     label: "Sketchkaro colaborative sketching app",
-    url: "https://sketchkaro.surajv.me",
+    url: "https://sketchkaro.surajv.dev",
     icon: Compass,
   },
   {
@@ -97,17 +97,17 @@ export const ResourcePage: ResourcePage[] = [
   },
   {
     label: "Feedback Form",
-    url: "https://feedmeback.surajv.me",
+    url: "https://feedmeback.surajv.dev",
     icon: MessageCircleCode,
   },
   {
     label: "Ed tech platform studysphere",
-    url: "https://studysphere.surajv.me",
+    url: "https://studysphere.surajv.dev",
     icon: SchoolIcon,
   },
   {
     label: "Paytm Clone",
-    url: "https://paytm.surajv.me/",
+    url: "https://paytm.surajv.dev/",
     icon: Banknote,
   },
   {
@@ -142,7 +142,7 @@ export const ResourcePage: ResourcePage[] = [
   },
   {
     label: "SmartDocs Docs ",
-    url: "https://docs.surajv.me/",
+    url: "https://docs.surajv.dev/",
     icon: BookCopy,
   },
   {

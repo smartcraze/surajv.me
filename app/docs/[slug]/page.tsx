@@ -35,7 +35,7 @@ export async function generateMetadata({
     };
   }
 
-  const docUrl = `https://surajv.me/docs/${slug}`;
+  const docUrl = `https://surajv.dev/docs/${slug}`;
   const { title, description, date, tags } = res.frontmatter;
 
   return {
@@ -48,7 +48,7 @@ export async function generateMetadata({
       'developer story',
       'technical documentation',
     ],
-    authors: [{ name: 'Suraj Vishwakarma', url: 'https://surajv.me' }],
+    authors: [{ name: 'Suraj Vishwakarma', url: 'https://surajv.dev' }],
     openGraph: {
       title: title,
       description: description,

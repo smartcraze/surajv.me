@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Book a Meeting - Suraj Vishwakarma',
     description: 'Schedule a 1-on-1 with Suraj to discuss projects, ideas, or collaboration opportunities.',
-    url: 'https://surajv.me/meet',
+    url: 'https://surajv.dev/meet',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://surajv.me/meet',
+    canonical: 'https://surajv.dev/meet',
   },
 };
 

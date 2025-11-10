@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Resources - Suraj Vishwakarma',
     description: 'Raw links to all my builds, experiments, and development progress.',
-    url: 'https://surajv.me/resource',
+    url: 'https://surajv.dev/resource',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://surajv.me/resource',
+    canonical: 'https://surajv.dev/resource',
   },
 };
 

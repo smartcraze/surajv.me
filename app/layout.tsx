@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     "Smart India Hackathon",
     "Warpspeed Hackathon",
   ],
-  authors: [{ name: "Suraj Vishwakarma", url: "https://surajv.me" }],
+  authors: [{ name: "Suraj Vishwakarma", url: "https://surajv.dev" }],
   creator: "Suraj Vishwakarma",
   publisher: "Suraj Vishwakarma",
-  metadataBase: new URL("https://surajv.me"),
+  metadataBase: new URL("https://surajv.dev"),
   alternates: {
     canonical: "/",
   },
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Suraj Vishwakarma — Full Stack & GenAI Developer",
     description: "Explore Suraj's portfolio of full stack and GenAI projects. Building innovative solutions with React, Next.js, Node.js, and AI technologies.",
-    url: "https://surajv.me",
-    siteName: "surajv.me",
+    url: "https://surajv.dev",
+    siteName: "surajv.dev",
     images: [
       {
         url: "/opengraph-image.png",
@@ -93,7 +93,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <head>
-          <link rel="canonical" href="https://surajv.me" />
+          <link rel="canonical" href="https://surajv.dev" />
           <meta name="theme-color" content="#18181b" />
           <StructuredData />
         </head>

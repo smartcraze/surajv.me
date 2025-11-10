@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Suraj Vishwakarma — Full Stack & GenAI Developer",
     description: "Full Stack Developer specializing in GenAI, React, Next.js, and Node.js. Building innovative AI-powered applications and modern web solutions.",
-    url: "https://surajv.me",
+    url: "https://surajv.dev",
     type: "website",
   },
   alternates: {
-    canonical: "https://surajv.me",
+    canonical: "https://surajv.dev",
   },
 };
 

@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://surajv.me/sitemap.xml',
-    host: 'https://surajv.me',
+    sitemap: 'https://surajv.dev/sitemap.xml',
+    host: 'https://surajv.dev',
   }
 }

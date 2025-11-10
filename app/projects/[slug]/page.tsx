@@ -38,7 +38,7 @@ export async function generateMetadata({
   }
 
   const project = projects.find(p => p.slug === slug);
-  const projectUrl = `https://surajv.me/projects/${slug}`;
+  const projectUrl = `https://surajv.dev/projects/${slug}`;
 
   return {
     title: res.frontmatter.title,

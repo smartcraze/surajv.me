@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Passion - YouTube Channel | Suraj Vishwakarma",
     description: "Coding tutorials, livestreams, and tech content by Suraj Vishwakarma",
-    url: 'https://surajv.me/passion',
+    url: 'https://surajv.dev/passion',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://surajv.me/passion',
+    canonical: 'https://surajv.dev/passion',
   },
 };
 

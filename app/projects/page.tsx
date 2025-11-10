@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Projects - Suraj Vishwakarma',
     description: 'Full stack apps, AI experiments, and web3 projects. Explore the builds and dive into the code.',
-    url: 'https://surajv.me/projects',
+    url: 'https://surajv.dev/projects',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://surajv.me/projects',
+    canonical: 'https://surajv.dev/projects',
   },
 }
 

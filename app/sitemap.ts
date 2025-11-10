@@ -7,37 +7,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: "https://surajv.me",
+      url: "https://surajv.dev",
       lastModified,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
-      url: "https://surajv.me/projects",
+      url: "https://surajv.dev/projects",
       lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "https://surajv.me/docs",
+      url: "https://surajv.dev/docs",
       lastModified,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: "https://surajv.me/passion",
+      url: "https://surajv.dev/passion",
       lastModified,
       changeFrequency: "weekly",
       priority: 0.6,
     },
     {
-      url: "https://surajv.me/resource",
+      url: "https://surajv.dev/resource",
       lastModified,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
-      url: "https://surajv.me/meet",
+      url: "https://surajv.dev/meet",
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const projectPages: MetadataRoute.Sitemap = projects.map((project) => ({
-    url: `https://surajv.me/projects/${project.slug}`,
+    url: `https://surajv.dev/projects/${project.slug}`,
     lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.8,
@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 
   const docPages: MetadataRoute.Sitemap = docs.map((doc) => ({
-    url: `https://surajv.me/docs/${doc.slug}`,
+    url: `https://surajv.dev/docs/${doc.slug}`,
     lastModified: doc.date ? new Date(doc.date) : lastModified,
     changeFrequency: "monthly" as const,
     priority: 0.7,

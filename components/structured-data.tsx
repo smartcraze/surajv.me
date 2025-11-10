@@ -4,8 +4,8 @@ export default function StructuredData() {
     "@type": "Person",
     name: "Suraj Vishwakarma",
     alternateName: "smartcraze",
-    url: "https://surajv.me",
-    image: "https://surajv.me/opengraph-image.png",
+    url: "https://surajv.dev",
+    image: "https://surajv.dev/opengraph-image.png",
     sameAs: [
       "https://github.com/smartcraze",
       "https://twitter.com/surajv354",
