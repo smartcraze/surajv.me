@@ -1,0 +1,321 @@
+---
+title: "Git Internals: Understanding How Git Actually Works"
+description: "Deep dive into Git's internal architecture - learn how Git stores data, manages commits, and builds your project's history using blobs, trees, and commits."
+date: "2024-12-01"
+---
+
+<Image
+  src="https://github-production-user-asset-6210df.s3.amazonaws.com/133375708/513443888-ba23b8c0-b0f3-43c2-93ff-65fdaa34a107.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251112T170954Z&X-Amz-Expires=300&X-Amz-Signature=5eaefd77b0e519d2d24c0a2179e4cba2cf8b5a16ceafb93ce9a92afefbc7ee4c&X-Amz-SignedHeaders=host"
+  alt="Git Folder Internals - Visual representation of Git's internal structure"
+  width={1782}
+  height={1606}
+  className="rounded-lg border border-border my-8"
+/>
+
+## Why Learn Git Internals?
+
+We use Git daily to commit, branch, and push code — but very few know _how_ Git actually stores data inside that hidden `.git` folder.
+
+Git isn't just saving "versions of files." It builds a **mini database** of your project — made of small building blocks (objects) linked together by cryptographic hashes.
+
+By exploring these building blocks, you'll understand _exactly_ what happens when you run `git add`, `git commit`, or `git checkout`.
+
+---
+
+## Creating a Git Repository
+
+Start with a clean folder and initialize Git:
+
+```bash
+mkdir git-internal
+cd git-internal
+git init
+```
+
+You’ll see:
+
+```
+Initialized empty Git repository in .git/
+```
+
+If you open `.git`:
+
+```bash
+ls .git
+```
+
+Output:
+
+```
+HEAD  config  hooks  info  objects  refs
+```
+
+### What this means:
+
+- **.git/** → the brain of your project. Everything Git does lives here.
+- **objects/** → actual data storage (commits, files, etc.).
+- **refs/** → pointers (branches, tags).
+- **HEAD** → tells Git which branch or commit you’re currently on.
+
+At this point, your project has no commits — it’s just an empty database ready to store snapshots.
+
+---
+
+## Adding Your First File
+
+Create a file and add it:
+
+```bash
+echo "hello" > a.txt
+git add a.txt
+```
+
+Let's look inside the `.git/objects` folder:
+```
+
+Now Git has tracked your file — but not committed it yet.
+
+Let’s look inside the `.git/objects` folder:
+
+```bash
+ls .git/objects
+```
+
+You’ll find something like:
+
+```
+ce  info  pack
+```
+
+Inside `ce/`:
+
+```
+013625030ba8dba906f756967f9e9ca394464a
+```
+
+This long hash is **not random** — it's a _SHA-1 checksum_ of your file's content.
+Git uses this hash as the filename for storing your file safely and uniquely.
+
+<Note type="success">
+Objects are stored in subdirectories named by the **first two characters** of their SHA-1 hash. This prevents any single directory from having too many files.
+</Note>
+
+---
+
+## What's Stored Inside Objects?
+
+Let’s peek at it:
+
+```bash
+git cat-file -p ce013625030ba8dba906f756967f9e9ca394464a
+```
+
+Output:
+
+```
+hello
+```
+
+That’s the exact content of your file — but Git calls this a **blob** (Binary Large OBject).
+
+### What is a Blob?
+
+A **blob** stores only file data. It has:
+
+- ✅ The file's content
+- ❌ No filename
+- ❌ No directory information
+- ❌ No history
+
+Git stores every file version like this — content only. The structure (file name, directory) comes later. All objects are compressed using **zlib** to save space.
+
+---
+
+## Taking Your First Snapshot (Tree)
+
+Next, tell Git to record what’s in the staging area:
+
+```bash
+git write-tree
+```
+
+<Note type="warning">
+`git write-tree` is a **plumbing command** (low-level). In normal workflows, you use `git commit` which creates both the tree and commit objects automatically.
+</Note>
+
+Output:
+
+```
+2e81171448eb9f2ee3821e3d447aa6b2fe3ddba1
+```
+
+This created a **tree object** — think of it as a folder structure that knows:
+
+- each file name,
+- the blob it points to,
+- and its permissions.
+
+Inspect it:
+
+```bash
+git cat-file -p 2e81171448eb9f2ee3821e3d447aa6b2fe3ddba1
+```
+
+Output:
+
+```
+100644 blob ce013625030ba8dba906f756967f9e9ca394464a    a.txt
+```
+
+### Understanding the Tree Entry
+
+- **`100644`** → File permission (regular file, readable/writable)
+- **`blob`** → Object type
+- **`ce0136...`** → Hash of the blob (file content)
+- **`a.txt`** → Filename
+
+The tree connects file names to their blobs — this is how Git rebuilds your working directory.
+
+---
+
+## Creating Your First Commit
+
+Now we’ll permanently save this tree as a snapshot:
+
+```bash
+git commit -m "first commit"
+```
+
+View the internal commit data:
+
+```bash
+git cat-file -p HEAD
+```
+
+Output:
+
+```
+tree 2e81171448eb9f2ee3821e3d447aa6b2fe3ddba1
+author Suraj Vishwakarma <dev.surajv@gmail.com> 1733961600 +0530
+committer Suraj Vishwakarma <dev.surajv@gmail.com> 1733961600 +0530
+
+first commit
+```
+
+### Anatomy of a Commit Object
+
+A commit contains:
+
+1. **`tree`** → Points to the tree object (your folder state)
+2. **`author`** → Who created the changes (with timestamp)
+3. **`committer`** → Who committed the changes (with timestamp)
+4. **`message`** → Commit description
+
+The commit **does not store file content directly** — only references to the tree and blobs. This makes Git extremely efficient.
+
+---
+
+## Adding Another File (New Snapshot)
+
+Add another file:
+
+```bash
+echo "new file" > b.txt
+git add b.txt
+git write-tree
+```
+
+Output:
+
+```
+1424e6f9aa2ead19d4238516d37f5d40692cb0ce
+```
+
+Check what’s inside:
+
+```bash
+git cat-file -p 1424e6f9aa2ead19d4238516d37f5d40692cb0ce
+```
+
+Output:
+
+```
+100644 blob ce013625030ba8dba906f756967f9e9ca394464a    a.txt
+100644 blob fa49b077972391ad58037050f2a75f74e3671e92    b.txt
+```
+
+Notice that `a.txt` still points to the same blob (`ce0136...`) because its content didn't change. Git reuses objects efficiently!
+
+Now commit again:
+```
+
+Now commit again:
+
+```bash
+git commit -m "add b.txt"
+```
+
+View the new commit:
+
+```bash
+git cat-file -p HEAD
+```
+
+Output:
+
+```
+tree 1424e6f9aa2ead19d4238516d37f5d40692cb0ce
+parent 832f7f14575e2241d0d77c6bc80631f2f1f11cf5
+author Suraj Vishwakarma <dev.surajv@gmail.com> 1733961660 +0530
+committer Suraj Vishwakarma <dev.surajv@gmail.com> 1733961660 +0530
+
+add b.txt
+```
+
+### The Parent Link
+
+<Note type="info">
+This commit includes a **`parent`** field — linking it back to the previous commit. That's how Git builds your history. Each commit points backward, forming a chain called the **commit graph**.
+</Note>
+
+---
+
+## Visualizing the Object Graph
+
+```
+HEAD
+ ↓
+refs/heads/main
+ ↓
+Commit 2662847 ("add b.txt")
+ ├── parent → 832f7f1 ("first commit")
+ │            ├── parent → (none, initial commit)
+ │            └── tree 2e8117...
+ │                 └── blob ce0136... (a.txt)
+ │
+ └── tree 1424e6f9...
+      ├── blob ce0136... (a.txt) ← reused!
+      └── blob fa49b0... (b.txt) ← new!
+```
+
+### The Logic
+
+- **Blobs** = Raw file contents (immutable)
+- **Trees** = Directory structure (maps names → blobs/subtrees)
+- **Commits** = Snapshots (point to a tree + optional parent(s))
+- **HEAD** = Points to the current branch (and therefore the latest commit)
+
+Git never overwrites or deletes objects — it only adds new ones and links them.
+
+---
+
+## Understanding Git Objects: Complete Reference
+
+| Object Type | Purpose                            | Contains                        | Example Hash      |
+| ----------- | ---------------------------------- | ------------------------------- | ----------------- |
+| **Blob**    | Stores file content                | Raw file data (zlib compressed) | `ce0136...`       |
+| **Tree**    | Stores directory structure         | List of blobs/trees + names     | `1424e6...`       |
+| **Commit**  | Snapshot with metadata             | Tree + parent + author + msg    | `2662847...`      |
+| **HEAD**    | Pointer to current branch/commit   | Branch ref or commit hash       | `refs/heads/main` |
+
+---

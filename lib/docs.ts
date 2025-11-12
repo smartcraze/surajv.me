@@ -8,19 +8,30 @@ export interface Doc {
 
 export const docs: Doc[] = [
   {
+    slug: "git-internal",
+    title: "Git Internal You Didn't Know",
+    description:
+      "Exploring the inner workings of Git: from objects to refs and everything in between",
+    date: "2025-11-12",
+    tags: ["git", "internal", "version-control", "development"],
+  },
+  {
     slug: "warpspeed-hackathon",
     title: "Warpspeed: Agentic AI Hackathon",
-    description: "Building the future of learning with AI agents at Lightspeed India's hackathon in Bangalore",
+    description:
+      "Building the future of learning with AI agents at Lightspeed India's hackathon in Bangalore",
     date: "2025-06-01",
     tags: ["hackathon", "AI", "agentic-ai", "event"],
   },
   {
     slug: "sih-2024-finalist",
     title: "Smart India Hackathon 2024 - Finalist",
-    description: "Our journey to becoming finalists at India's largest hackathon, solving real-world problems for Delhi Government",
+    description:
+      "Our journey to becoming finalists at India's largest hackathon, solving real-world problems for Delhi Government",
     date: "2024-12-01",
     tags: ["hackathon", "finalist", "machine-learning", "fullstack", "event"],
-  },
+  }
+ 
 ];
 
 export function getDocBySlug(slug: string): Doc | undefined {
