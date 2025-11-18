@@ -11,6 +11,11 @@ export const projects: Project[] = [
     status: "fullstack",
   },
   {
+    slug: "gothrottle",
+    title: "Gothrottle ",
+    status: "fullstack",
+  },
+  {
     slug: "rapidserve",
     title: "RapidServe ",
     status: "fullstack",

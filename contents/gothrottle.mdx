@@ -1,0 +1,69 @@
+---
+title: "GoThrottle"
+description: "A distributed, config-driven rate-limiting reverse proxy with modular routing and dynamic throttling policies."
+date: "2025-11-15"
+tags: ["golang", "reverse-proxy", "rate-limiting", "devops", "distributed-systems"]
+video: "https://www.tella.tv/video/xxxxxxxxxxxx/embed?b=0&title=0&a=0&loop=0&t=0&muted=0&wt=0"
+github: "https://github.com/smartcraze/gothrottle"
+live: ""
+---
+
+**GoThrottle** is a **config-driven reverse proxy** that enables distributed rate-limiting with support for global, per-route, and per-IP throttling. It allows developers to enforce traffic limits and dynamic routing **without changing application code**, entirely through a declarative `config.yaml`.
+
+<Note type="danger">
+    You must configure your own rate-limits and upstream routes.
+</Note>
+
+---
+
+## Project Overview
+
+GoThrottle is a **modular reverse proxy written in Go**, designed for scalability and observability. It uses a **token-bucket algorithm** for request throttling and supports **pluggable storage backends** like Redis or in-memory stores.
+
+Developers can define routing rules, throttle limits, upstream services, and middleware pipelines directly from configuration — making it suitable for distributed, multi-service architectures.
+
+---
+
+## Key Features
+
+* **Token-Bucket Rate Limiting**  
+  Supports global, per-route, and per-IP throttles configurable via YAML.
+
+* **Declarative Routing Layer**  
+  Define upstream services, paths, and limits without modifying code.
+
+* **Pluggable Backend Stores**  
+  Built-in support for **Redis** and **in-memory** rate limit counters.
+
+* **Middleware Pipeline**  
+  Request logging, structured JSON output, panic-safe recovery, and more.
+
+* **Production-Grade Config System**  
+  Full control using a single `config.yaml` file.
+
+---
+
+## Technologies Used
+
+| Layer                   | Tech Stack / Tools                          |
+| ----------------------- | ------------------------------------------- |
+| Language                | Go                                          |
+| Rate Limiting Engine    | Token Bucket Algorithm                      |
+| Storage Backend         | Redis, In-Memory                            |
+| Config System           | YAML-Driven                                 |
+| Middleware              | Custom Chainable Handlers                   |
+| Deployment              | Docker, Binary Build                        |
+
+---
+
+## Why This Project Matters
+
+GoThrottle demonstrates **backend systems engineering, traffic control, and high-performance Go design**. It highlights practical experience in:
+
+* Building reverse proxies
+* Designing middleware pipelines
+* Implementing scalable rate-limiting mechanisms
+* Managing distributed state with Redis
+* Declarative, config-first backend systems
+
+This project reflects the ability to **design production-ready infrastructure components**, essential in API gateways, platform engineering, and SaaS multi-tenant architectures.

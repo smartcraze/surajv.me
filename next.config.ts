@@ -73,7 +73,7 @@ const nextConfig: NextConfig = {
         has: [{ type: "host", value: "rapidserve.surajv.me" }],
         destination: "/soon",
         permanent: false,
-      },
+      }
     ];
   },
 };
