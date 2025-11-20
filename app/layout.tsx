@@ -96,6 +96,10 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <head>
+          <meta
+            name="google-site-verification"
+            content="WOBvoHYJ_MAcI-cvXhCIExK6oX9kAlwLhIdJcph4kmo"
+          />
           <link rel="canonical" href="https://surajv.dev" />
           <meta name="theme-color" content="#18181b" />
           <StructuredData />
@@ -112,7 +116,6 @@ export default function RootLayout({
       gtag('config', 'G-YGQ31E83TL');
     `}
           </Script>
-          
         </head>
         <meta
           name="google-site-verification"
