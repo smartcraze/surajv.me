@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import LayoutWrapper from "@/components/layout-wrapper";
 import StructuredData from "@/components/structured-data";
 const inter = Inter({ subsets: ["latin"] });
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -56,7 +57,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Suraj Vishwakarma — Full Stack & GenAI Developer",
-    description: "Explore Suraj's portfolio of full stack and GenAI projects. Building innovative solutions with React, Next.js, Node.js, and AI technologies.",
+    description:
+      "Explore Suraj's portfolio of full stack and GenAI projects. Building innovative solutions with React, Next.js, Node.js, and AI technologies.",
     url: "https://surajv.dev",
     siteName: "surajv.dev",
     images: [
@@ -75,11 +77,12 @@ export const metadata: Metadata = {
     site: "@surajv354",
     creator: "@surajv354",
     title: "Suraj Vishwakarma — Full Stack & GenAI Developer",
-    description: "Full stack projects & GenAI experiments by Suraj Vishwakarma. Building the future with AI and modern web technologies.",
+    description:
+      "Full stack projects & GenAI experiments by Suraj Vishwakarma. Building the future with AI and modern web technologies.",
     images: ["/opengraph-image.png"],
   },
   verification: {
-    google: "G1dKZPX7WqFguP2nxEt1PZE1W9KDieFNdGdOVMy3y3M", 
+    google: "G1dKZPX7WqFguP2nxEt1PZE1W9KDieFNdGdOVMy3y3M",
   },
   category: "technology",
 };
@@ -96,6 +99,20 @@ export default function RootLayout({
           <link rel="canonical" href="https://surajv.dev" />
           <meta name="theme-color" content="#18181b" />
           <StructuredData />
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-YGQ31E83TL"
+            strategy="afterInteractive"
+          />
+
+          <Script id="gtag-init" strategy="afterInteractive">
+            {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YGQ31E83TL');
+    `}
+          </Script>
+          
         </head>
         <meta
           name="google-site-verification"
