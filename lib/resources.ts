@@ -18,10 +18,9 @@ import {
   FlameIcon,
   ListTodo,
   Banknote,
-  Code2Icon,
   RocketIcon,
-  Component,
 } from "lucide-react";
+
 import { ElementType } from "react";
 
 export interface Resource {
@@ -32,12 +31,12 @@ export interface Resource {
 
 export const resources: Resource[] = [
   {
-    title: "UI Library",
-    link: "https://ui.whatever.codes",
-    icon: Component,
+    title: "Blog",
+    link: "https://blog.surajv.dev",
+    icon: Book,
   },
   {
-    title: "kiddie projects ",
+    title: "kiddie projects",
     link: "/resource",
     icon: Link,
   },
@@ -55,11 +54,6 @@ export const resources: Resource[] = [
     title: "Archive Repo",
     link: "https://github.com/surajarchive",
     icon: Github,
-  },
-  {
-    title: "Lab(building)",
-    link: "https://www.whatever.codes",
-    icon: Code2Icon,
   },
 ];
 
@@ -141,7 +135,7 @@ export const ResourcePage: ResourcePage[] = [
     icon: Flame,
   },
   {
-    label: "SmartDocs Docs ",
+    label: "SmartDocs Docs",
     url: "https://docs.surajv.dev/",
     icon: BookCopy,
   },
@@ -157,7 +151,7 @@ export const ResourcePage: ResourcePage[] = [
   },
   {
     label: "Smart events",
-    url: "https://smartevents-frontend-suraj-vishwakarmas-projects.vercel.app/",
+    url: "https://smarteevents-frontend-suraj-vishwakarmas-projects.vercel.app/",
     icon: Calendar1Icon,
   },
 ];
