@@ -2,12 +2,17 @@
 import { useCallback, useState, useEffect } from "react";
 import { Activity } from "react-github-calendar";
 
+type GitHubCalendarProps = {
+  username: string;
+  transformData?: (data: Activity[]) => Activity[];
+  totalCount?: number;
+};
+
 function GithubCalender() {
   const [totalCount, setTotalCount] = useState(0);
-  const [GitHubCalendar, setGitHubCalendar] = useState<any>(null);
+  const [GitHubCalendar, setGitHubCalendar] = useState<React.ComponentType<GitHubCalendarProps> | null>(null);
 
   useEffect(() => {
-    // Only import on client side
     import("react-github-calendar").then((mod) => {
       setGitHubCalendar(() => mod.default);
     });
