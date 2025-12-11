@@ -5,6 +5,7 @@ export const skills = [
   "js",
   "html5",
   "css3",
+  "go",
 
   "react",
   "nextjs",

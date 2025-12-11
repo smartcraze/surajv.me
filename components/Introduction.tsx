@@ -18,10 +18,7 @@ function Introduction() {
         </div>
 
         <p className="text-zinc-600 dark:text-zinc-500 max-w-lg p-2">
-          I&apos;m a full-stack developer passionate about building scalable web apps
-          and solving real-world problems. From JavaScript to Rust and modern
-          cloud infra, I focus on writing clean, efficient code and turning
-          ideas into production-ready products.
+          Fullstack Developer • GenAI and Back-end Engineering
         </p>
       </div>
 
