@@ -1,15 +1,17 @@
 "use client";
-import dynamic from "next/dynamic";
-import { useCallback, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { Activity } from "react-github-calendar";
-
-const GitHubCalendar = dynamic(() => import("react-github-calendar"), {
-  ssr: false,
-  loading: () => <div className="h-[159px] w-full" />,
-});
 
 function GithubCalender() {
   const [totalCount, setTotalCount] = useState(0);
+  const [GitHubCalendar, setGitHubCalendar] = useState<any>(null);
+
+  useEffect(() => {
+    // Only import on client side
+    import("react-github-calendar").then((mod) => {
+      setGitHubCalendar(() => mod.default);
+    });
+  }, []);
 
   const processContributions = useCallback((contributions: Activity[]) => {
     setTimeout(() => {
@@ -22,6 +24,10 @@ function GithubCalender() {
 
     return contributions.slice(91, 365);
   }, []);
+
+  if (!GitHubCalendar) {
+    return <div className="h-[159px] w-full" />;
+  }
 
   return (
     <GitHubCalendar

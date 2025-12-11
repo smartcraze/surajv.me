@@ -19,7 +19,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.523.0",
-    "next": "15.3.3",
+    "next": "15.3.6",
     "next-mdx-remote": "^5.0.0",
     "next-view-transitions": "^0.3.4",
     "react": "^19.1.0",
@@ -33,9 +33,8 @@
     "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.3.1",
     "tailwind-scrollbar-hide": "^4.0.0",
-    "tech-stack-icons": "^3.3.1",
-    "use-sound": "^5.0.0"
-  },
+    "tech-stack-icons": "^3.3.1"
+    },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",

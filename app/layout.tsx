@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "../lib/polyfills";
 import { ViewTransitions } from "next-view-transitions";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";

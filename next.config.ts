@@ -27,6 +27,19 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Redirect old domain to new domain
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "surajv.me" }],
+        destination: "https://surajv.dev/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.surajv.me" }],
+        destination: "https://surajv.dev/:path*",
+        permanent: true,
+      },
       {
         source: "/instagram",
         destination: "https://instagram.com/surajv354",
@@ -64,13 +77,13 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/",
-        has: [{ type: "host", value: "betteruptime.surajv.me" }],
+        has: [{ type: "host", value: "betteruptime.surajv.dev" }],
         destination: "/soon",
         permanent: false,
       },
       {
         source: "/",
-        has: [{ type: "host", value: "rapidserve.surajv.me" }],
+        has: [{ type: "host", value: "rapidserve.surajv.dev" }],
         destination: "/soon",
         permanent: false,
       }

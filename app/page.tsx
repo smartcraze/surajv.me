@@ -4,7 +4,6 @@ import Footer from "@/components/footer";
 import SkillsSection from "@/components/SkillsSection";
 import WhatAmILearning from "@/components/what-am-i-leanring";
 import ProjectsList from "@/components/projects-list";
-import SurajGPT from "@/components/Surajgpt";
 import Resource from "@/components/resource";
 import { ActionButtons } from "@/components/social-icons";
 import MeetLink from "@/components/meet-link";
@@ -37,7 +36,6 @@ export default function Home() {
       <SkillsSection />
       <MeetLink />
       <WhatAmILearning />
-      <SurajGPT />
       <hr className="w-full border-zinc-600 border-1" />
       <Footer />
     </main>
