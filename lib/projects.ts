@@ -36,24 +36,9 @@ export const projects: Project[] = [
     status: "fullstack",
   },
   {
-    slug: "surajgpt",
-    title: "SurajGPT",
-    status: "GenAI",
-  },
-  {
-    slug: "cursorbot",
-    title: "CursorBot",
-    status: "GenAI",
-  },
-  {
-    slug: "ezsnipe",
-    title: "EzSnipe",
-    status: "npm-package",
-  },
-  {
-    slug: "token-launchpad",
-    title: "Token Launchpad",
-    status: "web3",
+    slug: "pfpstudio",
+    title: "PFP Studio",
+    status: "fullstack",
   },
 ];
 
