@@ -21,6 +21,11 @@ export const projects: Project[] = [
     status: "fullstack",
   },
   {
+    slug: "pfpstudio",
+    title: "PFP Studio",
+    status: "fullstack",
+  },
+  {
     slug: "cipherstudio",
     title: "CipherStudio ",
     status: "fullstack",
@@ -33,11 +38,6 @@ export const projects: Project[] = [
   {
     slug: "paytm",
     title: "Paytm Clone ",
-    status: "fullstack",
-  },
-  {
-    slug: "pfpstudio",
-    title: "PFP Studio",
     status: "fullstack",
   },
 ];
