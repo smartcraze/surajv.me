@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Resources',
-  description: 'Collection of Suraj Vishwakarma\'s development projects, experiments, and learning resources. Links to live demos, GitHub repositories, and ongoing work.',
+  description: 'Collection of smartcraze\'s (Suraj Vishwakarma) development projects, experiments, and learning resources. Links to live demos, GitHub repositories, and ongoing work.',
   keywords: [
     'developer resources',
     'project links',
@@ -10,10 +10,11 @@ export const metadata: Metadata = {
     'development progress',
     'portfolio links',
     'coding projects',
+    'smartcraze resources',
   ],
   openGraph: {
-    title: 'Resources - Suraj Vishwakarma',
-    description: 'Raw links to all my builds, experiments, and development progress.',
+    title: 'Resources — smartcraze (Suraj Vishwakarma)',
+    description: 'Raw links to all builds, experiments, and development progress by smartcraze (Suraj Vishwakarma).',
     url: 'https://surajv.dev/resource',
     type: 'website',
   },

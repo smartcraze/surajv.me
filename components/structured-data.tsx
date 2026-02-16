@@ -58,13 +58,14 @@ export default function StructuredData() {
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Suraj Vishwakarma Portfolio",
-    alternateName: ["surajv.dev", "Suraj Vishwakarma - Full Stack Developer"],
+    name: "smartcraze | surajv.dev",
+    alternateName: ["surajv.dev", "smartcraze", "smartcraze portfolio", "Suraj Vishwakarma Portfolio"],
     url: "https://surajv.dev",
-    description: "Portfolio website of Suraj Vishwakarma, showcasing full stack development projects, GenAI experiments, and software engineering work.",
+    description: "Portfolio website of smartcraze (Suraj Vishwakarma), showcasing full stack development projects, GenAI experiments, and software engineering work.",
     author: {
       "@type": "Person",
       name: "Suraj Vishwakarma",
+      alternateName: "smartcraze",
       url: "https://surajv.dev",
     },
     potentialAction: {

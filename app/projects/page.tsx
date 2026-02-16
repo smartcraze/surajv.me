@@ -5,8 +5,9 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Explore Suraj Vishwakarma\'s full stack and GenAI projects including StudySphere, Paytm Clone, Token Launchpad, EZSnipe, and more. Built with React, Next.js, Node.js, TypeScript, AI/ML, Web3, and modern technologies.',
+  description: 'Explore smartcraze\'s (Suraj Vishwakarma) full stack and GenAI projects including StudySphere, Paytm Clone, Token Launchpad, EZSnipe, and more. Built with React, Next.js, Node.js, TypeScript, AI/ML, Web3, and modern technologies.',
   keywords: [
+    'smartcraze projects',
     'full stack projects',
     'GenAI projects',
     'AI applications',
@@ -19,8 +20,8 @@ export const metadata: Metadata = {
     'developer portfolio',
   ],
   openGraph: {
-    title: 'Projects - Suraj Vishwakarma',
-    description: 'Full stack apps, AI experiments, and web3 projects. Explore the builds and dive into the code.',
+    title: 'Projects — smartcraze (Suraj Vishwakarma)',
+    description: 'Full stack apps, AI experiments, and web3 projects by smartcraze. Explore the builds and dive into the code.',
     url: 'https://surajv.dev/projects',
     type: 'website',
   },

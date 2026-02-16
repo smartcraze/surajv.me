@@ -12,13 +12,17 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
-    default: "Suraj Vishwakarma — Full Stack & GenAI Developer",
-    template: "%s | Suraj Vishwakarma",
+    default: "smartcraze (Suraj Vishwakarma) — Full Stack & GenAI Developer | surajv.dev",
+    template: "%s | smartcraze (Suraj Vishwakarma)",
   },
   description:
-    "I'm Suraj Vishwakarma, a full stack developer exploring GenAI and DevOps. Based in Bangalore, India. Discover my projects, stories, and journey in software development.",
+    "smartcraze — I'm Suraj Vishwakarma, a full stack developer and GenAI enthusiast based in Bangalore, India. Hackathon winner (SIH, Warpspeed). Explore my projects, docs, and developer journey at surajv.dev.",
   keywords: [
+    "smartcraze",
     "Suraj Vishwakarma",
+    "surajv.dev",
+    "smartcraze developer",
+    "smartcraze Suraj Vishwakarma",
     "Full Stack Developer",
     "GenAI Developer",
     "AI Developer",
@@ -33,14 +37,13 @@ export const metadata: Metadata = {
     "Bangalore Developer",
     "India Developer",
     "Portfolio",
-    "smartcraze",
     "hackathon winner",
     "Smart India Hackathon",
     "Warpspeed Hackathon",
   ],
-  authors: [{ name: "Suraj Vishwakarma", url: "https://surajv.dev" }],
-  creator: "Suraj Vishwakarma",
-  publisher: "Suraj Vishwakarma",
+  authors: [{ name: "smartcraze (Suraj Vishwakarma)", url: "https://surajv.dev" }],
+  creator: "smartcraze (Suraj Vishwakarma)",
+  publisher: "smartcraze (Suraj Vishwakarma)",
   metadataBase: new URL("https://surajv.dev"),
   alternates: {
     canonical: "/",
@@ -57,17 +60,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Suraj Vishwakarma — Full Stack & GenAI Developer",
+    title: "smartcraze (Suraj Vishwakarma) — Full Stack & GenAI Developer",
     description:
-      "Explore Suraj's portfolio of full stack and GenAI projects. Building innovative solutions with React, Next.js, Node.js, and AI technologies.",
+      "Explore smartcraze's portfolio — full stack and GenAI projects by Suraj Vishwakarma. Building innovative solutions with React, Next.js, Node.js, and AI technologies.",
     url: "https://surajv.dev",
-    siteName: "surajv.dev",
+    siteName: "smartcraze | surajv.dev",
     images: [
       {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Suraj Vishwakarma - Full Stack & GenAI Developer Portfolio",
+        alt: "smartcraze (Suraj Vishwakarma) — Full Stack & GenAI Developer Portfolio",
       },
     ],
     locale: "en_US",
@@ -77,9 +80,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@surajv354",
     creator: "@surajv354",
-    title: "Suraj Vishwakarma — Full Stack & GenAI Developer",
+    title: "smartcraze (Suraj Vishwakarma) — Full Stack & GenAI Developer",
     description:
-      "Full stack projects & GenAI experiments by Suraj Vishwakarma. Building the future with AI and modern web technologies.",
+      "Full stack projects & GenAI experiments by smartcraze (Suraj Vishwakarma). Building the future with AI and modern web technologies at surajv.dev.",
     images: ["/opengraph-image.png"],
   },
   verification: {
@@ -118,10 +121,6 @@ export default function RootLayout({
     `}
           </Script>
         </head>
-        <meta
-          name="google-site-verification"
-          content="G1dKZPX7WqFguP2nxEt1PZE1W9KDieFNdGdOVMy3y3M"
-        />
         <body className={`${inter.className} dark`}>
           <LayoutWrapper>{children}</LayoutWrapper>
           <Analytics />

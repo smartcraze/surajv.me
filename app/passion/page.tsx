@@ -5,8 +5,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Passion",
-  description: "Watch Suraj Vishwakarma's YouTube channel featuring coding tutorials, tech livestreams, programming tips, and software development content.",
+  description: "Watch smartcraze's (Suraj Vishwakarma) YouTube channel featuring coding tutorials, tech livestreams, programming tips, and software development content.",
   keywords: [
+    'smartcraze YouTube',
     'YouTube channel',
     'coding tutorials',
     'tech livestreams',
@@ -16,8 +17,8 @@ export const metadata: Metadata = {
     'Suraj Vishwakarma YouTube',
   ],
   openGraph: {
-    title: "Passion - YouTube Channel | Suraj Vishwakarma",
-    description: "Coding tutorials, livestreams, and tech content by Suraj Vishwakarma",
+    title: "Passion — YouTube Channel | smartcraze (Suraj Vishwakarma)",
+    description: "Coding tutorials, livestreams, and tech content by smartcraze (Suraj Vishwakarma)",
     url: 'https://surajv.dev/passion',
     type: 'website',
   },

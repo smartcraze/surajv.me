@@ -11,11 +11,11 @@ import FeaturedDocs from "@/components/featured-docs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home",
-  description: "Suraj Vishwakarma - Full Stack & GenAI Developer based in Bangalore, India. Specializing in React, Next.js, Node.js, TypeScript, AI/ML, and modern web development. Explore my projects, hackathon achievements, and developer stories.",
+  title: "smartcraze (Suraj Vishwakarma) — Full Stack & GenAI Developer | surajv.dev",
+  description: "smartcraze — Suraj Vishwakarma is a Full Stack & GenAI Developer based in Bangalore, India. Specializing in React, Next.js, Node.js, TypeScript, AI/ML, and modern web development. Hackathon winner (SIH, Warpspeed). Explore projects, docs, and developer stories at surajv.dev.",
   openGraph: {
-    title: "Suraj Vishwakarma — Full Stack & GenAI Developer",
-    description: "Full Stack Developer specializing in GenAI, React, Next.js, and Node.js. Building innovative AI-powered applications and modern web solutions.",
+    title: "smartcraze (Suraj Vishwakarma) — Full Stack & GenAI Developer",
+    description: "smartcraze — Full Stack Developer specializing in GenAI, React, Next.js, and Node.js. Building innovative AI-powered applications and modern web solutions.",
     url: "https://surajv.dev",
     type: "website",
   },

@@ -5,8 +5,9 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Docs & Stories',
-  description: 'Technical documentation, tutorials, hackathon experiences, and developer stories by Suraj Vishwakarma. Read about Smart India Hackathon, Warpspeed AI Hackathon, and my journey in software development.',
+  description: 'Technical documentation, tutorials, hackathon experiences, and developer stories by smartcraze (Suraj Vishwakarma). Read about Smart India Hackathon, Warpspeed AI Hackathon, and the journey in software development.',
   keywords: [
+    'smartcraze docs',
     'developer stories',
     'technical documentation',
     'hackathon experience',
@@ -18,8 +19,8 @@ export const metadata: Metadata = {
     'web development stories',
   ],
   openGraph: {
-    title: 'Docs & Stories - Suraj Vishwakarma',
-    description: 'Technical docs, tutorials, event experiences, and stories about my journey in software development.',
+    title: 'Docs & Stories — smartcraze (Suraj Vishwakarma)',
+    description: 'Technical docs, tutorials, event experiences, and stories from smartcraze\'s journey in software development.',
     url: 'https://surajv.dev/docs',
     type: 'website',
   },
