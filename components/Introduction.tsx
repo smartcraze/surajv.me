@@ -14,25 +14,8 @@ function Introduction() {
         </div>
 
         <div className="relative flex flex-col md:flex-row items-center gap-6 px-4 sm:px-6 pt-6 pb-4">
-          {/* Left Section */}
-          <div className="flex-1 min-w-0">
-            <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight mb-2 text-black dark:text-white">
-              Suraj Vishwakarma
-            </h1>
-            <div className="flex items-center gap-2 mb-2">
-              <MapPin className="w-4 h-4 shrink-0" />
-              <p className="text-zinc-600 dark:text-zinc-500 truncate">
-                Bangalore, India
-              </p>
-            </div>
-
-            <p className="text-zinc-600 dark:text-zinc-500 max-w-xl">
-              Fullstack Developer • GenAI and Back-end Engineering
-            </p>
-          </div>
-
-          {/* Avatar */}
-          <div className="flex-shrink-0">
+          {/* Avatar (top on mobile, right on desktop) */}
+          <div className="flex-shrink-0 order-1 md:order-2 mb-4 md:mb-0">
             <Image
               src="https://avatars.githubusercontent.com/u/133375708?v=4"
               alt="suraj's photo"
@@ -41,6 +24,23 @@ function Introduction() {
               className="object-cover rounded-full border-4 dark:border-zinc-800 border-zinc-900 
               w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44"
             />
+          </div>
+
+          {/* Text Section */}
+          <div className="flex-1 min-w-0 order-2 md:order-1 text-center md:text-left">
+            <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight mb-2 text-black dark:text-white">
+              Suraj Vishwakarma
+            </h1>
+            <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+              <MapPin className="w-4 h-4 shrink-0" />
+              <p className="text-zinc-600 dark:text-zinc-500 truncate">
+                Bangalore, India
+              </p>
+            </div>
+
+            <p className="text-zinc-600 dark:text-zinc-500 max-w-xl mx-auto md:mx-0">
+              Fullstack Developer • GenAI and Back-end Engineering
+            </p>
           </div>
         </div>
 
