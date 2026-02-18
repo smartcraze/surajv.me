@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { docs } from "@/lib/docs";
 import { projects } from "@/lib/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -17,12 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
-    },
-    {
-      url: "https://surajv.dev/docs",
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.8,
     },
     {
       url: "https://surajv.dev/passion",
@@ -51,13 +44,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-
-  const docPages: MetadataRoute.Sitemap = docs.map((doc) => ({
-    url: `https://surajv.dev/docs/${doc.slug}`,
-    lastModified: doc.date ? new Date(doc.date) : lastModified,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
-
-  return [...staticPages, ...projectPages, ...docPages];
+  return [...staticPages, ...projectPages];
 }

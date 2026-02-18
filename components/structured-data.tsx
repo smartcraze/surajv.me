@@ -93,12 +93,6 @@ export default function StructuredData() {
         name: "Projects",
         item: "https://surajv.dev/projects",
       },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Docs",
-        item: "https://surajv.dev/docs",
-      },
     ],
   };
 

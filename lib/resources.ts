@@ -41,11 +41,6 @@ export const resources: Resource[] = [
     icon: Link,
   },
   {
-    title: "Docs & Stories",
-    link: "/docs",
-    icon: BookCopy,
-  },
-  {
     title: "Projects",
     link: "/projects",
     icon: BookOpen,

@@ -7,7 +7,6 @@ import ProjectsList from "@/components/projects-list";
 import Resource from "@/components/resource";
 import { ActionButtons } from "@/components/social-icons";
 import MeetLink from "@/components/meet-link";
-import FeaturedDocs from "@/components/featured-docs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -32,7 +31,6 @@ export default function Home() {
       <ProofOfWork />
       <Resource />
       <ProjectsList />
-      <FeaturedDocs />
       <SkillsSection />
       <MeetLink />
       <WhatAmILearning />
