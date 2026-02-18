@@ -5,7 +5,6 @@ import SkillsSection from "@/components/SkillsSection";
 import WhatAmILearning from "@/components/what-am-i-leanring";
 import ProjectsList from "@/components/projects-list";
 import Resource from "@/components/resource";
-import { ActionButtons } from "@/components/social-icons";
 import MeetLink from "@/components/meet-link";
 import { Metadata } from "next";
 
@@ -27,7 +26,6 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-y-8 justify-center mx-auto">
       <Introduction />
-      <ActionButtons />
       <ProofOfWork />
       <Resource />
       <ProjectsList />

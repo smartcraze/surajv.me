@@ -8,7 +8,7 @@ import { Resource as ResourceType } from "@/lib/resources";
 export default function ResourceBar() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 py-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto flex flex-col items-center">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -25,7 +25,7 @@ export default function ResourceBar() {
         </motion.div>
 
         {/* Resource Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
           {resources.map((res, index) => (
             <motion.div
               key={index}
