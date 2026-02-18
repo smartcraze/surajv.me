@@ -27,7 +27,6 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Redirect old domain to new domain
       {
         source: "/:path*",
         has: [{ type: "host", value: "surajv.me" }],
@@ -75,18 +74,6 @@ const nextConfig: NextConfig = {
         destination: "/passion",
         permanent: false,
       },
-      {
-        source: "/",
-        has: [{ type: "host", value: "betteruptime.surajv.dev" }],
-        destination: "/soon",
-        permanent: false,
-      },
-      {
-        source: "/",
-        has: [{ type: "host", value: "rapidserve.surajv.dev" }],
-        destination: "/soon",
-        permanent: false,
-      }
     ];
   },
 };
