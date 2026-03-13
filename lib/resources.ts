@@ -39,10 +39,16 @@ export const resources: Resource[] = [
     icon: Book,
   },
   {
-    title: "kiddie projects",
-    link: "/resource",
-    icon: Link,
+    title: "Resume",
+    link: "/resumes.pdf",
+    icon: FileText,
   },
+  {
+    title: "Book Meeting",
+    link: "https://cal.com/surajv354/15min",
+    icon: Calendar1Icon,
+  },
+
   {
     title: "Projects",
     link: "/projects",
@@ -53,21 +59,18 @@ export const resources: Resource[] = [
     link: "/highlights",
     icon: Award,
   },
-  {
-    title: "Book Meeting",
-    link: "https://cal.com/surajv354/15min",
-    icon: Calendar1Icon,
-  },
+
   {
     title: "Archive Repo",
     link: "https://github.com/surajarchive",
     icon: Github,
   },
   {
-    title: "Resume",
-    link: "/resumes.pdf",
-    icon: FileText,
+    title: "kiddie projects",
+    link: "/resource",
+    icon: Link,
   },
+
   {
     title: "RSS Feed",
     link: "/rss.xml",

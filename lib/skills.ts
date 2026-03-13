@@ -20,8 +20,11 @@ export const skills = [
   "docker",
   "kubernetes",
   "aws",
+  "grafana",
+  "prometheus",
 
   "git",
   "github",
   "linux",
+  "turborepo"
 ];

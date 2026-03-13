@@ -1,10 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { Github, Instagram, Linkedin, Twitter, Mail } from "lucide-react";
+import NewsletterSubscribe from "@/components/newsletter-subscribe";
 
 function Footer() {
   return (
     <footer className="flex flex-col gap-4 text-zinc-400">
+            <NewsletterSubscribe />
+
       <div className="flex justify-center items-center gap-4">
         <Link
           href="https://github.com/smartcraze"
@@ -62,7 +65,9 @@ function Footer() {
           Check out my YouTube channel
         </Link>
       </div>
-     
+
+      
+
     </footer>
   );
 }

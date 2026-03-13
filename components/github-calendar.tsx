@@ -31,7 +31,7 @@ function GithubCalender() {
   }, []);
 
   if (!GitHubCalendar) {
-    return <div className="h-[159px] w-full" />;
+    return <div className="h-39.75 w-full" />;
   }
 
   return (
