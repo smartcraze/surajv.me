@@ -30,7 +30,7 @@ export default function Home() {
       <ProjectsList />
       <SkillsSection />
       <WhatAmILearning />
-      <hr className="w-full border-zinc-600 border-1" />
+      <hr className="w-full border-zinc-600 border" />
       <Footer />
     </main>
   );

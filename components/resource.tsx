@@ -69,7 +69,7 @@ function ResourceItem({ title, link, icon: Icon }: ResourceType) {
       {/* Icon container with subtle gradient */}
       <div
         className="relative p-2 rounded-lg bg-primary/5 group-hover:bg-primary/10 
-                      transition-colors duration-300 flex-shrink-0"
+                      transition-colors duration-300 shrink-0"
       >
         <Icon
           className="h-4 w-4 sm:h-5 sm:w-5 text-primary group-hover:text-primary/80 
@@ -87,7 +87,7 @@ function ResourceItem({ title, link, icon: Icon }: ResourceType) {
       <span
         className="text-xs font-medium text-foreground/80 group-hover:text-foreground
                        text-center leading-tight transition-colors duration-300
-                       px-1 flex-shrink-0 overflow-hidden text-ellipsis
+                       px-1 shrink-0 overflow-hidden text-ellipsis
                        max-h-8 flex items-center justify-center"
       >
         {title}
@@ -96,7 +96,7 @@ function ResourceItem({ title, link, icon: Icon }: ResourceType) {
       {/* Subtle bottom accent line */}
       <div
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 
-                      bg-gradient-to-r from-primary/50 to-primary
+                      bg-linear-to-r from-primary/50 to-primary
                       group-hover:w-8 transition-all duration-300 rounded-full"
       />
     </Link>
