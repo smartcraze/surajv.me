@@ -25,16 +25,18 @@ function Introduction() {
 
             <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-2">
               <Link
-                href="/projects"
+                href="https://cal.com/surajv354/15min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center rounded-full border border-zinc-300/80 dark:border-zinc-700 px-3.5 py-1.5 text-sm font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
               >
-                Projects
+                Hire Me
               </Link>
               <Link
-                href="/resource"
+                href="mailto:dev.surajv@gmail.com"
                 className="inline-flex items-center rounded-full border border-zinc-300/80 dark:border-zinc-700 px-3.5 py-1.5 text-sm font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
               >
-                Resources
+                Let&apos;s Talk
               </Link>
               <Link
                 href="/resumes.pdf"

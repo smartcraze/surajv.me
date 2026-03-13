@@ -2,6 +2,7 @@ import Footer from '@/components/footer'
 import ProjectsList from '@/components/projects-list'
 import Breadcrumbs from '@/components/routes-header-breadcrumb'
 import { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -40,9 +41,29 @@ export default function ProjectsPage() {
           <Breadcrumbs />
         </div>
         <p className="text-muted-foreground text-sm md:text-base max-w-xl">
-          These are some of the projects I&apos;ve worked on — from fullstack apps to AI experiments.
-          Click around, explore the builds, and vibe with the code ⚡
+          These are full case studies, not just project cards. Open any card to see the full build story,
+          architecture decisions, and implementation details.
         </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <Link
+            href="/projects/rapidserve"
+            className="inline-flex items-center rounded-full border border-zinc-300/80 dark:border-zinc-700 px-3 py-1 text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+          >
+            RapidServe Case Study
+          </Link>
+          <Link
+            href="/projects/sketchkaro"
+            className="inline-flex items-center rounded-full border border-zinc-300/80 dark:border-zinc-700 px-3 py-1 text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+          >
+            SketchKaro Case Study
+          </Link>
+          <Link
+            href="/projects/gothrottle"
+            className="inline-flex items-center rounded-full border border-zinc-300/80 dark:border-zinc-700 px-3 py-1 text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+          >
+            Gothrottle Case Study
+          </Link>
+        </div>
       </div>
       <section className="w-full max-w-6xl mx-auto">
         <ProjectsList />

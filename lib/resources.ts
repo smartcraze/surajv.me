@@ -21,6 +21,7 @@ import {
   RocketIcon,
   FileText,
   Award,
+  Rss,
 } from "lucide-react";
 
 import { ElementType } from "react";
@@ -66,6 +67,11 @@ export const resources: Resource[] = [
     title: "Resume",
     link: "/resumes.pdf",
     icon: FileText,
+  },
+  {
+    title: "RSS Feed",
+    link: "/rss.xml",
+    icon: Rss,
   },
 ];
 
