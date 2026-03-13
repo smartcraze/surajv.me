@@ -95,7 +95,7 @@ export default async function Projects({
       </div>
 
       <Typography>
-        <h1 className="sm:text-3xl text-2xl !-mt-0.5">{title}</h1>
+        <h1 className="sm:text-3xl text-2xl -mt-0.5!">{title}</h1>
         <p className="-mt-4 text-muted-foreground sm:text-[16.5px] text-[14.5px]">
           {description}
         </p>

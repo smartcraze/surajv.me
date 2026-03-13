@@ -2,12 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "../lib/polyfills";
 import { ViewTransitions } from "next-view-transitions";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono, Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import LayoutWrapper from "@/components/layout-wrapper";
 import StructuredData from "@/components/structured-data";
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -118,11 +127,7 @@ export default function RootLayout({
     `}
           </Script>
         </head>
-        <meta
-          name="google-site-verification"
-          content="G1dKZPX7WqFguP2nxEt1PZE1W9KDieFNdGdOVMy3y3M"
-        />
-        <body className={`${inter.className} dark`}>
+        <body className={`${manrope.variable} ${jetBrainsMono.variable} dark antialiased`}>
           <LayoutWrapper>{children}</LayoutWrapper>
           <Analytics />
           <SpeedInsights />

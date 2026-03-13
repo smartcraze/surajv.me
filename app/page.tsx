@@ -5,7 +5,6 @@ import SkillsSection from "@/components/SkillsSection";
 import WhatAmILearning from "@/components/what-am-i-leanring";
 import ProjectsList from "@/components/projects-list";
 import Resource from "@/components/resource";
-import MeetLink from "@/components/meet-link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,7 +29,6 @@ export default function Home() {
       <Resource />
       <ProjectsList />
       <SkillsSection />
-      <MeetLink />
       <WhatAmILearning />
       <hr className="w-full border-zinc-600 border-1" />
       <Footer />

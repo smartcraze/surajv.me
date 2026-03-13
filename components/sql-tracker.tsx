@@ -46,7 +46,7 @@ export default function SqlTracker({ studyPlan }: { studyPlan: Group[] }) {
       setSolvedQuestions(initialSolved);
     }
     setIsLoaded(true);
-  }, []); // Run only once on mount
+  }, [studyPlan]);
 
   const toggleQuestion = (slug: string) => {
     // If not loaded yet, don't allow toggling to avoid overwriting or inconsistency
@@ -129,7 +129,7 @@ export default function SqlTracker({ studyPlan }: { studyPlan: Group[] }) {
                     >
                       <div className="flex items-center gap-3 min-w-0">
                         <button
-                          className="shrink-0 focus:outline-none"
+                          className="shrink-0 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                           onClick={(e) => {
                             e.stopPropagation();
                             toggleQuestion(question.titleSlug);

@@ -29,12 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
-    {
-      url: "https://surajv.dev/meet",
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
   ];
 
   const projectPages: MetadataRoute.Sitemap = projects.map((project) => ({

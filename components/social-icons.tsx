@@ -49,9 +49,12 @@ export function SocialLinks() {
           key={title}
           href={href}
           title={title}
-          className={`transition-all duration-200 hover:scale-110 hover:-translate-y-0.5 ${colorClass}`}
+          aria-label={title}
+          target={href.startsWith("http") ? "_blank" : undefined}
+          rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+          className={`transition-transform duration-200 hover:scale-110 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 rounded-sm ${colorClass}`}
         >
-          <Icon size={20} />
+          <Icon aria-hidden="true" size={20} />
         </Link>
       ))}
     </div>
@@ -60,7 +63,7 @@ export function SocialLinks() {
 
 export function ActionButtons() {
   return (
-    <div >
+    <div>
       <SocialLinks />
     </div>
   );

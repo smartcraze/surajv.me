@@ -51,9 +51,13 @@ export default function ResourceBar() {
 }
 
 function ResourceItem({ title, link, icon: Icon }: ResourceType) {
+  const isExternal = /^https?:\/\//.test(link);
+
   return (
     <Link
       href={link}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className="group relative flex flex-col items-center justify-center gap-3 p-4 rounded-xl 
                  border border-border/50 hover:border-border
                   hover:bg-card/5 backdrop-blur-sm

@@ -66,7 +66,7 @@ export default function FeaturedDocs() {
         <div className="border border-zinc-600 rounded-md p-6 relative group hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-all duration-300 hover:shadow-lg hover:border-zinc-500 dark:hover:border-zinc-500 hover:-translate-y-1">
           <Link href={`/docs/${currentDoc.slug}`} className="block" prefetch={true}>
             <div className="flex items-start gap-3 mb-4">
-              <FileText className="w-6 h-6 text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-all duration-200 mt-1 flex-shrink-0 group-hover:scale-110" />
+              <FileText className="w-6 h-6 text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-[transform,color] duration-200 mt-1 shrink-0 group-hover:scale-110" />
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-2 transition-colors group-hover:translate-x-1 duration-200">
                   {currentDoc.title}

@@ -68,12 +68,7 @@ const nextConfig: NextConfig = {
         source: "/yt",
         destination: "https://www.youtube.com/@Smartcraze17",
         permanent: true,
-      },
-      {
-        source: "/youtube",
-        destination: "/passion",
-        permanent: false,
-      },
+      }
     ];
   },
 };

@@ -60,8 +60,8 @@ bun run build
 ### 📫 Get in Touch
 
 💌 **Email:** dev.surajv@gmail.com  
-📅 **Schedule a Meet:** [surajv.dev/meet](https://surajv.dev/meet)  
-📝 **View Resume:** [Coming Soon]
+📅 **Schedule a Meet:** [cal.com/surajv354/15min](https://cal.com/surajv354/15min)  
+📝 **View Resume:** [resumes.pdf](https://surajv.dev/resumes.pdf)
 
 ---
 

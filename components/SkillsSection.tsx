@@ -29,7 +29,7 @@ export default function SkillsSection() {
     <div className="space-y-8">
       {/* Section Header */}
       <div className="text-center space-y-3">
-        <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
           Skills I Play With
         </h2>
         <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto">
@@ -64,10 +64,10 @@ export default function SkillsSection() {
             title={skill.charAt(0).toUpperCase() + skill.slice(1)}
           >
             {/* Background Glow */}
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 rounded-xl bg-linear-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             {/* Subtle Border Glow */}
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/20 via-transparent to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10" />
+            <div className="absolute inset-0 rounded-xl bg-linear-to-r from-primary/20 via-transparent to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10" />
 
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center gap-2 text-center">

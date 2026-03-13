@@ -13,7 +13,7 @@ export function LearningCard({ title, link ,icon:Icon}: LearningType) {
   return (
     <Link
       href={link}
-      className="w-full border border-zinc-600 rounded-md p-2 flex flex-row gap-2 items-center text-zinc-900 dark:text-zinc-100 hover:bg-gradient-to-r hover:from-zinc-100 hover:to-indigo-50 dark:hover:from-zinc-800 dark:hover:to-indigo-900/30 transition-all duration-200 ease-in-out group hover:shadow-md hover:scale-[1.02] hover:-translate-y-[2px]"
+      className="w-full border border-zinc-600 rounded-md p-2 flex flex-row gap-2 items-center text-zinc-900 dark:text-zinc-100 hover:bg-linear-to-r hover:from-zinc-100 hover:to-indigo-50 dark:hover:from-zinc-800 dark:hover:to-indigo-900/30 transition-[transform,box-shadow,background-color] duration-200 ease-in-out group hover:shadow-md hover:scale-[1.02] hover:-translate-y-0.5"
     >
       <Icon className="w-4 h-4 text-zinc-400 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors duration-200" />
 

@@ -19,6 +19,8 @@ import {
   ListTodo,
   Banknote,
   RocketIcon,
+  FileText,
+  Award,
 } from "lucide-react";
 
 import { ElementType } from "react";
@@ -46,9 +48,24 @@ export const resources: Resource[] = [
     icon: BookOpen,
   },
   {
+    title: "Highlights",
+    link: "/highlights",
+    icon: Award,
+  },
+  {
+    title: "Book Meeting",
+    link: "https://cal.com/surajv354/15min",
+    icon: Calendar1Icon,
+  },
+  {
     title: "Archive Repo",
     link: "https://github.com/surajarchive",
     icon: Github,
+  },
+  {
+    title: "Resume",
+    link: "/resumes.pdf",
+    icon: FileText,
   },
 ];
 
