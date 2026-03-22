@@ -1,7 +1,12 @@
 import { ArrowUpRight, GitMerge } from "lucide-react";
 import Link from "next/link";
 import { getPortfolioProjects, type PortfolioStatus } from "@/lib/portfolio";
-import { getSortedProjects } from "@/lib/projects";
+
+type ProjectsListMode = "all" | "home";
+
+interface ProjectsListProps {
+  mode?: ProjectsListMode;
+}
 
 interface ProjectCardProps {
   title: string;
@@ -38,10 +43,22 @@ export function ProjectCard({ title, slug, status, description }: ProjectCardPro
   );
 }
 
-export default async function ProjectsList() {
-  const sortedProjects = getSortedProjects();
+export default async function ProjectsList({ mode = "all" }: ProjectsListProps) {
   const portfolioProjects = await getPortfolioProjects();
-  const detailsBySlug = new Map(portfolioProjects.map((project) => [project.slug, project]));
+  const statusOrder: PortfolioStatus[] = ["fullstack", "GenAI", "npm-package", "web3"];
+
+  const sortedProjects = [...portfolioProjects].sort((a, b) => {
+    const statusDiff = statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status);
+    if (statusDiff !== 0) return statusDiff;
+
+    const aDate = a.date ? Date.parse(a.date) : 0;
+    const bDate = b.date ? Date.parse(b.date) : 0;
+    return bDate - aDate;
+  });
+
+  const visibleProjects = mode === "home"
+    ? sortedProjects.filter((project) => project.showOnHome)
+    : sortedProjects;
 
   return (
     <div className="px-4 py-6">
@@ -50,21 +67,18 @@ export default async function ProjectsList() {
         Each card opens a full breakdown with architecture, decisions, and outcomes.
       </p>
       <div className="flex flex-col gap-3 max-w-3xl mx-auto">
-        {sortedProjects.map((project) => {
-          const details = detailsBySlug.get(project.slug);
-          return (
-            <ProjectCard
-              key={project.slug}
-              title={project.title.trim()}
-              slug={project.slug}
-              status={project.status}
-              description={
-                details?.description ??
-                "Read the full case study for implementation details and key learnings."
-              }
-            />
-          );
-        })}
+        {visibleProjects.map((project) => (
+          <ProjectCard
+            key={project.slug}
+            title={project.title.trim()}
+            slug={project.slug}
+            status={project.status}
+            description={
+              project.description ||
+              "Read the full case study for implementation details and key learnings."
+            }
+          />
+        ))}
       </div>
     </div>
   );

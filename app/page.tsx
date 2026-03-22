@@ -27,7 +27,7 @@ export default function Home() {
       <Introduction />
       <ProofOfWork />
       <Resource />
-      <ProjectsList />
+      <ProjectsList mode="home" />
       <SkillsSection />
       <WhatAmILearning />
       <hr className="w-full border-zinc-600 border" />

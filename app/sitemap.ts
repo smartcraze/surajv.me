@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
-import { projects } from "@/lib/projects";
+import { getPortfolioProjects } from "@/lib/portfolio";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -36,6 +36,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.4,
     },
   ];
+
+  const projects = await getPortfolioProjects();
 
   const projectPages: MetadataRoute.Sitemap = projects.map((project) => ({
     url: `https://surajv.dev/projects/${project.slug}`,

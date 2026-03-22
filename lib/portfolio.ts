@@ -1,9 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
-import { cache } from "react";
 
 import { getCompiledDocsForSlug } from "./get-contents";
-import { projects } from "./projects";
 
 export type PortfolioStatus = "fullstack" | "GenAI" | "npm-package" | "web3";
 
@@ -17,9 +15,8 @@ export interface PortfolioProject {
   github?: string;
   live?: string;
   status: PortfolioStatus;
+  showOnHome: boolean;
 }
-
-const statusBySlug = new Map(projects.map((project) => [project.slug, project.status]));
 
 function inferStatus(tags: string[]): PortfolioStatus {
   const normalizedTags = tags.map((tag) => tag.toLowerCase());
@@ -45,7 +42,7 @@ function getTimestamp(date?: string): number {
   return Number.isNaN(parsed) ? 0 : parsed;
 }
 
-export const getPortfolioProjects = cache(async (): Promise<PortfolioProject[]> => {
+export async function getPortfolioProjects(): Promise<PortfolioProject[]> {
   const contentsDirectory = path.join(process.cwd(), "contents");
   const dirEntries = await fs.readdir(contentsDirectory, { withFileTypes: true });
 
@@ -73,7 +70,8 @@ export const getPortfolioProjects = cache(async (): Promise<PortfolioProject[]> 
         video: frontmatter.video || undefined,
         github: frontmatter.github || undefined,
         live: frontmatter.live || undefined,
-        status: statusBySlug.get(slug) ?? inferStatus(tags),
+        status: frontmatter.status ?? inferStatus(tags),
+        showOnHome: frontmatter.showOnHome ?? true,
       } as PortfolioProject;
     })
   );
@@ -81,9 +79,9 @@ export const getPortfolioProjects = cache(async (): Promise<PortfolioProject[]> 
   return loadedProjects
     .filter((project): project is PortfolioProject => project !== null)
     .sort((a, b) => getTimestamp(b.date) - getTimestamp(a.date));
-});
+}
 
-export const getPortfolioStats = cache(async () => {
+export async function getPortfolioStats() {
   const projectsData = await getPortfolioProjects();
 
   const liveProjects = projectsData.filter((project) => Boolean(project.live)).length;
@@ -94,4 +92,4 @@ export const getPortfolioStats = cache(async () => {
     liveProjects,
     openSourceProjects,
   };
-});
+}

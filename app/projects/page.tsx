@@ -46,6 +46,12 @@ export default function ProjectsPage() {
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           <Link
+            href="/projects/slotify"
+            className="inline-flex items-center rounded-full border border-zinc-300/80 dark:border-zinc-700 px-3 py-1 text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+          >
+            Slotify Case Study
+          </Link>
+          <Link
             href="/projects/rapidserve"
             className="inline-flex items-center rounded-full border border-zinc-300/80 dark:border-zinc-700 px-3 py-1 text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
           >

@@ -1,6 +1,4 @@
-// Polyfill for localStorage in server-side rendering
 if (typeof window === 'undefined') {
-  // Mock localStorage for SSR
   global.localStorage = {
     getItem: () => null,
     setItem: () => {},

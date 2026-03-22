@@ -45,6 +45,8 @@ export type BaseMdxFrontmatter = {
   description: string;
   date?: string;
   tags?: string[];
+  status?: "fullstack" | "GenAI" | "npm-package" | "web3";
+  showOnHome?: boolean;
   video: string;
   github: string;
   live: string;

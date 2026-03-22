@@ -1,7 +1,7 @@
 import Iframe from '@/components/ResponsiveIframe';
 import RoutesHeaderBreadcrumb from '@/components/routes-header-breadcrumb';
 import { getCompiledDocsForSlug } from '@/lib/get-contents';
-import { projects } from '@/lib/projects';
+import { getPortfolioProjects } from '@/lib/portfolio';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Github, ExternalLink } from "lucide-react";
@@ -14,6 +14,8 @@ import { Typography } from '@/components/typography';
 
 // Generate static params for all projects at build time
 export async function generateStaticParams() {
+  const projects = await getPortfolioProjects();
+
   return projects.map((project) => ({
     slug: project.slug,
   }));
@@ -37,7 +39,8 @@ export async function generateMetadata({
     };
   }
 
-  const project = projects.find(p => p.slug === slug);
+  const projects = await getPortfolioProjects();
+  const project = projects.find((p) => p.slug === slug);
   const projectUrl = `https://surajv.dev/projects/${slug}`;
 
   return {
