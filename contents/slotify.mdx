@@ -8,170 +8,36 @@ github: "https://github.com/smartcraze/slotify"
 live: "https://slotify.surajv.dev"
 ---
 
+<Image src="https://github.com/user-attachments/assets/ffe89da2-7cc9-437a-92a1-592ef480bfc0" alt="Slotify" width={2753} height={1492} />
+
+<Image src="https://slotify.surajv.dev/landing.png" alt="Slotify" width={2753} height={1492} />
+
+
 Slotify is a production-grade scheduling and booking platform built to deliver the smooth, low-friction experience users expect from modern tools like Cal.com, while keeping the stack lean, type-safe, and developer-friendly.
 
-It is not just a booking page. It is a complete scheduling system that covers public booking links, timezone-safe availability, booking lifecycle management, calendar sync, payments, emails, SEO, and robust webhook processing.
+It is not just a booking page. It is a complete end-to-end scheduling system where hosts can easily share their availability and guests can discover accurate time slots in their local timezone.
 
-## Why I Built Slotify
+## What It Does
 
-Most scheduling products solve only one part of the workflow. They either focus on calendar UI, payment collection, or notifications, but rarely connect all parts in a reliable way.
+Most scheduling products solve only one part of the workflow. With Slotify, the goal was to build a cohesive engine connecting all parts reliably:
 
-With Slotify, the goal was to build an end-to-end scheduling engine where:
-
-- A host can create event types and share a public link
-- A guest can discover accurate time slots in their local timezone
-- A booking can be safely created without race conditions
-- Payments can be captured and verified securely
-- Email notifications and delivery states are fully tracked
-- SEO and public discoverability are ready by default
-
-## What Slotify Supports (Cal.com-Style Feature Coverage)
-
-Slotify is designed to perform the core capabilities expected from a complete scheduling platform:
-
-- Public scheduling pages by host username and event type
-- Timezone-aware slot generation across regions
-- UTC-first storage strategy for consistency
-- Booking lifecycle operations: create, cancel, and reschedule-safe handling
-- Host-side booking visibility and management APIs
-- Google Calendar integration with automatic Google Meet link generation
-- Secure auth flows with Better Auth + Google OAuth
-- Subscription billing with Razorpay order creation and verification
-- Webhook-driven payment reconciliation with idempotency safeguards
-- Transactional booking emails through Resend
-- Delivery-status synchronization through Resend webhooks
-- SEO baseline included: metadata, structured data, robots, sitemap, manifest
-
-## Product Experience
-
-### 1. Public Booking Flow
-
-A host shares a public profile/event URL. Guests can select an event type and choose from dynamically computed available slots.
-
-The slot engine is timezone-sensitive:
-
-- Host availability is computed in host timezone
-- All date-time values are persisted in UTC in the database
-- Attendees view options in attendee-local timezone
-
-This approach prevents DST confusion and cross-region time mismatches.
-
-### 2. Booking Lifecycle
-
-After selecting a slot, a booking can be created and managed through APIs that support:
-
-- New booking creation
-- Cancellation flows (host and public-safe endpoints)
-- Update operations with conflict-safe behavior
-
-Concurrency is handled with database-level guarantees, so duplicate or conflicting bookings are prevented under load.
-
-### 3. Calendar and Meeting Integration
-
-Slotify integrates with Google so booked sessions can be reflected in calendar workflows and include Google Meet join links when needed.
-
-Token refresh and reconnection edge-cases are handled to avoid silent integration failures.
-
-### 4. Billing and Subscription Layer
-
-For paid scheduling or premium plans, Slotify integrates Razorpay with:
-
-- Order creation endpoint
-- Signature verification endpoint
-- Webhook processing for payment lifecycle events
-
-Webhook handlers validate signatures and apply transactional row-level locks to ensure idempotent updates and avoid double-processing.
-
-### 5. Notification Reliability
-
-Slotify uses Resend for booking notifications and tracks email delivery lifecycle using a dedicated webhook endpoint.
-
-Supported states include sent, delivered, failed, bounced, complained, and suppressed. This provides observability that many scheduling clones ignore.
+- **Timezone-Aware Scheduling**: Computes dynamic availability across regions. Host availability is handled in their timezone, attendees view options in their local timezone, and all data is securely persisted in UTC.
+- **Calendar & Meeting Integration**: Integrates directly with Google Calendar to reflect booked sessions and automatically generate Google Meet join links.
+- **Robust Booking Lifecycle**: Manages creations, cancellations, and reschedules with conflict-safe concurrency handling to prevent double bookings under load.
+- **Payments & Subscriptions**: Integrates Razorpay for premium features, utilizing secure webhook processing for payment lifecycle events.
+- **Reliable Notifications**: Employs Resend for transactional emails, with delivery-status synchronization to verify users are actually receiving their updates.
 
 ## Technical Stack
 
-Slotify is built with a modern production stack:
+Slotify leverages a modern, high-performance web stack:
 
-- Next.js 16 App Router + React 19 + TypeScript
-- Tailwind CSS v4 + Radix/shadcn UI primitives
-- Prisma 7.5 + PostgreSQL
-- Better Auth with Google OAuth
-- Razorpay (payments)
-- Resend (email)
-- Bun runtime and package manager
+- **Framework**: Next.js 16 (App Router) + React 19 + TypeScript
+- **Styling**: Tailwind CSS v4 + Radix/shadcn UI
+- **Database**: PostgreSQL with Prisma ORM
+- **Authentication**: Better Auth with Google OAuth
+- **Integrations**: Razorpay (Payments) & Resend (Emails)
+- **Tooling**: Bun runtime
 
-## API Surface
-
-The project exposes a practical API layer for core scheduling operations:
-
-- Auth handlers
-- Availability discovery
-- Booking create/read/update/delete
-- Public cancellation endpoint
-- Event type CRUD
-- Onboarding completion
-- Pricing retrieval
-- Subscription order/verification/webhook endpoints
-- Email delivery webhook endpoint
-
-This structure keeps public and authenticated flows clearly separated while preserving a consistent domain model.
-
-## SEO and Discoverability
-
-Slotify includes foundational SEO setup out of the box:
-
-- Global metadata definitions
-- Home page metadata and JSON-LD structured data
-- Robots configuration
-- Sitemap generation
-- Manifest configuration
-
-With a proper production base URL configured, canonical links and crawlers behave as expected.
-
-## Architecture Decisions That Matter
-
-### UTC-First Data Model
-
-Time values are persisted in UTC for deterministic storage and querying. Presentation is shifted to user-local timezone at the edge.
-
-### Idempotent Webhook Processing
-
-Webhook endpoints are signature-validated and transaction-protected. This prevents replay and duplicate side effects.
-
-### Graceful Degradation
-
-If optional integrations are missing (for example email keys in local setups), core app behavior degrades safely rather than crashing unexpectedly.
-
-## Local Development Flow
-
-The setup remains straightforward:
-
-1. Install dependencies with Bun
-2. Copy env template and fill required secrets
-3. Generate Prisma client and run migrations
-4. Start development server
-
-This allows contributors to move from clone to running environment quickly.
-
-## Production Readiness Checklist
-
-Before go-live, Slotify expects:
-
-1. Complete env variable setup
-2. Correct Google OAuth redirect configuration
-3. Razorpay webhook setup with matching secret
-4. Resend sender + webhook setup with matching secret
-5. Applied production migrations
-6. Correct public app URL for SEO surfaces
-7. Verification of robots, sitemap, and manifest endpoints
-
-## Final Thoughts
-
-Slotify demonstrates how to build a complete scheduling platform, not just a booking form.
-
-From timezone correctness and calendar sync to payments, emails, webhooks, and SEO, the system is structured for real-world usage and scale. If you are exploring how to build a modern scheduler with a clean TypeScript-first stack, Slotify is a practical blueprint.
-
-
-
-
-
+<Note title="More Information">
+For deeper technical insights, architecture decisions (like the UTC-first data model and idempotent webhooks), API details, and local setup instructions, please visit the full documentation on the [GitHub repository](https://github.com/smartcraze/slotify).
+</Note>

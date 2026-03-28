@@ -104,7 +104,7 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-      <html lang="en">
+      <html lang="en" data-scroll-behavior="smooth">
         <head>
           <meta
             name="google-site-verification"

@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    unoptimized: process.env.NODE_ENV === "development",
     qualities: [40, 75],
     remotePatterns: [
       {
@@ -23,6 +24,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "github-production-user-asset-6210df.s3.amazonaws.com",
+      },
+      {
+        protocol: "https",
+        hostname: "slotify.surajv.dev",
       },
     ],
   },
